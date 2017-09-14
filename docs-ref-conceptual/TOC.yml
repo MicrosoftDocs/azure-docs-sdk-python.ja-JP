@@ -1,0 +1,35 @@
+- name: Python 開発者向けの Azure
+  href: index.yml
+  items:
+    - name: 概要
+      href: python-sdk-azure-overview.md
+    - name: ツール
+      href: python-azure-tools.md
+    - name: Python モジュールの概要
+      href: python-sdk-azure-get-started.md
+    - name: 認証
+      href: python-sdk-azure-authenticate.md
+    - name: クイック スタート
+      items:
+        - name: Web Apps
+          href: 'https://docs.microsoft.com/azure/app-service-web/app-service-web-get-started-python'
+        - name: PostgreSQL Database
+          href: 'https://docs.microsoft.com/azure/postgresql/connect-python'
+        - name: Cosmos DB
+          href: 'https://docs.microsoft.com/azure/cosmos-db/create-documentdb-python'
+        - name: Data Lake Analytics
+          href: 'https://docs.microsoft.com/azure/data-lake-analytics/data-lake-analytics-manage-use-python-sdk'
+    - name: Tutorials (チュートリアル)
+      items:
+        - name: Flask と PostgreSQL
+          href: 'https://docs.microsoft.com/azure/app-service-web/app-service-web-tutorial-docker-python-postgresql-app'
+    - name: サンプル
+      items:
+        - name: 仮想マシン
+          href: python-sdk-azure-virtual-machine-samples.md
+        - name: Web Apps
+          href: python-sdk-azure-web-apps-samples.md
+        - name: SQL Database
+          href: python-sdk-azure-sql-database-samples.md
+        - name: すべての Python サンプル
+          href: 'https://azure.microsoft.com/resources/samples/?platform=python'
