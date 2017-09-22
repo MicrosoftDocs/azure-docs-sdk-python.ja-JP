@@ -11,11 +11,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: python
 ms.service: compute
-ms.openlocfilehash: e2f2ad4e42bd847c9286333bacd583c3cd3f1b8c
-ms.sourcegitcommit: 79afc8a1b427e26ecea7bdc0b7b3c898f143360f
+ms.openlocfilehash: c4128dae1c1fd47d2ac34b178b7e1031aa14c948
+ms.sourcegitcommit: 1229121faaae8536a7d8cc89cddd24abf1e30cb8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 09/15/2017
 ---
 # <a name="azure-virtual-machine-libraries"></a>Azure 仮想マシン ライブラリ
 
@@ -77,16 +77,18 @@ def create_vm()
 
 * [仮想マシンを管理する][1]
 * [管理対象のサービス ID で認証を行う][2]
-* [ロード バランサーを管理する][3]
-* [管理ディスクを作成して構成する][4]
-* [イメージを一覧表示する][5] 
-* [仮想マシンを監視する][6]
+* [管理対象のサービス ID 拡張機能で仮想マシンを作成する][3]
+* [ロード バランサーを管理する][4]
+* [管理ディスクを作成して構成する][5]
+* [イメージを一覧表示する][6] 
+* [仮想マシンを監視する][7]
 
 仮想マシン サンプルの[完全な一覧](https://azure.microsoft.com/resources/samples/?platform=python&term=virtual-machines)をご覧ください。
 
 [1]: https://azure.microsoft.com/resources/samples/virtual-machines-python-manage/
 [2]: https://github.com/Azure-Samples/resource-manager-python-manage-resources-with-msi
-[3]: https://azure.microsoft.com/resources/samples/network-python-manage-loadbalancer
-[4]: ../docs-ref-conceptual/python-sdk-azure-samples-managed-disks.md
-[5]: ../docs-ref-conceptual/python-sdk-azure-samples-list-images.md
-[6]: ../docs-ref-conceptual/python-sdk-azure-samples-monitor-vms.md
+[3]: https://github.com/Azure-Samples/compute-python-msi-vm
+[4]: https://azure.microsoft.com/resources/samples/network-python-manage-loadbalancer
+[5]: ../docs-ref-conceptual/python-sdk-azure-samples-managed-disks.md
+[6]: ../docs-ref-conceptual/python-sdk-azure-samples-list-images.md
+[7]: ../docs-ref-conceptual/python-sdk-azure-samples-monitor-vms.md
