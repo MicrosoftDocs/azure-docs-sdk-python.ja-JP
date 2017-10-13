@@ -10,11 +10,11 @@ ms.service: Azure
 ms.technology: Azure
 ms.date: 6/15/2017
 ms.author: liwong
-ms.openlocfilehash: 4154367f0449b174790ee3f3c9480ca0bceeea87
-ms.sourcegitcommit: c6d9500492131bf782488fcafc7c5c41c2703e92
+ms.openlocfilehash: ca1af18ae37549238ffaafbd2d5f8223974e0d11
+ms.sourcegitcommit: 12ea38af93cc4f1ba6aac333035829a69f6aed0c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 09/29/2017
 ---
 # <a name="managed-disks"></a>Managed Disks
 
@@ -129,7 +129,7 @@ async_update.wait()
 
 ## <a name="virtual-machine-scale-sets-with-managed-disks"></a>Managed Disks を使用する Virtual Machines スケール セット
 
-管理ディスクを使用する前は、スケール セットに含めるすべての VM に対してストレージ アカウントを手動で作成し、その後、リスト パラメーター ``vhd_containers`` を使用してすべてのストレージ アカウント名をスケール セットの RestAPI に渡す必要がありました。 正式な移行ガイドについては、こちら`article <https://docs.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-convert-template-to-md>`を参照してください。
+管理ディスクを使用する前は、スケール セットに含めるすべての VM に対してストレージ アカウントを手動で作成し、その後、リスト パラメーター ``vhd_containers`` を使用してすべてのストレージ アカウント名をスケール セットの RestAPI に渡す必要がありました。 正式な移行ガイドについては、こちらの記事 (`<https://docs.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-convert-template-to-md>`) を参照してください。
 
 管理ディスクを使用するようになって、ストレージ アカウントを管理する必要はなくなりました。 VMSS Python SDK を使い慣れている場合は、``storage_profile`` は VM の作成に使用したものとまったく同じと考えてください。
 
