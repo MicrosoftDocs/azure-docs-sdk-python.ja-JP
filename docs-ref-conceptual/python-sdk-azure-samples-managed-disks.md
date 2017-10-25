@@ -10,11 +10,11 @@ ms.service: Azure
 ms.technology: Azure
 ms.date: 6/15/2017
 ms.author: liwong
-ms.openlocfilehash: ca1af18ae37549238ffaafbd2d5f8223974e0d11
-ms.sourcegitcommit: 12ea38af93cc4f1ba6aac333035829a69f6aed0c
+ms.openlocfilehash: 1dceb1b2fe700904b530f1834f0338f7d5e61999
+ms.sourcegitcommit: 3e477d608bbb41f0c561c88e4c665013e3008c26
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2017
+ms.lasthandoff: 10/13/2017
 ---
 # <a name="managed-disks"></a>Managed Disks
 
