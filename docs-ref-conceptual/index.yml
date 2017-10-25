@@ -1,11 +1,11 @@
 ### YamlMime:YamlDocument
 documentType: LandingData
-title: <span data-ttu-id="63b9a-101">Python 開発者向けの Azure</span><span class="sxs-lookup"><span data-stu-id="63b9a-101">Azure for Python developers</span></span>
+title: Python 開発者向けの Azure
 metadata:
   document_id: be4f4c73-c672-4490-8fca-ae087fba8b3b
-  title: '<span data-ttu-id="63b9a-102">Python 開発者向けの Azure - チュートリアル、API リファレンス</span><span class="sxs-lookup"><span data-stu-id="63b9a-102">Azure for Python developers - Tutorials, API Reference</span></span>'
-  description: <span data-ttu-id="63b9a-103">以下のリソースを使用して、Azure でアプリの開発を開始しましょう。Python 開発者向けの優れたチュートリアルとツールが用意されています。</span><span class="sxs-lookup"><span data-stu-id="63b9a-103">Get started developing apps with Azure using the resources below to find great tutorials and tools for Python developers.</span></span>
-  keywords: '<span data-ttu-id="63b9a-104">Azure, Python, SDK, API</span><span class="sxs-lookup"><span data-stu-id="63b9a-104">Azure, Python, SDK, API</span></span>'
+  title: Python 開発者向けの Azure - チュートリアル、API リファレンス
+  description: 以下のリソースを使用して、Azure でアプリの開発を開始しましょう。Python 開発者向けの優れたチュートリアルとツールが用意されています。
+  keywords: 'Azure, Python, SDK, API'
   author: lisawong19
   ms.author: liwong
   manager: douge
@@ -19,7 +19,7 @@ sections:
   - items:
       - type: markdown
         text: |
-          <span data-ttu-id="63b9a-105">以下のリソースを使用して、Azure でアプリの開発を開始しましょう。Python 開発者向けの優れたチュートリアルとツールが用意されています。</span><span class="sxs-lookup"><span data-stu-id="63b9a-105">Get started developing apps with Azure using the resources below to find great tutorials and tools for Python developers.</span></span>
+          以下のリソースを使用して、Azure でアプリの開発を開始しましょう。Python 開発者向けの優れたチュートリアルとツールが用意されています。
   - items:
       - type: list
         style: cards
@@ -27,29 +27,29 @@ sections:
         columns: 2
         items:
           - href: 'https://docs.microsoft.com/azure/app-service-web/app-service-web-get-started-python'
-            html: <p><span data-ttu-id="63b9a-106">最初の Web アプリを Azure にデプロイする</span><span class="sxs-lookup"><span data-stu-id="63b9a-106">Deploy your first web app to Azure</span></span></p>
+            html: <p>最初の Web アプリを Azure にデプロイする</p>
             image:
               src: 'https://docs.microsoft.com/media/common/i_get-started.svg'
-            title: <span data-ttu-id="63b9a-107">作業の開始</span><span class="sxs-lookup"><span data-stu-id="63b9a-107">Get Started</span></span>
+            title: 作業の開始
           - href: 'https://azure.microsoft.com/resources/samples/?platform=pythont&view=azure-python'
-            html: <p><span data-ttu-id="63b9a-108">Python を使用した Azure サンプル コード</span><span class="sxs-lookup"><span data-stu-id="63b9a-108">Azure code samples using Python</span></span></p>
+            html: <p>Python を使用した Azure サンプル コード</p>
             image:
               src: 'https://docs.microsoft.com/media/common/i_code-samples.svg'
-            title: <span data-ttu-id="63b9a-109">コード サンプル</span><span class="sxs-lookup"><span data-stu-id="63b9a-109">Code Samples</span></span>
+            title: コード サンプル
           - href: 'https://docs.microsoft.com/python/azure/python-azure-tools'
-            html: <p><span data-ttu-id="63b9a-110">開発者用ツール</span><span class="sxs-lookup"><span data-stu-id="63b9a-110">Developer tools</span></span></p>
+            html: <p>開発者用ツール</p>
             image:
               src: 'https://docs.microsoft.com/media/common/i_download-install.svg'
-            title: <span data-ttu-id="63b9a-111">SDK &amp; ツール</span><span class="sxs-lookup"><span data-stu-id="63b9a-111">SDK &amp; Tools</span></span>
+            title: SDK &amp; ツール
           - href: 'https://docs.microsoft.com/en-us/python/api/overview/azure/?view=azure-python'
-            html: <p><span data-ttu-id="63b9a-112">Python ライブラリ</span><span class="sxs-lookup"><span data-stu-id="63b9a-112">Python Libraries</span></span></p>
+            html: <p>Python ライブラリ</p>
             image:
               src: 'https://docs.microsoft.com/en-us/media/common/i_api-reference.svg'
-            title: <span data-ttu-id="63b9a-113">API リファレンス</span><span class="sxs-lookup"><span data-stu-id="63b9a-113">API Reference</span></span>
-  - title: <span data-ttu-id="63b9a-114">5 分間のクイック スタート</span><span class="sxs-lookup"><span data-stu-id="63b9a-114">5-Minute Quickstarts</span></span>
+            title: API リファレンス
+  - title: 5 分間のクイック スタート
     items:
       - type: paragraph
-        text: <span data-ttu-id="63b9a-115">Azure サービスを使用して Python アプリを作成する方法について説明します。</span><span class="sxs-lookup"><span data-stu-id="63b9a-115">Learn how to build Python apps with Azure services.</span></span>
+        text: Azure サービスを使用して Python アプリを作成する方法について説明します。
       - type: list
         style: cards
         className: cardsM
@@ -57,25 +57,25 @@ sections:
         items:
           - image:
               src: 'https://docs.microsoft.com/azure/media/index/app-service-web.svg'
-            title: <span data-ttu-id="63b9a-116">最初の Web アプリを Azure にデプロイする</span><span class="sxs-lookup"><span data-stu-id="63b9a-116">Deploy your first web app to Azure</span></span>
+            title: 最初の Web アプリを Azure にデプロイする
             href: 'https://docs.microsoft.com/azure/app-service-web/app-service-web-get-started-python'
           - image:
               src: 'https://docs.microsoft.com/azure/media/index/PostgreSQL.svg'
-            title: <span data-ttu-id="63b9a-117">アプリを Azure PostgreSQL Database に接続する</span><span class="sxs-lookup"><span data-stu-id="63b9a-117">Connect your app to Azure PostgreSQL Database</span></span>
+            title: アプリを Azure PostgreSQL Database に接続する
             href: 'https://docs.microsoft.com/azure/postgresql/connect-python'
           - image:
               src: 'https://docs.microsoft.com/azure/media/index/cosmosdb.svg'
-            title: <span data-ttu-id="63b9a-118">Cosmos DB で Web アプリを構築する</span><span class="sxs-lookup"><span data-stu-id="63b9a-118">Build a web app with Cosmos DB</span></span>
+            title: Cosmos DB で Web アプリを構築する
             href: 'https://docs.microsoft.com/azure/cosmos-db/create-documentdb-python'
           - image:
-              src: 'https://docs.microsoft.com/azure/media/index/DataLakeStore.svg'
-            title: <span data-ttu-id="63b9a-119">Azure Data Lake Analytics を管理する</span><span class="sxs-lookup"><span data-stu-id="63b9a-119">Manage Azure Data Lake Analytics</span></span>
-            href: 'https://docs.microsoft.com//azure/data-lake-analytics/data-lake-analytics-manage-use-python-sdk'
-  - title: <span data-ttu-id="63b9a-120">サンプル</span><span class="sxs-lookup"><span data-stu-id="63b9a-120">Samples</span></span>
+              src: 'https://docs.microsoft.com/azure/media/index/MachineLearning.svg'
+            title: Azure Notebooks を使用したデータ サイエンス
+            href: 'https://notebooks.azure.com/liwong/libraries/iris1234'
+  - title: サンプル
     items:
       - type: list
         style: unordered
         items:
-          - html: '<span data-ttu-id="63b9a-121"><a href="https://azure.microsoft.com/resources/samples/container-service-python-manage/">Azure クラスターに Docker コンテナーをデプロイして接続する</a></span><span class="sxs-lookup"><span data-stu-id="63b9a-121"><a href="https://azure.microsoft.com/resources/samples/container-service-python-manage/">Deploy and connect to a Docker container in an Azure cluster</a></span></span>'
-          - html: '<span data-ttu-id="63b9a-122"><a href="https://azure.microsoft.com/resources/samples/storage-python-manage/">Python での Azure Storage 管理の概要</a></span><span class="sxs-lookup"><span data-stu-id="63b9a-122"><a href="https://azure.microsoft.com/resources/samples/storage-python-manage/">Getting Started with Azure Storage Management in Python</a></span></span>'
-          - html: '<span data-ttu-id="63b9a-123"><a href="https://azure.microsoft.com/resources/samples/virtual-machines-python-manage/">Azure Virtual Machines 管理のサンプル</a></span><span class="sxs-lookup"><span data-stu-id="63b9a-123"><a href="https://azure.microsoft.com/resources/samples/virtual-machines-python-manage/">Azure Virtual Machines Management Samples</a></span></span>'
+          - html: '<a href="https://azure.microsoft.com/resources/samples/container-service-python-manage/">Azure クラスターに Docker コンテナーをデプロイして接続する</a>'
+          - html: '<a href="https://azure.microsoft.com/resources/samples/storage-python-manage/">Python での Azure Storage 管理の概要</a>'
+          - html: '<a href="https://azure.microsoft.com/resources/samples/virtual-machines-python-manage/">Azure Virtual Machines 管理のサンプル</a>'
