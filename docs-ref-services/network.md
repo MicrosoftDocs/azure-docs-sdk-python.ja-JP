@@ -11,11 +11,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: python
 ms.service: multiple
-ms.openlocfilehash: ed6ddfe4d1f4d860952369a75e10166a1f22c483
-ms.sourcegitcommit: 3617d0db0111bbc00072ff8161de2d76606ce0ea
+ms.openlocfilehash: 261225223e84d24f294f4470dd2b00cf6402dea7
+ms.sourcegitcommit: cd2d097f5e91aae1eb1cd5a238d3b49ac427fd64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2017
+ms.lasthandoff: 10/26/2017
 ---
 # <a name="azure-network-libraries-for-python"></a>Python 用 Azure ネットワーク ライブラリ
 
@@ -78,8 +78,6 @@ subnet_info = async_subnet_creation.result()
 
 ### <a name="samples"></a>サンプル
 
-* [Python でのロード バランサー用の Azure Resource Manager の概要][1]
+* [Python でのロード バランサー用の Azure Resource Manager の概要](https://azure.microsoft.com/en-us/resources/samples/network-python-manage-loadbalancer/)
 
 Azure Virtual Network のサンプルの[完全な一覧](https://azure.microsoft.com/en-us/resources/samples/?platform=python&term=virtual%20network)を表示します。
-
-[1]: [https://azure.microsoft.com/en-us/resources/samples/network-python-manage-loadbalancer/]
