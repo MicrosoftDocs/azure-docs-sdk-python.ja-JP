@@ -60,9 +60,9 @@ sections:
             title: 最初の Web アプリを Azure にデプロイする
             href: 'https://docs.microsoft.com/azure/app-service-web/app-service-web-get-started-python'
           - image:
-              src: 'https://docs.microsoft.com/azure/media/index/PostgreSQL.svg'
-            title: アプリを Azure PostgreSQL Database に接続する
-            href: 'https://docs.microsoft.com/azure/postgresql/connect-python'
+              src: 'https://docs.microsoft.com/azure/media/index/API_Face.svg'
+            title: Face API の概要
+            href: 'https://docs.microsoft.com/azure/cognitive-services/face/tutorials/faceapiinpythontutorial'
           - image:
               src: 'https://docs.microsoft.com/azure/media/index/cosmosdb.svg'
             title: Cosmos DB で Web アプリを構築する
