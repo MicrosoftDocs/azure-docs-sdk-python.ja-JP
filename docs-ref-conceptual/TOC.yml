@@ -6,7 +6,7 @@
     - name: ツール
       href: python-azure-tools.md
     - name: Python モジュールの概要
-      href: python-sdk-azure-get-started.md
+      href: python-sdk-azure-get-started.yml
     - name: 認証
       href: python-sdk-azure-authenticate.md
     - name: クイック スタート
