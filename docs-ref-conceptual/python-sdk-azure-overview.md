@@ -11,11 +11,11 @@ ms.technology: azure
 ms.devlang: python
 ms.service: multiple
 ms.assetid: 
-ms.openlocfilehash: 68074d445a21a38fe6ffb6f5f7b7cbd8f24d87a3
-ms.sourcegitcommit: 3617d0db0111bbc00072ff8161de2d76606ce0ea
+ms.openlocfilehash: 7c069f849007ea2c02cf4347ce213dd033dcd68b
+ms.sourcegitcommit: c57305dad01cad925faf50a64953c408429d4ca9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="azure-libraries-for-python"></a>Python 用 Azure ライブラリ
 
@@ -45,7 +45,7 @@ server = sql_client.servers.create_or_update(
 )
 ```
 
-ライブラリの全一覧とプロジェクトへのインポート方法については、[インストール手順](python-sdk-azure-install.md)を参照してください。そのうえで[概要の記事](python-sdk-azure-get-started.md)を参照し、自分の Azure サブスクリプションに対して認証を設定したり、サンプル コードを実行したりする方法を確認しましょう。
+ライブラリの全一覧とプロジェクトへのインポート方法については、[インストール手順](python-sdk-azure-install.md)を参照してください。そのうえで[概要の記事](python-sdk-azure-get-started.yml)を参照し、自分の Azure サブスクリプションに対して認証を設定したり、サンプル コードを実行したりする方法を確認しましょう。
 
 ## <a name="connect-to-azure-services"></a>Azure サービスへの接続
 
