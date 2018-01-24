@@ -1,64 +1,77 @@
 ---
 title: "Python 用 Azure SQL Database ライブラリ"
-description: 
-keywords: "Azure, Python, SDK, API, SQL, データベース, pyodbc"
+description: "ODBC ドライバーと pyodbc を使用して Azure SQL Database に接続したり、Management API を使用して Azure SQL インスタンスを管理したりします。"
 author: lisawong19
 ms.author: liwong
-manager: douge
-ms.date: 07/11/2017
-ms.topic: article
-ms.prod: azure
-ms.technology: azure
+manager: routlaw
+ms.date: 01/09/2018
+ms.topic: reference
 ms.devlang: python
 ms.service: sql-database
-ms.openlocfilehash: b580c5011412bc77fd8fd55b709a305be07e2316
-ms.sourcegitcommit: 3617d0db0111bbc00072ff8161de2d76606ce0ea
+ms.openlocfilehash: baa0e53a77d18dc93241135b5b0fecff5786114c
+ms.sourcegitcommit: ab96bcebe9d5bfa5f32ec5a61b79bd7483fadcad
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="azure-sql-database-libraries-for-python"></a>Python 用 Azure SQL Database ライブラリ
 
 ## <a name="overview"></a>概要
 
-Microsoft ODBC ドライバーと pyodbc を使用して、[Azure SQL Database](/azure/sql-database/sql-database-technical-overview) に格納されたデータを Python で処理します。 
+pyodbc [ODBC データベース ドライバー](https://github.com/mkleehammer/pyodbc/wiki/Drivers-and-Driver-Managers)を使用して、[Azure SQL Database](/azure/sql-database/sql-database-technical-overview) に格納されたデータを Python で処理します。 Azure SQL Database への接続、Transact-SQL ステートメントを使用したデータの照会、pyodbc での[サンプル](https://github.com/mkleehammer/pyodbc/wiki/Getting-started)の使用に関する[クイック スタート](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-python)をご覧ください。
 
-## <a name="client-odbc-driver-and-pyodbc"></a>クライアント ODBC ドライバーと pyodbc
+## <a name="install-odbc-driver-and-pyodbc"></a>ODBC ドライバーと pyodbc のインストール
 
 ```bash
 pip install pyodbc
 ```
-Python とデータベースの通信ライブラリのインストールの詳細については、[こちら](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-python#install-the-python-and-database-communication-libraries)を参照してください。
+Python とデータベースの通信ライブラリのインストールの詳細については、[こちら](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-python#install-the-python-and-database-communication-libraries)をご覧ください。
 
-### <a name="example"></a>例
+## <a name="connect-and-execute-a-sql-query"></a>接続と SQL クエリの実行
 
-SQL データベースに接続して、テーブル内のすべてのレコードを選択します。
+### <a name="connect-to-a-sql-database"></a>SQL Database への接続
 
 ```python
-import pyodbc 
+import pyodbc
 
-SERVER = 'YOUR_SERVER_NAME.database.windows.net'
-DATABASE = 'YOUR_DATABASE_NAME'
-USERNAME = 'YOUR_DB_USERNAME'
-PASSWORD = 'YOUR_DB_PASSWORD'
+server = 'your_server.database.windows.net'
+database = 'your_database'
+username = 'your_username'
+password = 'your_password'
+driver= '{ODBC Driver 13 for SQL Server}'
 
-DRIVER= '{ODBC Driver 13 for SQL Server}'
-cnxn = pyodbc.connect('DRIVER=' + DRIVER + ';PORT=1433;SERVER=' + SERVER +
-    ';PORT=1443;DATABASE=' + DATABASE + ';UID=' + USERNAME + ';PWD=' + PASSWORD)
+cnxn = pyodbc.connect('DRIVER='+driver+';PORT=1433;SERVER='+server+';PORT=1443;DATABASE='+database+';UID='+username+';PWD='+ password)
 cursor = cnxn.cursor()
-selectsql = "SELECT * FROM SALES"  # SALES is an example table name
-cursor.execute(selectsql)
 ```
 
-## <a name="management-api"></a>Management API
+### <a name="execute-a-sql-query"></a>SQL クエリの実行
+
+```python
+cursor.execute("SELECT TOP 20 pc.Name as CategoryName, p.name as ProductName FROM [SalesLT].[ProductCategory] pc JOIN [SalesLT].[Product] p ON pc.productcategoryid = p.productcategoryid")
+row = cursor.fetchone()
+while row:
+    print (str(row[0]) + " " + str(row[1]))
+    row = cursor.fetchone()
+```
+
+> [!div class="nextstepaction"]
+> [pyodbc のサンプル](https://github.com/mkleehammer/pyodbc/wiki/Getting-started)
+
+## <a name="connecting-to-orms"></a>ORM への接続
+
+pyodbc は、[SQLAlchemy](http://docs.sqlalchemy.org/en/latest/dialects/mssql.html?highlight=pyodbc#module-sqlalchemy.dialects.mssql.pyodbc) や [Django](https://github.com/lionheart/django-pyodbc/) などの他の ORM で動作します。 
+
+## <a name="management-apipythonapioverviewazuresqlmanagementlibrary"></a>[Management API](/python/api/overview/azure/sql/managementlibrary)
 
 Management API を使用すると、ご利用のサブスクリプションの Azure SQL Database リソースを作成したり管理したりすることができます。 
 
 ```bash
+pip install azure-common
 pip install azure-mgmt-sql
+pip install azure-mgmt-resource
 ```
 
-### <a name="example"></a>例
+## <a name="example"></a>例
 
 SQL Database リソースを作成し、ファイアウォール規則を使って、特定の範囲の IP アドレスにアクセスを制限します。
 
@@ -66,6 +79,13 @@ SQL Database リソースを作成し、ファイアウォール規則を使っ�
 RESOURCE_GROUP = 'YOUR_RESOURCE_GROUP_NAME'
 LOCATION = 'eastus'  # example Azure availability zone, should match resource group
 SQL_DB = 'YOUR_SQLDB_NAME'
+
+# create resource client
+resource_client = get_client_from_cli_profile(ResourceManagementClient)
+# create resource group
+resource_client.resource_groups.create_or_update(RESOURCE_GROUP, {'location': LOCATION})
+
+sql_client = get_client_from_cli_profile(SqlManagementClient)
 
 # Create a SQL server
 server = sql_client.servers.create_or_update(
@@ -91,12 +111,3 @@ firewall_rule = sql_client.firewall_rules.create_or_update(
 > [!div class="nextstepaction"]
 > [Management API を探す](/python/api/overview/azure/sql/managementlibrary)
 
-## <a name="samples"></a>サンプル
-
-* [SQL データベースの作成と管理][1]    
-* [Python を使って接続し、データを照会する][2]   
-
-[1]: https://github.com/Azure-Samples/sql-database-python-manage
-[2]: https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-python
-
-Azure SQL Database サンプルの[完全な一覧](https://azure.microsoft.com/resources/samples/?platform=python&term=SQL)を表示します。 
