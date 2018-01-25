@@ -1,5 +1,4 @@
-### YamlMime:YamlDocument
-documentType: Tutorial
+### YamlMime:Tutorial
 title: "Python 用 Azure ライブラリを使用したクラウド開発の開始"
 metadata:
   title: "Python 用 Azure ライブラリの概要"
@@ -10,13 +9,13 @@ metadata:
   nextTutorialTitle: "Python SDK リファレンス"
   displayType: two-column
   interactive: azurecli
-  ms.openlocfilehash: 103dd9fa8307f8f71eab6d219e8a2dad28ba94f0
-  ms.sourcegitcommit: 932b476b0f0c4c6613a4bdc1b0b96e6ce4ba8fcb
+  ms.openlocfilehash: 23e29f3a4fde678e6b8973f3f7baca0f2afb1cde
+  ms.sourcegitcommit: 5ab15a7214082d16f339a13e4ae7735b3a57a9aa
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 12/14/2017
+  ms.lasthandoff: 01/18/2018
 items:
-- durationInMinutes: 
+- durationInMinutes: 1
   content: "このガイドでは、いくつかの Python 用 Azure ライブラリの使用方法について説明します。  \n"
 - title: "前提条件"
   durationInMinutes: 5
@@ -39,5 +38,5 @@ items:
 - title: "新しいストレージ アカウントへの BLOB の書き込み"
   durationInMinutes: 5
   content: "認証を行います。\n```azcli\naz login\n```\nリソース グループを作成します。\n```azurecli-interactive\naz group create -l eastus -n sampleStorageResourceGroup\n```\n\nストレージ アカウントを作成します。\n```azurecli-interactive\naz storage account create -n samplestorageaccountname -g sampleStorageResourceGroup -l eastus --sku Standard_RAGRS\n```\n\nこのコードは、[Azure ストレージ アカウント](https://docs.microsoft.com/azure/storage/storage-introduction)を作成し、Python 用 Azure Storage ライブラリを使用して新しい html ファイルをクラウドに作成するものです。 \n```python\nfrom azure.storage import CloudStorageAccount\nfrom azure.storage.blob import PublicAccess\nfrom azure.storage.blob.models import ContentSettings\nfrom azure.common.client_factory import get_client_from_cli_profile\nfrom azure.mgmt.storage import StorageManagementClient\n\nRESOURCE_GROUP = 'sampleStorageResourceGroup'\nSTORAGE_ACCOUNT_NAME = 'samplestorageaccountname'\nCONTAINER_NAME = 'samplecontainername'\n\n# log in\nstorage_client = get_client_from_cli_profile(StorageManagementClient)\n\n# create a public storage container to hold the file\nstorage_keys = storage_client.storage_accounts.list_keys(RESOURCE_GROUP, STORAGE_ACCOUNT_NAME)\nstorage_keys = {v.key_name: v.value for v in storage_keys.keys}\n\nstorage_client = CloudStorageAccount(STORAGE_ACCOUNT_NAME, storage_keys['key1'])\nblob_service = storage_client.create_block_blob_service()\n\nblob_service.create_container(CONTAINER_NAME, public_access=PublicAccess.Container)\n\nblob_service.create_blob_from_bytes(\n    CONTAINER_NAME,\n    'helloworld.html',\n    b'<center><h1>Hello World!</h1></center>',\n    content_settings=ContentSettings('text/html')\n)\n\nprint(blob_service.make_blob_url(CONTAINER_NAME, 'helloworld.html'))\n```\nコンテンツが正常にアップロードされたことを確認するには、出力された URL に移動します。 \n\nCLI で次のコマンドを入力して、ストレージ アカウントをクリーンアップします。\n```azurecli-interactive\naz group delete --name sampleStorageResourceGroup\n```\n"
-- title: "次のステップ"
+- title: "次の手順"
   content: "「Python 用 Azure ライブラリの概要」を完了しました。\n\n- Python 用 Azure 管理ライブラリを使用したリソースの管理とタスクの自動化の詳細については、[仮想マシン](python-sdk-azure-web-apps-samples.md)、[Web アプリ](python-sdk-azure-web-apps-samples.md)、[SQL データベース](python-sdk-azure-sql-database-samples.md)のサンプル コードを参照してください。\n\n- すべてのパッケージには、[リファレンス](/python/api/overview/azure/?view=azure-python)が提供されています。\0"
