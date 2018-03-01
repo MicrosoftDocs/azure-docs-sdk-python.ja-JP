@@ -11,25 +11,25 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: python
 ms.service: mysql
-ms.openlocfilehash: 2ea2ed06d4532f9c9366257e049856dcef73385e
-ms.sourcegitcommit: 3617d0db0111bbc00072ff8161de2d76606ce0ea
+ms.openlocfilehash: f03134bfddfabc426cbcaf4d98ef86d14038861f
+ms.sourcegitcommit: 41e90fe75de03d397079a276cdb388305290e27e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2017
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="azure-mysql-libraries-for-python"></a><span data-ttu-id="4d6c1-103">Python 用 Azure MySQL ライブラリ</span><span class="sxs-lookup"><span data-stu-id="4d6c1-103">Azure MySQL libraries for Python</span></span> 
+# <a name="azure-mysql-libraries-for-python"></a><span data-ttu-id="05d58-103">Python 用 Azure MySQL ライブラリ</span><span class="sxs-lookup"><span data-stu-id="05d58-103">Azure MySQL libraries for Python</span></span> 
 
-## <a name="overview"></a><span data-ttu-id="4d6c1-104">概要</span><span class="sxs-lookup"><span data-stu-id="4d6c1-104">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="05d58-104">概要</span><span class="sxs-lookup"><span data-stu-id="05d58-104">Overview</span></span>
 
-<span data-ttu-id="4d6c1-105">MySQL Manager と pyodbc を使用して、Python から [Azure MySQL Database](/azure/mysql/overview) に格納されたリソースやデータを処理します。</span><span class="sxs-lookup"><span data-stu-id="4d6c1-105">Work with resources and data stored in [Azure MySQL Database](/azure/mysql/overview) from python with the MySQL manager and pyodbc.</span></span>
+<span data-ttu-id="05d58-105">MySQL Manager と pyodbc を使用して、Python から [Azure MySQL Database](/azure/mysql/overview) に格納されたリソースやデータを処理します。</span><span class="sxs-lookup"><span data-stu-id="05d58-105">Work with resources and data stored in [Azure MySQL Database](/azure/mysql/overview) from python with the MySQL manager and pyodbc.</span></span>
 
-## <a name="client-odbc-driver-and-pyodbc"></a><span data-ttu-id="4d6c1-106">クライアント ODBC ドライバーと pyodbc</span><span class="sxs-lookup"><span data-stu-id="4d6c1-106">Client ODBC driver and pyodbc</span></span>
+## <a name="client-odbc-driver-and-pyodbc"></a><span data-ttu-id="05d58-106">クライアント ODBC ドライバーと pyodbc</span><span class="sxs-lookup"><span data-stu-id="05d58-106">Client ODBC driver and pyodbc</span></span>
 
-<span data-ttu-id="4d6c1-107">Azure Database for MySQL にアクセスするための推奨クライアント ライブラリは、Microsoft [ODBC ドライバー](/azure/sql-database/sql-database-connect-query-python#install-the-python-and-database-communication-libraries)です。</span><span class="sxs-lookup"><span data-stu-id="4d6c1-107">The recommended client library for accessing Azure Database for MySQL is the Microsoft [ODBC driver](/azure/sql-database/sql-database-connect-query-python#install-the-python-and-database-communication-libraries).</span></span> <span data-ttu-id="4d6c1-108">ODBC ドライバーを使用してデータベースに接続し、SQL ステートメントを直接実行します。</span><span class="sxs-lookup"><span data-stu-id="4d6c1-108">Use the ODBC driver to connect to the database and execute SQL statements directly.</span></span>
+<span data-ttu-id="05d58-107">Azure Database for MySQL にアクセスするための推奨クライアント ライブラリは、Microsoft [ODBC ドライバー](/azure/sql-database/sql-database-connect-query-python#install-the-python-and-database-communication-libraries)です。</span><span class="sxs-lookup"><span data-stu-id="05d58-107">The recommended client library for accessing Azure Database for MySQL is the Microsoft [ODBC driver](/azure/sql-database/sql-database-connect-query-python#install-the-python-and-database-communication-libraries).</span></span> <span data-ttu-id="05d58-108">ODBC ドライバーを使用してデータベースに接続し、SQL ステートメントを直接実行します。</span><span class="sxs-lookup"><span data-stu-id="05d58-108">Use the ODBC driver to connect to the database and execute SQL statements directly.</span></span>
 
-### <a name="example"></a><span data-ttu-id="4d6c1-109">例</span><span class="sxs-lookup"><span data-stu-id="4d6c1-109">Example</span></span>
+### <a name="example"></a><span data-ttu-id="05d58-109">例</span><span class="sxs-lookup"><span data-stu-id="05d58-109">Example</span></span>
 
-<span data-ttu-id="4d6c1-110">Azure Database for MySQL に接続し、sales テーブル内の全レコードを選択します。</span><span class="sxs-lookup"><span data-stu-id="4d6c1-110">Connect to a Azure Database for MySQL and select all records in the sales table.</span></span> <span data-ttu-id="4d6c1-111">データベースの ODBC 接続文字列は、Azure Portal から取得できます。</span><span class="sxs-lookup"><span data-stu-id="4d6c1-111">You can get the ODBC connection string for the database from the Azure Portal.</span></span>
+<span data-ttu-id="05d58-110">Azure Database for MySQL に接続し、sales テーブル内の全レコードを選択します。</span><span class="sxs-lookup"><span data-stu-id="05d58-110">Connect to a Azure Database for MySQL and select all records in the sales table.</span></span> <span data-ttu-id="05d58-111">データベースの ODBC 接続文字列は、Azure Portal から取得できます。</span><span class="sxs-lookup"><span data-stu-id="05d58-111">You can get the ODBC connection string for the database from the Azure Portal.</span></span>
 
 ```python
 SERVER = 'YOUR_SEVER_NAME' + '.mysql.database.azure.com'
@@ -45,21 +45,21 @@ selectsql = "SELECT * FROM SALES"  # SALES is an example table name
 cursor.execute(selectsql)
 ```
 
-## <a name="management-api"></a><span data-ttu-id="4d6c1-112">Management API</span><span class="sxs-lookup"><span data-stu-id="4d6c1-112">Management API</span></span>
+## <a name="management-api"></a><span data-ttu-id="05d58-112">管理 API</span><span class="sxs-lookup"><span data-stu-id="05d58-112">Management API</span></span>
 
-<span data-ttu-id="4d6c1-113">Management API を使用して、ご利用のサブスクリプションの MySQL リソースの作成や管理を行うことができます。</span><span class="sxs-lookup"><span data-stu-id="4d6c1-113">Create and manage MySQL resources in your subscription with the management API.</span></span>
+<span data-ttu-id="05d58-113">Management API を使用して、ご利用のサブスクリプションの MySQL リソースの作成や管理を行うことができます。</span><span class="sxs-lookup"><span data-stu-id="05d58-113">Create and manage MySQL resources in your subscription with the management API.</span></span>
 
-### <a name="requirements"></a><span data-ttu-id="4d6c1-114">必要条件</span><span class="sxs-lookup"><span data-stu-id="4d6c1-114">Requirements</span></span>
-<span data-ttu-id="4d6c1-115">Python 用 MySQL 管理ライブラリをインストールする必要があります。</span><span class="sxs-lookup"><span data-stu-id="4d6c1-115">You must install the MySQL management libraries for Python.</span></span>
+### <a name="requirements"></a><span data-ttu-id="05d58-114">必要条件</span><span class="sxs-lookup"><span data-stu-id="05d58-114">Requirements</span></span>
+<span data-ttu-id="05d58-115">Python 用 MySQL 管理ライブラリをインストールする必要があります。</span><span class="sxs-lookup"><span data-stu-id="05d58-115">You must install the MySQL management libraries for Python.</span></span>
 ```bash
 pip install azure-mgmt-rdbms
 ```
 
-<span data-ttu-id="4d6c1-116">管理クライアントを使用して認証用の資格情報を取得する方法の詳細については、[Python SDK 認証](https://docs.microsoft.com/python/azure/python-sdk-azure-authenticate)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="4d6c1-116">Please see the [Python SDK authentication](https://docs.microsoft.com/python/azure/python-sdk-azure-authenticate) page for details on obtaining credentials to authenticate with the management client.</span></span>
+<span data-ttu-id="05d58-116">管理クライアントを使用して認証用の資格情報を取得する方法の詳細については、[Python SDK 認証](https://docs.microsoft.com/python/azure/python-sdk-azure-authenticate)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="05d58-116">Please see the [Python SDK authentication](https://docs.microsoft.com/python/azure/python-sdk-azure-authenticate) page for details on obtaining credentials to authenticate with the management client.</span></span>
 
-### <a name="example"></a><span data-ttu-id="4d6c1-117">例</span><span class="sxs-lookup"><span data-stu-id="4d6c1-117">Example</span></span>
+### <a name="example"></a><span data-ttu-id="05d58-117">例</span><span class="sxs-lookup"><span data-stu-id="05d58-117">Example</span></span>
 
-<span data-ttu-id="4d6c1-118">MySQL 5.7 Database リソースを作成し、ファイアウォール規則を使って、特定の範囲の IP アドレスにアクセスを制限します。</span><span class="sxs-lookup"><span data-stu-id="4d6c1-118">Create a MySQL 5.7 Database resource and restrict access to a range of IP addresses using a firewall rule.</span></span>
+<span data-ttu-id="05d58-118">MySQL 5.7 Database リソースを作成し、ファイアウォール規則を使って、特定の範囲の IP アドレスにアクセスを制限します。</span><span class="sxs-lookup"><span data-stu-id="05d58-118">Create a MySQL 5.7 Database resource and restrict access to a range of IP addresses using a firewall rule.</span></span>
 
 ```python
 
@@ -105,4 +105,4 @@ firewall_rule = rule_creation_poller.result()
 ```
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="4d6c1-119">Management API を探す</span><span class="sxs-lookup"><span data-stu-id="4d6c1-119">Explore the Management APIs</span></span>](/python/api/overview/azure/mysql/managementlibrary)
+> [<span data-ttu-id="05d58-119">Management API を探す</span><span class="sxs-lookup"><span data-stu-id="05d58-119">Explore the Management APIs</span></span>](/python/api/overview/azure/mysql/management)

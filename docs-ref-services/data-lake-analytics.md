@@ -11,28 +11,28 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: python
 ms.service: multiple
-ms.openlocfilehash: 9200eb8b01f6326f1a169c48ee3f842947177647
-ms.sourcegitcommit: 3617d0db0111bbc00072ff8161de2d76606ce0ea
+ms.openlocfilehash: d779aca1f3a9e14f275385f93054a8e2f9c0c689
+ms.sourcegitcommit: 41e90fe75de03d397079a276cdb388305290e27e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2017
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="azure-data-lake-analytics-libraries-for-python"></a><span data-ttu-id="ab581-104">Python 用 Azure Data Lake Analytics ライブラリ</span><span class="sxs-lookup"><span data-stu-id="ab581-104">Azure Data Lake Analytics libraries for python</span></span>
+# <a name="azure-data-lake-analytics-libraries-for-python"></a><span data-ttu-id="6b3ee-104">Python 用 Azure Data Lake Analytics ライブラリ</span><span class="sxs-lookup"><span data-stu-id="6b3ee-104">Azure Data Lake Analytics libraries for python</span></span>
 
-## <a name="overview"></a><span data-ttu-id="ab581-105">概要</span><span class="sxs-lookup"><span data-stu-id="ab581-105">Overview</span></span>
-<span data-ttu-id="ab581-106">[Azure Data Lake Analytics](/azure/data-lake-analytics/data-lake-analytics-overview) を使用して、大規模なデータ セットに対応するビッグ データ分析ジョブを実行します。</span><span class="sxs-lookup"><span data-stu-id="ab581-106">Run big data analysis jobs that scale to massive data sets with [Azure Data Lake Analytics](/azure/data-lake-analytics/data-lake-analytics-overview).</span></span>
+## <a name="overview"></a><span data-ttu-id="6b3ee-105">概要</span><span class="sxs-lookup"><span data-stu-id="6b3ee-105">Overview</span></span>
+<span data-ttu-id="6b3ee-106">[Azure Data Lake Analytics](/azure/data-lake-analytics/data-lake-analytics-overview) を使用して、大規模なデータ セットに対応するビッグ データ分析ジョブを実行します。</span><span class="sxs-lookup"><span data-stu-id="6b3ee-106">Run big data analysis jobs that scale to massive data sets with [Azure Data Lake Analytics](/azure/data-lake-analytics/data-lake-analytics-overview).</span></span>
 
-## <a name="install-the-libraries"></a><span data-ttu-id="ab581-107">ライブラリをインストールする</span><span class="sxs-lookup"><span data-stu-id="ab581-107">Install the libraries</span></span>
+## <a name="install-the-libraries"></a><span data-ttu-id="6b3ee-107">ライブラリをインストールする</span><span class="sxs-lookup"><span data-stu-id="6b3ee-107">Install the libraries</span></span>
 
-## <a name="management-api"></a><span data-ttu-id="ab581-108">Management API</span><span class="sxs-lookup"><span data-stu-id="ab581-108">Management API</span></span>
-<span data-ttu-id="ab581-109">Management API を使用して、Data Lake Analytics のアカウント、ジョブ、ポリシー、カタログを管理します。</span><span class="sxs-lookup"><span data-stu-id="ab581-109">Use the management API to manage Data Lake Analytics accounts, jobs, policies, and catalogs.</span></span>
+## <a name="management-api"></a><span data-ttu-id="6b3ee-108">管理 API</span><span class="sxs-lookup"><span data-stu-id="6b3ee-108">Management API</span></span>
+<span data-ttu-id="6b3ee-109">Management API を使用して、Data Lake Analytics のアカウント、ジョブ、ポリシー、カタログを管理します。</span><span class="sxs-lookup"><span data-stu-id="6b3ee-109">Use the management API to manage Data Lake Analytics accounts, jobs, policies, and catalogs.</span></span>
 
 ```bash
 pip install azure-mgmt-datalake-analytics
 ```
 
-### <a name="example"></a><span data-ttu-id="ab581-110">例</span><span class="sxs-lookup"><span data-stu-id="ab581-110">Example</span></span>
-<span data-ttu-id="ab581-111">これは、Data Lake Analytics アカウントを作成し、ジョブを送信する方法の例です。</span><span class="sxs-lookup"><span data-stu-id="ab581-111">This is an example of how to create a Data Lake Analytics account and submit a job.</span></span> 
+### <a name="example"></a><span data-ttu-id="6b3ee-110">例</span><span class="sxs-lookup"><span data-stu-id="6b3ee-110">Example</span></span>
+<span data-ttu-id="6b3ee-111">これは、Data Lake Analytics アカウントを作成し、ジョブを送信する方法の例です。</span><span class="sxs-lookup"><span data-stu-id="6b3ee-111">This is an example of how to create a Data Lake Analytics account and submit a job.</span></span> 
 
 ```python
 ## Required for Azure Resource Manager
@@ -117,7 +117,7 @@ jobResult = adlaJobClient.job.create(
 ```
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="ab581-112">Management API を探す</span><span class="sxs-lookup"><span data-stu-id="ab581-112">Explore the Management APIs</span></span>](/python/api/overview/azure/datalakeanalytics/managementlibrary)
+> [<span data-ttu-id="6b3ee-112">Management API を探す</span><span class="sxs-lookup"><span data-stu-id="6b3ee-112">Explore the Management APIs</span></span>](/python/api/overview/azure/datalakeanalytics/management)
 
-## <a name="samples"></a><span data-ttu-id="ab581-113">サンプル</span><span class="sxs-lookup"><span data-stu-id="ab581-113">Samples</span></span>
-[<span data-ttu-id="ab581-114">Azure Data Lake Anyalytics を管理する</span><span class="sxs-lookup"><span data-stu-id="ab581-114">Manage Azure Data Lake Anyalytics</span></span>](https://docs.microsoft.com/azure/data-lake-analytics/data-lake-analytics-manage-use-python-sdk)
+## <a name="samples"></a><span data-ttu-id="6b3ee-113">サンプル</span><span class="sxs-lookup"><span data-stu-id="6b3ee-113">Samples</span></span>
+[<span data-ttu-id="6b3ee-114">Azure Data Lake Anyalytics を管理する</span><span class="sxs-lookup"><span data-stu-id="6b3ee-114">Manage Azure Data Lake Anyalytics</span></span>](https://docs.microsoft.com/azure/data-lake-analytics/data-lake-analytics-manage-use-python-sdk)
