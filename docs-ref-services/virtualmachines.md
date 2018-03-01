@@ -11,11 +11,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: python
 ms.service: compute
-ms.openlocfilehash: c4128dae1c1fd47d2ac34b178b7e1031aa14c948
-ms.sourcegitcommit: 1229121faaae8536a7d8cc89cddd24abf1e30cb8
+ms.openlocfilehash: adea3dfd1e38fb8c880009d5a02ab2b8be2a67e1
+ms.sourcegitcommit: 41e90fe75de03d397079a276cdb388305290e27e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="azure-virtual-machine-libraries"></a>Azure 仮想マシン ライブラリ
 
@@ -25,7 +25,7 @@ Linux または Windows を実行するオンデマンドのスケーラブル�
 
 Azure 仮想マシンの概要については、「[Azure Portal で Linux 仮想マシンを作成する](/azure/virtual-machines/linux/quick-create-portal)」を参照してください。
 
-## <a name="management-api"></a>Management API
+## <a name="management-api"></a>管理 API
 
 Azure の Windows 仮想マシンと Linux 仮想マシンは、コードから Management API を使って作成、構成、管理、スケーリングを行えます。
 
@@ -71,7 +71,7 @@ def create_vm()
 ```
 
 > [!div class="nextstepaction"]
-> [Management API を探す](/python/api/overview/azure/virtualmachines/managementlibrary)
+> [Management API を探す](/python/api/overview/azure/virtualmachines/management)
 
 ## <a name="samples"></a>サンプル
 

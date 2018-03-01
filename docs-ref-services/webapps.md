@@ -11,11 +11,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: python
 ms.service: appservice
-ms.openlocfilehash: 05f6ad173f4ec051654b5eb2a986b2c2a93cc33a
-ms.sourcegitcommit: 3617d0db0111bbc00072ff8161de2d76606ce0ea
+ms.openlocfilehash: 8e8dd78cbc2d5887308361a47a9571ce242aee6e
+ms.sourcegitcommit: 41e90fe75de03d397079a276cdb388305290e27e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="azure-web-apps-libraries-for-python"></a>Python 用 Azure Web Apps ライブラリ
 
@@ -25,7 +25,7 @@ ms.lasthandoff: 08/18/2017
 
 Azure App Service の概要については、「[Azure に Python Web アプリを作成する](/azure/app-service-web/app-service-web-get-started-python)」を参照してください。
 
-## <a name="management-api"></a>Management API
+## <a name="management-api"></a>管理 API
 
 Azure App Service でホストされている要素のデプロイ、管理、スケーリングを行うには、Management API を使用します。
 
@@ -67,7 +67,7 @@ source_control_async_operation = web_client.web_apps.create_or_update_source_con
 )
 ```
 > [!div class="nextstepaction"]
-> [Management API を探す](/python/api/overview/azure/webapps/managementlibrary)
+> [Management API を探す](/python/api/overview/azure/webapps/management)
 
 ## <a name="samples"></a>サンプル 
 

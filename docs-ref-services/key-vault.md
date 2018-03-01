@@ -9,11 +9,11 @@ ms.date: 07/18/2017
 ms.topic: article
 ms.devlang: python
 ms.service: keyvault
-ms.openlocfilehash: 3eac46eb4d5d19273ead9f19b739f6fb6d72e5cc
-ms.sourcegitcommit: 3617d0db0111bbc00072ff8161de2d76606ce0ea
+ms.openlocfilehash: 6f0f1012839dad21fb8140dbbdf0f883d2877317
+ms.sourcegitcommit: 41e90fe75de03d397079a276cdb388305290e27e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="azure-key-vault-libraries-for-python"></a>Python 用 Azure Key Vault ライブラリ
 
@@ -57,9 +57,9 @@ key_bundle = client.get_key(vault_url, key_name, key_version)
 json_key = key_bundle.key
 ```
 [!div class="nextstepaction"]
-[クライアント API を探す](/python/api/overview/azure/keyvault/clientlibrary)
+[クライアント API を探す](/python/api/overview/azure/keyvault/client)
 
-### <a name="management-api"></a>Management API
+### <a name="management-api"></a>管理 API
 ```bash
 pip install azure-mgmt-keyvault
 ```
@@ -103,7 +103,7 @@ vault = kv_client.vaults.create_or_update(
 > [Management API を探す](/python/api/azure.mgmt.keyvault)
 
 > [!div class="nextstepaction"]
-> [Management API を探す](/python/api/overview/azure/keyvault/managementlibrary)
+> [Management API を探す](/python/api/overview/azure/keyvault/management)
 
 ## <a name="samples"></a>サンプル
 * [キー コンテナーの管理][1] 

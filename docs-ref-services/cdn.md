@@ -11,11 +11,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: python
 ms.service: multiple
-ms.openlocfilehash: c704b32ff5fd6db922ef9c296142832455088562
-ms.sourcegitcommit: 3617d0db0111bbc00072ff8161de2d76606ce0ea
+ms.openlocfilehash: 92d6dd6ce55964bc48bb9bc654e8dec25f6b8344
+ms.sourcegitcommit: 41e90fe75de03d397079a276cdb388305290e27e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="azure-cdn-libraries-for-python"></a>Python 用 Azure CDN ライブラリ
 
@@ -68,4 +68,4 @@ endpoint = endpoint_poller.result()
 ```
 
 > [!div class="nextstepaction"]
-> [Management API を探す](/python/api/overview/azure/cdn/managementlibrary)
+> [Management API を探す](/python/api/overview/azure/cdn/management)

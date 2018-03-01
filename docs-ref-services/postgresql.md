@@ -11,11 +11,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: python
 ms.service: postgresql
-ms.openlocfilehash: e184efc276fb4e6d86504ab44e47340ce72e7006
-ms.sourcegitcommit: 3617d0db0111bbc00072ff8161de2d76606ce0ea
+ms.openlocfilehash: cad5995072d5040764986765d9a900f46f5141ec
+ms.sourcegitcommit: 41e90fe75de03d397079a276cdb388305290e27e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2017
+ms.lasthandoff: 02/23/2018
 ---
 #<a name="azure-postgresql-libraries-for-python"></a>Python 用 Azure PostgreSQL ライブラリ
 
@@ -49,7 +49,7 @@ selectsql = "SELECT * FROM SALES" # SALES is an example table name
 cursor.execute(selectsql)
 ```
 
-## <a name="management-api"></a>Management API
+## <a name="management-api"></a>管理 API
 ### <a name="requirements"></a>必要条件
 Python 用 PostgreSQL 管理ライブラリをインストールする必要があります。
 ```bash
@@ -77,5 +77,5 @@ db = db_creation_poller.result()
 ```
 
 > [!div class="nextstepaction"]
-> [Management API を探す](/python/api/overview/azure/postgresql/managementlibrary)
+> [Management API を探す](/python/api/overview/azure/postgresql/management)
 

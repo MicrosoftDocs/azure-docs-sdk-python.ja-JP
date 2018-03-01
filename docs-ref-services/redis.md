@@ -9,23 +9,23 @@ ms.date: 06/26/2017
 ms.topic: article
 ms.devlang: python
 ms.service: redis
-ms.openlocfilehash: 3ba8d972e91fad229c1489800edeca08760254e6
-ms.sourcegitcommit: 3617d0db0111bbc00072ff8161de2d76606ce0ea
+ms.openlocfilehash: c2f8ebcbcbd7b71c1fa96e46a8148a3c0b88877f
+ms.sourcegitcommit: 41e90fe75de03d397079a276cdb388305290e27e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="azure-redis-cache-libraries-for-python"></a>Python 用 Azure Redis Cache ライブラリ
 
 ## <a name="overview"></a>概要
 
-Azure Redis Cache は、広く普及しているオープン ソースの Redis プロジェクトを基盤にしています。 これを使用すると、Microsoft によって管理されている、セキュリティで保護された専用 Redis インスタンスに、ご利用の Azure アプリケーションからアクセスすることができます。
+Azure Redis Cache は、広く普及しているオープン ソースの Redis プロジェクトを基盤にしています。 これを使用すると、Microsoft によって管理されている、セキュリティで保護された専用 Redis インスタンスに、ご利用の Azure アプリでアクセスできます。
 
-Redis は高度なキーと値のストアです。キーには、文字列、ハッシュ、リスト、セット、ソート済みセットなどのデータ構造を格納できます。 Redis は、このようなデータ型に対する一連のアトミック操作をサポートしています。
+Redis は高度なキーと値のストアです。キーには、文字列、ハッシュ、リスト、セット、ソート済みセットなどのデータ構造を格納できます。 Redis では、このようなデータ型に対する一連のアトミック操作がサポートされています。
 
 Azure Redis Cache の詳細については、[こちら](https://docs.microsoft.com/azure/redis-cache/)を参照してください。
 
-## <a name="management-api"></a>Management API
+## <a name="management-api"></a>管理 API
 
 Redis 管理 API を使用すると、ご利用のサブスクリプションの Redis リソースを作成したり管理したりすることができます。
 
@@ -60,5 +60,5 @@ redis_cache = redis_client.redis.create_or_update(
 ```
 
 > [!div class="nextstepaction"]
-> [Management API を探す](/python/api/overview/azure/redis/managementlibrary)
+> [Management API を探す](/python/api/overview/azure/redis/management)
 
