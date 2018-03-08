@@ -4,7 +4,7 @@
     - name: 概要
       href: python-sdk-azure-overview.md
     - name: インストール
-      href: /azure/python-how-to-install
+      href: python-sdk-azure-install.md
     - name: ツール
       href: python-azure-tools.md
     - name: Python モジュールの概要
@@ -35,3 +35,5 @@
           href: python-sdk-azure-sql-database-samples.md
         - name: すべての Python サンプル
           href: 'https://azure.microsoft.com/resources/samples/?platform=python'
+    - name: マルチクラウド
+      href: python-sdk-azure-multi-cloud.md
