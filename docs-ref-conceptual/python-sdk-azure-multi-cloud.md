@@ -1,6 +1,6 @@
 ---
-title: "マルチクラウド"
-description: "さまざまなリージョンで Azure を使用する"
+title: マルチクラウド
+description: さまざまなリージョンで Azure を使用する
 author: lmazuel
 ms.author: lmazuel
 manager: routlaw
@@ -8,11 +8,11 @@ ms.date: 02/22/2018
 ms.topic: article
 ms.devlang: python
 ms.service: multiple
-ms.openlocfilehash: 48c6cc1872ef985641efc957a78e4b489f27ab56
-ms.sourcegitcommit: d7c26ac167cf6a6491358ac3153f268bc90e55e9
+ms.openlocfilehash: 6d2ba0580f8b6dda857b48ed5235a8c969a051f5
+ms.sourcegitcommit: 7066ace94076483bae7d54172605f431e47bd5ee
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="multi-cloud---use-azure-on-all-regions"></a>マルチクラウド - さまざまなリージョンで Azure を使用する
 
@@ -87,7 +87,7 @@ from azure.mgmt.resource import ResourceManagementClient
 # Service Principal
 tenant = 'ABCDEFGH-1234-1234-1234-ABCDEFGHIJKL'
 client_id = 'ABCDEFGH-1234-1234-1234-ABCDEFGHIJKL'
-password = 'password
+password = 'password'
 
 # Public Azure - default values
 authentication_endpoint = 'https://login.microsoftonline.com/'
@@ -118,7 +118,7 @@ from azure.mgmt.resource import ResourceManagementClient
 # Service Principal
 tenant = 'ABCDEFGH-1234-1234-1234-ABCDEFGHIJKL'
 client_id = 'ABCDEFGH-1234-1234-1234-ABCDEFGHIJKL'
-password = 'password
+password = 'password'
 
 # Government
 authentication_endpoint = 'https://login-us.microsoftonline.com/'
@@ -149,7 +149,7 @@ from azure.mgmt.resource import ResourceManagementClient
 # Service Principal
 tenant = 'ABCDEFGH-1234-1234-1234-ABCDEFGHIJKL'
 client_id = 'ABCDEFGH-1234-1234-1234-ABCDEFGHIJKL'
-password = 'password
+password = 'password'
 
 # Azure Germany
 authentication_endpoint = 'https://login.microsoftonline.de/'
@@ -180,7 +180,7 @@ from azure.mgmt.resource import ResourceManagementClient
 # Service Principal
 tenant = 'ABCDEFGH-1234-1234-1234-ABCDEFGHIJKL'
 client_id = 'ABCDEFGH-1234-1234-1234-ABCDEFGHIJKL'
-password = 'password
+password = 'password'
 
 # Azure China
 authentication_endpoint = 'https://login.chinacloudapi.cn/'
