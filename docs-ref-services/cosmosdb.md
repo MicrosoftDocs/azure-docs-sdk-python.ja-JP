@@ -1,27 +1,27 @@
 ---
-title: "Python 用 Azure CosmosDB ライブラリ"
-description: "Python 用 CosmosDB クライアント ライブラリのリファレンス ドキュメント"
-keywords: "Azure, Python, SDK, API, SQL, データベース, PostGres,CosmosDB, NoSQL"
+title: Azure Cosmos DB Libraries for Python
+description: Python 用 Azure Cosmos DB クライアント ライブラリのリファレンス ドキュメント
+keywords: Azure, Python, SDK, API, SQL, データベース, PostGres,Cosmos DB, NoSQL
 author: lisawong19
 ms.author: liwong
 manager: douge
-ms.date: 08/11/2017
+ms.date: 03/20/2018
 ms.topic: article
 ms.devlang: python
 ms.service: cosmosdb
-ms.openlocfilehash: d56dd69f4fc4513034046f9f721608ad94ff5cfe
-ms.sourcegitcommit: 41e90fe75de03d397079a276cdb388305290e27e
+ms.openlocfilehash: 391b556ece7d818406fa501763814eb7f0d50d22
+ms.sourcegitcommit: 41e6e6b5469271f4ec497a322b460e2a2af2c73d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/28/2018
 ---
-# <a name="azure-cosmosdb-libraries-for-python"></a>Python 用 Azure CosmosDB ライブラリ
+# <a name="azure-cosmos-db-libraries-for-python"></a>Azure Cosmos DB Libraries for Python
 
 ## <a name="overview"></a>概要
 
-Python アプリケーションで CosmosDB を使用して、NoSQL データ ストアに JSON ドキュメントを格納し、クエリを実行します。
+Python アプリケーションで Azure Cosmos DB を使用して、NoSQL データ ストアに JSON ドキュメントを格納し、クエリを実行します。
 
-詳細については、[Azure CosmosDB](https://docs.microsoft.com/azure/cosmos-db/introduction) に関するページを参照してください。
+[Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/introduction) の詳細をご覧ください。
 
 ## <a name="client-library"></a>クライアント ライブラリ
  ```bash
@@ -35,13 +35,13 @@ pip install azure-mgmt-cosmosdb
 
 ### <a name="example"></a>例
 
-SQL に似たクエリ インターフェイスを使用して、CosmosDB で一致するドキュメントを探します。
+SQL に似たクエリ インターフェイスを使用して、Azure CosmosDB で一致するドキュメントを探します。
 
 ```python
 import pydocumentdb
 import pydocumentdb.document_client as document_client
 
-# Initialize the Python DocumentDB client
+# Initialize the Python Azure Cosmos DB client
 client = document_client.DocumentClient(config['ENDPOINT'], {'masterKey': config['MASTERKEY']})
 # Create a database
 db = client.CreateDatabase({ 'id': config['DOCUMENTDB_DATABASE'] })
@@ -83,6 +83,6 @@ print(results)
 
 ## <a name="samples"></a>サンプル
 
-[Azure Cosmos DB の DocumentDB API を使用して Python アプリを開発する](https://azure.microsoft.com/resources/samples/azure-cosmos-db-documentdb-python-getting-started/)
+[Azure Cosmos DB を使用して Python アプリを開発する](https://azure.microsoft.com/resources/samples/azure-cosmos-db-documentdb-python-getting-started/)
 
 
