@@ -1,7 +1,7 @@
 ---
-title: "Python 用 Azure 監視ライブラリ"
-description: "Python 用 Azure 監視ライブラリのリファレンス"
-keywords: "Azure, python, SDK, API, 監視"
+title: Python 用 Azure 監視ライブラリ
+description: Python 用 Azure 監視ライブラリのリファレンス
+keywords: Azure, python, SDK, API, 監視
 author: lisawong19
 ms.author: liwong
 manager: douge
@@ -16,6 +16,7 @@ ms.sourcegitcommit: 41e90fe75de03d397079a276cdb388305290e27e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/23/2018
+ms.locfileid: "29479065"
 ---
 # <a name="azure-monitoring-libraries-for-python"></a>Python 用 Azure 監視ライブラリ
 

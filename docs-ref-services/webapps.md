@@ -1,6 +1,6 @@
 ---
-title: "Python 用 Azure Web Apps ライブラリ"
-description: 
+title: Python 用 Azure Web Apps ライブラリ
+description: ''
 keywords: Azure, Python, SDK, API, Web Apps, App Service
 author: lisawong19
 ms.author: liwong
@@ -16,6 +16,7 @@ ms.sourcegitcommit: 41e90fe75de03d397079a276cdb388305290e27e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/23/2018
+ms.locfileid: "29479225"
 ---
 # <a name="azure-web-apps-libraries-for-python"></a>Python 用 Azure Web Apps ライブラリ
 

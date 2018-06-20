@@ -1,7 +1,7 @@
 ---
-title: "Python 用 Azure コマース ライブラリ"
-description: "Python 用 Azure コマース ライブラリのリファレンス"
-keywords: "Azure, Python, SDK, API, コマース"
+title: Python 用 Azure コマース ライブラリ
+description: Python 用 Azure コマース ライブラリのリファレンス
+keywords: Azure, Python, SDK, API, コマース
 author: lisawong19
 ms.author: liwong
 manager: routlaw
@@ -16,6 +16,7 @@ ms.sourcegitcommit: d7c26ac167cf6a6491358ac3153f268bc90e55e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/24/2018
+ms.locfileid: "29551605"
 ---
 # <a name="azure-commerce-libraries-for-python"></a>Python 用 Azure コマース ライブラリ
 

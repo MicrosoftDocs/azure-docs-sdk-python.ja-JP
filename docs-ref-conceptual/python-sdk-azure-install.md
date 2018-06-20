@@ -1,6 +1,6 @@
 ---
-title: "インストール"
-description: "Azure Python SDK のインストール方法"
+title: インストール
+description: Azure Python SDK のインストール方法
 keywords: Azure, Python, SDK, API
 author: lisawong19
 ms.author: liwong
@@ -16,6 +16,7 @@ ms.sourcegitcommit: 757bf84535fd9d8299c4b51ec92a5ab1926cb671
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/27/2018
+ms.locfileid: "29565821"
 ---
 # <a name="installation"></a>インストール
 

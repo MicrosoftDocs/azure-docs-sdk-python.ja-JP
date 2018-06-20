@@ -1,7 +1,7 @@
 ---
-title: "その他の Python 用 Azure ライブラリ"
-description: "その他の Python 用 Azure ライブラリのリファレンス"
-keywords: "Azure, Python, SDK, API, その他"
+title: その他の Python 用 Azure ライブラリ
+description: その他の Python 用 Azure ライブラリのリファレンス
+keywords: Azure, Python, SDK, API, その他
 author: sptramer
 ms.author: sttramer
 manager: douge
@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3617d0db0111bbc00072ff8161de2d76606ce0ea
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 08/18/2017
+ms.locfileid: "20909365"
 ---
 # <a name="azure-other-libraries-for-python"></a>その他の Python 用 Azure ライブラリ
 

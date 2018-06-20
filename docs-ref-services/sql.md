@@ -13,6 +13,7 @@ ms.sourcegitcommit: 560362db0f65307c8b02b7b7ad8642b5c4aa6294
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33901355"
 ---
 # <a name="azure-sql-database-libraries-for-python"></a>Python 用 Azure SQL Database ライブラリ
 

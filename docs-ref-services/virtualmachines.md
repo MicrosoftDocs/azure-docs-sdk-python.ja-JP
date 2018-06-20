@@ -1,7 +1,7 @@
 ---
-title: "Python 用 Azure 仮想マシン ライブラリ"
-description: 
-keywords: "Azure, Python, SDK, API, コンピューティング, 仮想マシン"
+title: Python 用 Azure 仮想マシン ライブラリ
+description: ''
+keywords: Azure, Python, SDK, API, コンピューティング, 仮想マシン
 author: lisawong19
 ms.author: liwong
 manager: douge
@@ -16,6 +16,7 @@ ms.sourcegitcommit: 41e90fe75de03d397079a276cdb388305290e27e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/23/2018
+ms.locfileid: "29478825"
 ---
 # <a name="azure-virtual-machine-libraries"></a>Azure 仮想マシン ライブラリ
 

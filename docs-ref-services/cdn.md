@@ -1,6 +1,6 @@
 ---
-title: "Python 用 Azure CDN ライブラリ"
-description: "Python 用 Azure CDN ライブラリのリファレンス"
+title: Python 用 Azure CDN ライブラリ
+description: Python 用 Azure CDN ライブラリのリファレンス
 keywords: Azure, python, SDK, API, CDN
 author: sptramer
 ms.author: sttramer
@@ -16,6 +16,7 @@ ms.sourcegitcommit: 41e90fe75de03d397079a276cdb388305290e27e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/23/2018
+ms.locfileid: "29478885"
 ---
 # <a name="azure-cdn-libraries-for-python"></a>Python 用 Azure CDN ライブラリ
 

@@ -1,6 +1,6 @@
 ---
-title: "Python 用 Azure Media Services ライブラリ"
-description: "Python 用 Azure Media Services ライブラリのリファレンス"
+title: Python 用 Azure Media Services ライブラリ
+description: Python 用 Azure Media Services ライブラリのリファレンス
 keywords: Azure, Python, SDK, API, Media Services
 author: sptramer
 ms.author: sttramer
@@ -16,6 +16,7 @@ ms.sourcegitcommit: 41e90fe75de03d397079a276cdb388305290e27e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/23/2018
+ms.locfileid: "29479195"
 ---
 # <a name="azure-media-services-libraries-for-python"></a>Python 用 Azure Media Services ライブラリ
 

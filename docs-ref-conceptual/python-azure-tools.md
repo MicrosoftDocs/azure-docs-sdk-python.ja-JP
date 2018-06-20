@@ -1,6 +1,6 @@
 ---
-title: "Python 開発者のための Azure ツール | Microsoft Docs"
-description: "Azure を使用する Python 開発者のための IDE 統合とコマンド ライン インターフェイス。"
+title: Python 開発者のための Azure ツール | Microsoft Docs
+description: Azure を使用する Python 開発者のための IDE 統合とコマンド ライン インターフェイス。
 author: lisawong19
 manager: douge
 ms.devlang: python
@@ -14,6 +14,7 @@ ms.sourcegitcommit: c57305dad01cad925faf50a64953c408429d4ca9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 12/05/2017
+ms.locfileid: "26184596"
 ---
 # <a name="azure-tools-for-python-developers"></a>Python 開発者のための Azure ツール
 

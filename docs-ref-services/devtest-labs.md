@@ -1,6 +1,6 @@
 ---
-title: "Python 用 Azure DevTest Labs ライブラリ"
-description: "Python 用 Azure DevTest Labs ライブラリのリファレンス"
+title: Python 用 Azure DevTest Labs ライブラリ
+description: Python 用 Azure DevTest Labs ライブラリのリファレンス
 keywords: Azure, python, SDK, API, DevTest Labs
 author: lisawong19
 ms.author: liwong
@@ -16,6 +16,7 @@ ms.sourcegitcommit: d7c26ac167cf6a6491358ac3153f268bc90e55e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/24/2018
+ms.locfileid: "29551575"
 ---
 # <a name="azure-devtest-labs-libraries-for-python"></a>Python 用 Azure DevTest Labs ライブラリ
 

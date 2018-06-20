@@ -1,7 +1,7 @@
 ---
-title: "Python 用 Azure 消費ライブラリ"
-description: "Python 用 Azure 消費ライブラリのリファレンス"
-keywords: "Azure, Python, SDK, API, 消費"
+title: Python 用 Azure 消費ライブラリ
+description: Python 用 Azure 消費ライブラリのリファレンス
+keywords: Azure, Python, SDK, API, 消費
 author: sptramer
 ms.author: sttramer
 manager: douge
@@ -16,6 +16,7 @@ ms.sourcegitcommit: 41e90fe75de03d397079a276cdb388305290e27e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/23/2018
+ms.locfileid: "29478995"
 ---
 # <a name="azure-consumption-libraries-for-python"></a>Python 用 Azure 消費ライブラリ
 
