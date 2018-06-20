@@ -1,7 +1,7 @@
 ---
-title: "Python 用 Azure リソース ライブラリ"
-description: 
-keywords: "Azure, Python, SDK, API, リソース"
+title: Python 用 Azure リソース ライブラリ
+description: ''
+keywords: Azure, Python, SDK, API, リソース
 author: lisawong19
 ms.author: liwong
 manager: douge
@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3617d0db0111bbc00072ff8161de2d76606ce0ea
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 08/18/2017
+ms.locfileid: "20909395"
 ---
 # <a name="azure-resources-libraries-for-python"></a><span data-ttu-id="820d8-103">Python 用 Azure リソース ライブラリ</span><span class="sxs-lookup"><span data-stu-id="820d8-103">Azure Resources libraries for Python</span></span> 
 

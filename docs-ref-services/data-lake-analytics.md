@@ -1,6 +1,6 @@
 ---
-title: "Python 用 Azure Data Lake Analytics ライブラリ"
-description: "Python 用 Azure Data Lake Analytics ライブラリのリファレンス"
+title: Python 用 Azure Data Lake Analytics ライブラリ
+description: Python 用 Azure Data Lake Analytics ライブラリのリファレンス
 keywords: Azure, Python, SDK, API, Data Lake Analytics
 author: lisawong19
 ms.author: liwong
@@ -16,6 +16,7 @@ ms.sourcegitcommit: 41e90fe75de03d397079a276cdb388305290e27e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/23/2018
+ms.locfileid: "29478765"
 ---
 # <a name="azure-data-lake-analytics-libraries-for-python"></a><span data-ttu-id="6b3ee-104">Python 用 Azure Data Lake Analytics ライブラリ</span><span class="sxs-lookup"><span data-stu-id="6b3ee-104">Azure Data Lake Analytics libraries for python</span></span>
 

@@ -1,7 +1,7 @@
 ---
-title: "Python 用 Azure Recovery Services バックアップ ライブラリ"
-description: "Python 用 Azure Recovery Services バックアップ ライブラリのリファレンス"
-keywords: "Azure, Python, SDK, API, Recovery Services バックアップ"
+title: Python 用 Azure Recovery Services バックアップ ライブラリ
+description: Python 用 Azure Recovery Services バックアップ ライブラリのリファレンス
+keywords: Azure, Python, SDK, API, Recovery Services バックアップ
 author: sptramer
 ms.author: sttramer
 manager: douge
@@ -16,6 +16,7 @@ ms.sourcegitcommit: 41e90fe75de03d397079a276cdb388305290e27e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/23/2018
+ms.locfileid: "29479205"
 ---
 # <a name="azure-recovery-services-backup-libraries-for-python"></a><span data-ttu-id="0f338-104">Python 用 Azure Recovery Services バックアップ ライブラリ</span><span class="sxs-lookup"><span data-stu-id="0f338-104">Azure Recovery Services Backup libraries for python</span></span>
 

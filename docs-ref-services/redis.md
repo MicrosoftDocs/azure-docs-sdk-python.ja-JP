@@ -1,7 +1,7 @@
 ---
-title: "Python 用 Azure Redis ライブラリ"
-description: "Redis 用 Python クライアント ライブラリのリファレンス ドキュメント"
-keywords: "Azure, Python, Redis, API, SDK, データベース, NoSQL"
+title: Python 用 Azure Redis ライブラリ
+description: Redis 用 Python クライアント ライブラリのリファレンス ドキュメント
+keywords: Azure, Python, Redis, API, SDK, データベース, NoSQL
 author: sptramer
 ms.author: sttramer
 manager: douge
@@ -14,6 +14,7 @@ ms.sourcegitcommit: 41e90fe75de03d397079a276cdb388305290e27e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/23/2018
+ms.locfileid: "29479245"
 ---
 # <a name="azure-redis-cache-libraries-for-python"></a><span data-ttu-id="6bc25-104">Python 用 Azure Redis Cache ライブラリ</span><span class="sxs-lookup"><span data-stu-id="6bc25-104">Azure Redis Cache libraries for Python</span></span>
 

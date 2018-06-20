@@ -1,7 +1,7 @@
 ---
-title: "Python 用 Azure Active Directory ライブラリ"
-description: "Python クライアント ライブラリ Azure Active Directory のリファレンス ドキュメント"
-keywords: "Azure, Python, SDK, API, SQL, 認証, AAD, Active Directory, Graph, OAuth 2.0"
+title: Python 用 Azure Active Directory ライブラリ
+description: Python クライアント ライブラリ Azure Active Directory のリファレンス ドキュメント
+keywords: Azure, Python, SDK, API, SQL, 認証, AAD, Active Directory, Graph, OAuth 2.0
 author: lisawong19
 ms.author: liwong
 manager: douge
@@ -16,6 +16,7 @@ ms.sourcegitcommit: 41e90fe75de03d397079a276cdb388305290e27e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/23/2018
+ms.locfileid: "29478925"
 ---
 # <a name="azure-active-directory-libraries-for-python"></a><span data-ttu-id="89675-104">Python 用 Azure Active Directory ライブラリ</span><span class="sxs-lookup"><span data-stu-id="89675-104">Azure Active Directory libraries for Python</span></span>
 

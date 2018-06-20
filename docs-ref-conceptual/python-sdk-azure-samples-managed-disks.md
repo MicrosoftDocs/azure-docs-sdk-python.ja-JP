@@ -15,6 +15,7 @@ ms.sourcegitcommit: 560362db0f65307c8b02b7b7ad8642b5c4aa6294
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33839407"
 ---
 # <a name="managed-disks"></a><span data-ttu-id="de1b9-103">Managed Disks</span><span class="sxs-lookup"><span data-stu-id="de1b9-103">Managed Disks</span></span>
 

@@ -1,6 +1,6 @@
 ---
-title: "Python 用 Azure 管理ライブラリの SQL Database サンプル"
-description: "Python 用 Azure 管理ライブラリを使用して Azure SQL データベースの作成と更新を行うサンプル コードを入手しましょう。"
+title: Python 用 Azure 管理ライブラリの SQL Database サンプル
+description: Python 用 Azure 管理ライブラリを使用して Azure SQL データベースの作成と更新を行うサンプル コードを入手しましょう。
 keywords: Azure, Python, SDK, API, SQL Database
 author: lisawong19
 ms.author: liwong
@@ -10,12 +10,13 @@ ms.topic: article
 ms.technology: azure
 ms.devlang: python
 ms.service: multiple
-ms.assetid: 
+ms.assetid: ''
 ms.openlocfilehash: a0ec8fb3d2ef5eb4c5c58a3370b6efa221e33029
 ms.sourcegitcommit: 3617d0db0111bbc00072ff8161de2d76606ce0ea
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 08/18/2017
+ms.locfileid: "20909015"
 ---
 # <a name="azure-management-libraries-for-python-samples-for-sql-database"></a><span data-ttu-id="d0667-104">Python 用 Azure 管理ライブラリの SQL Database サンプル</span><span class="sxs-lookup"><span data-stu-id="d0667-104">Azure management libraries for Python samples for SQL Database</span></span>
 

@@ -1,8 +1,8 @@
-# <a name="azure-monitor"></a>Azure Monitor
+# <a name="azure-monitor"></a><span data-ttu-id="10be1-101">Azure Monitor</span><span class="sxs-lookup"><span data-stu-id="10be1-101">Azure Monitor</span></span>
 
-このサンプルは、Azure 上のリソース (VM など) のメトリックを取得します。
+<span data-ttu-id="10be1-102">このサンプルは、Azure 上のリソース (VM など) のメトリックを取得します。</span><span class="sxs-lookup"><span data-stu-id="10be1-102">This sample get the metrics of a resource on Azure (VMs, etc.).</span></span>
 
-フィルターに使用可能なキーワードの完全な一覧については、[こちら](https://msdn.microsoft.com/en-us/library/azure/mt743622.aspx)を参照してください。
+<span data-ttu-id="10be1-103">フィルターに使用可能なキーワードの完全な一覧については、[こちら](https://msdn.microsoft.com/en-us/library/azure/mt743622.aspx)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="10be1-103">A complete list of available keywords for filters is available [here](https://msdn.microsoft.com/en-us/library/azure/mt743622.aspx)</span></span>
 
 ```python
 import datetime
