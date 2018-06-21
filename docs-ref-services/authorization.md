@@ -1,7 +1,7 @@
 ---
-title: "Python 用 Azure 承認ライブラリ"
-description: "Python 用 Azure 承認ライブラリのリファレンス"
-keywords: "Azure, Python, SDK, API, 承認"
+title: Python 用 Azure 承認ライブラリ
+description: Python 用 Azure 承認ライブラリのリファレンス
+keywords: Azure, Python, SDK, API, 承認
 author: lisawong19
 ms.author: liwong
 manager: routlaw
@@ -11,11 +11,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: python
 ms.service: multiple
-ms.openlocfilehash: ba8814b22ee07a27181b214c6cc49607d4bc5d50
-ms.sourcegitcommit: 757bf84535fd9d8299c4b51ec92a5ab1926cb671
+ms.openlocfilehash: a3db490357ec35c0780d7dd16114b9041458373d
+ms.sourcegitcommit: 86f7f40295271ef94272642efb89b471aae99a2c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35720043"
 ---
 # <a name="azure-authorization-libraries-for-python"></a>Python 用 Azure 承認ライブラリ
 
@@ -43,7 +44,7 @@ subscription_id = '33333333-3333-3333-3333-333333333333'
 # See above for details on creating different types of AAD credentials
 credentials = UserPassCredentials(
     'user@domain.com',  # Your user
-    'my_password',      # Your password
+    'my_password'       # Your password
 )
 
 authorization_client = AuthorizationManagementClient(
