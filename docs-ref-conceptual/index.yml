@@ -1,60 +1,66 @@
 ### YamlMime:YamlDocument
+ms.openlocfilehash: 65fe229da00402bd107514993ee0f9141681f40b
+ms.sourcegitcommit: 16eecfc4ed0e2a8344ce5887327cdf2619ba89e4
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 07/21/2018
+ms.locfileid: "39189562"
 documentType: LandingData
 title: Python 開発者向けの Azure
 metadata:
-  document_id: be4f4c73-c672-4490-8fca-ae087fba8b3b
   title: Python 開発者向けの Azure - チュートリアル、API リファレンス
-  description: 以下のリソースを使用して、Azure でアプリの開発を開始しましょう。Python 開発者向けの優れたチュートリアルとツールが用意されています。
+  description: Python 開発者向けのチュートリアル、ツール、モジュールを使用して、Azure でアプリの開発を開始しましょう。
   keywords: Azure, Python, SDK, API
-  author: lisawong19
-  ms.author: liwong
-  manager: douge
-  ms.date: 07/20/2017
+  author: rloutlaw
+  ms.author: routlaw
+  manager: angerobe
+  ms.date: 07/09/2018
   ms.topic: landing-page
   ms.prod: azure
   ms.technology: azure
   ms.devlang: python
-  ms.openlocfilehash: 61eacb519d5484cedc1e9c6df57ca6538dd718e4
-  ms.sourcegitcommit: 86f7f40295271ef94272642efb89b471aae99a2c
-  ms.translationtype: HT
-  ms.contentlocale: ja-JP
-  ms.lasthandoff: 06/18/2018
-  ms.locfileid: "35720013"
 sections:
-- items:
-  - type: markdown
-    text: >
-      以下のリソースを使用して、Azure でアプリの開発を開始しましょう。Python 開発者向けの優れたチュートリアルとツールが用意されています。
-- items:
+- title: すぐに開始
+  items:
+  - type: paragraph
+    text: Azure サービスのための Python クイック スタート。
   - type: list
     style: cards
     className: cardsM
-    columns: 2
+    columns: 3
     items:
-    - href: https://docs.microsoft.com/azure/app-service/containers/tutorial-custom-docker-image
-      html: <p>最初の Web アプリを Azure にデプロイする</p>
+    - href: https://docs.microsoft.com/azure/app-service/containers/quickstart-python?toc=%2Fpython%2Fazure%2FTOC.json
+      html: <p>Azure での Python アプリの構築とデプロイ</p>
       image:
-        src: https://docs.microsoft.com/media/common/i_get-started.svg
-      title: 作業の開始
-    - href: https://azure.microsoft.com/resources/samples/?platform=pythont&view=azure-python
+        src: https://docs.microsoft.com/azure/media/index/ContainerInstances.svg
+      title: コンテナー アプリ ホスティング
+    - href: https://docs.microsoft.com/en-us/azure/cognitive-services/face/quickstarts/python?toc=%2Fpython%2Fazure%2FTOC.json
+      html: <p>Python SDK を使用した顔検出</p>
+      image:
+        src: https://docs.microsoft.com/azure/media/index/API_Face.svg
+      title: Cognitive Services API
+    - href: https://docs.microsoft.com/azure/cosmos-db/create-sql-api-python?toc=%2Fpython%2Fazure%2FTOC.json
+      html: <p>SQL API を使用したドキュメント データの作成とクエリ</p>
+      image:
+        src: https://docs.microsoft.com/azure/media/index/cosmosdb.svg
+      title: Cosmos DB
+    - href: https://notebooks.azure.com/liwong/libraries/iris1234/html/Data+Science+Quickstart.ipynb
+      html: <p>Jupyter Notebook を使用したパターン認識</p>
+      image:
+        src: https://docs.microsoft.com/media/logos/logo_python.svg
+      title: Machine Learning
+    - href: https://azure.microsoft.com/resources/samples/?platform=python
       html: <p>Python を使用した Azure サンプル コード</p>
       image:
         src: https://docs.microsoft.com/media/common/i_code-samples.svg
       title: コード サンプル
-    - href: https://docs.microsoft.com/python/azure/python-azure-tools
-      html: <p>開発者用ツール</p>
-      image:
-        src: https://docs.microsoft.com/media/common/i_download-install.svg
-      title: SDK &amp; ツール
     - href: https://docs.microsoft.com/python/api?view=azure-python
-      html: <p>Python ライブラリ</p>
+      html: <p>Python モジュール</p>
       image:
-        src: https://docs.microsoft.com/en-us/media/common/i_api-reference.svg
+        src: https://docs.microsoft.com/media/common/i_api-reference.svg
       title: API リファレンス
-- title: 5 分間のクイック スタート
+- title: アプリ ホスティング
   items:
-  - type: paragraph
-    text: Azure サービスを使用して Python アプリを作成する方法について説明します。
   - type: list
     style: cards
     className: cardsM
@@ -62,25 +68,104 @@ sections:
     items:
     - image:
         src: https://docs.microsoft.com/azure/media/index/app-service-web.svg
-      title: 最初の Web アプリを Azure にデプロイする
-      href: https://docs.microsoft.com/azure/app-service-web/app-service-web-get-started-python
+      title: App Service
+      html: <p>Linux または Windows 上での Python アプリの構築、デプロイ、スケーリング</p>
+      href: https://docs.microsoft.com/azure/app-service/containers/tutorial-custom-docker-image?toc=%2Fpython%2Fazure%2FTOC.json
     - image:
-        src: https://docs.microsoft.com/azure/media/index/API_Face.svg
-      title: Face API の概要
-      href: https://docs.microsoft.com/azure/cognitive-services/face/tutorials/faceapiinpythontutorial
-    - image:
-        src: https://docs.microsoft.com/azure/media/index/cosmosdb.svg
-      title: Cosmos DB SQL API アプリを構築する
-      href: https://docs.microsoft.com/en-us/azure/cosmos-db/create-sql-api-python
-    - image:
-        src: https://docs.microsoft.com/azure/media/index/MachineLearning.svg
-      title: Azure Notebooks を使用したデータ サイエンス
-      href: https://notebooks.azure.com/liwong/libraries/iris1234/html/Data+Science+Quickstart.ipynb
-- title: サンプル
+        src: https://docs.microsoft.com/media/logos/logo_kubernetes.svg
+      title: Kubernetes Service
+      html: <p>コンテナー化されたアプリのデプロイと管理</p>
+      href: https://docs.microsoft.com/azure/aks/kubernetes-walkthrough?toc=%2Fpython%2Fazure%2FTOC.json
+- title: データ ソリューション
   items:
   - type: list
-    style: unordered
+    style: cards
+    className: cardsM
+    columns: 3
     items:
-    - html: <a href="https://azure.microsoft.com/resources/samples/container-service-python-manage/">Azure クラスターに Docker コンテナーをデプロイして接続する</a>
-    - html: <a href="https://azure.microsoft.com/resources/samples/storage-python-manage/">Python での Azure Storage 管理の概要</a>
-    - html: <a href="https://azure.microsoft.com/resources/samples/virtual-machines-python-manage/">Azure Virtual Machines 管理のサンプル</a>
+    - image:
+        src: https://docs.microsoft.com/azure/media/index/Storage.svg
+      title: Storage
+      html: <p>スケーラブルな高可用性クラウド ストレージを使用したファイルの安全な保存</p>
+      href: https://docs.microsoft.com/azure/storage/blobs/storage-quickstart-blobs-python?toc=%2Fpython%2Fazure%2FTOC.json
+    - image:
+        src: https://docs.microsoft.com/azure/media/index/cosmosdb.svg
+      title: Cosmos DB
+      html: <p>分散型マルチモデル データベースでの一般的な API の使用</p>
+      href: https://docs.microsoft.com/azure/cosmos-db/sql-api-python-application?toc=%2Fpython%2Fazure%2FTOC.json
+    - image:
+        src: https://docs.microsoft.com/azure/media/index/RedisCache.svg
+      title: Redis Cache
+      html: <p>Python から Azure Redis Cache へのデータの読み取りと書き込み</p>
+      href: https://docs.microsoft.com/en-us/azure/redis-cache/cache-python-get-started?toc=%2Fpython%2Fazure%2FTOC.json
+    - image:
+        src: https://docs.microsoft.com/azure/media/index/PostgreSQL.svg
+      title: Azure Database for PostgreSQL
+      html: <p>PostgreSQL を使用して Flask Web アプリを作成し、Azure にデプロイ</p>
+      href: https://docs.microsoft.com/azure/app-service/containers/tutorial-docker-python-postgresql-app?toc=%2Fpython%2Fazure%2FTOC.json
+    - image:
+        src: https://docs.microsoft.com/azure/media/index/MySQL.SVG
+      title: Azure Database for MySQL
+      html: <p>MySQL のクラウド インスタンスを作成し、Python を使用して接続</p>
+      href: https://docs.microsoft.com/azure/mysql/connect-python?toc=%2Fpython%2Fazure%2FTOC.json
+- title: AI と機械学習
+  items:
+  - type: list
+    style: cards
+    className: cardsM
+    columns: 3
+    items:
+    - image:
+        src: https://docs.microsoft.com/azure/media/index/MachineLearning.svg
+      title: Machine Learning
+      html: <p>情報をインテリジェントに理解、処理し、情報に基づいて動作するアプリケーションを構築</p>
+      href: https://docs.microsoft.com/azure/machine-learning/desktop-workbench/tutorial-classifying-iris-part-1?toc=%2Fpython%2Fazure%2FTOC.json
+    - image:
+        src: https://docs.microsoft.com/azure/media/index/batch-ai.svg
+      title: Batch AI
+      html: <p>単一ノードの GPU クラスター上で CNTK トレーニング ジョブを実行</p>
+      href: https://docs.microsoft.com/azure/batch-ai/quickstart-python?toc=%2Fpython%2Fazure%2FTOC.json
+    - image:
+        src: https://docs.microsoft.com/media/logos/logo_python.svg
+      title: Azure Notebooks
+      html: <p>Jupyter Notebook を作成し、クラウドで無料で共有</p>
+      href: https://notebooks.azure.com/
+- title: セキュリティと統合
+  items:
+  - type: list
+    style: cards
+    className: cardsM
+    columns: 3
+    items:
+    - image:
+        src: https://docs.microsoft.com/azure/media/index/KeyVault.svg
+      title: Key Vault
+      html: <p>クラウド アプリおよびサービスが使用するキーとシークレットを保護</p>
+      href: https://docs.microsoft.com/en-us/python/api/overview/azure/key-vault?toc=%2Fpython%2Fazure%2FTOC.json
+    - image:
+        src: https://docs.microsoft.com/azure/media/index/ServiceBus.svg
+      title: Service Bus
+      html: <p>分散アプリとマイクロサービスに適した信頼性の高いメッセージング サービス</p>
+      href: https://docs.microsoft.com/azure/service-bus-messaging/service-bus-python-how-to-use-queues?toc=%2Fpython%2Fazure%2FTOC.json
+- title: ツールと拡張機能
+  items:
+  - type: list
+    style: cards
+    className: cardsM
+    columns: 3
+    items:
+    - href: https://code.visualstudio.com/docs/azure/extensions
+      html: <p>Visual Studio Code 向け Azure 拡張機能</p>
+      image:
+        src: https://docs.microsoft.com/media/logos/logo_vs-code.svg
+      title: Visual Studio Code
+    - href: https://docs.microsoft.com/en-us/visualstudio/python/overview-of-python-tools-for-visual-studio?toc=%2Fpython%2Fazure%2FTOC.json
+      html: <p>Python 用の IntelliSense、開発、プロファイル、およびデバッグツール</p>
+      image:
+        src: https://docs.microsoft.com/media/logos/logo_visual-studio.svg
+      title: Visual Studio での Python
+    - href: https://docs.microsoft.com/cli/azure?toc=%2Fpython%2Fazure%2FTOC.json
+      html: <p><a href="https://docs.microsoft.com/en-us/cli/azure/install-azure-cli">コマンド ラインから Azure リソースを管理</a></p>
+      image:
+        src: https://docs.microsoft.com/azure/media/index/azure_dev-7.svg
+      title: Azure CLI 2.0
