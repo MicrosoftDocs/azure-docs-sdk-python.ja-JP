@@ -6,7 +6,7 @@
       "docset_name": "python-sdk",
       "build_source_folder": ".",
       "build_output_subfolder": "azure-python-sdk",
-      "locale": "ja-jp",
+      "locale": "ja-JP",
       "monikers": [],
       "open_to_public_contributors": true,
       "type_mapping": {
@@ -25,6 +25,7 @@
       ],
        "customized_tasks": {
         "docset_prebuild": [
+          "_dependentPackages/CommonPlugins/tools/SplitTOC.ps1",
           "_dependentPackages/CommonPlugins/tools/JoinTOC.ps1",
           "_dependentPackages/CommonPlugins/tools/DiffFolder.ps1"
         ]
@@ -39,12 +40,16 @@
   "continue_with_document_error": true,
   "skip_source_output_uploading": false,
   "need_preview_pull_request": false,
-  "git_repository_url_open_to_public_contributors": "https://github.com/MicrosoftDocs/azure-docs-sdk-python.ja-jp",
+  "SplitTOC": [
+    "docs-ref-autogen/toc.yml"
+  ],
+  "git_repository_url_open_to_public_contributors": "https://github.com/MicrosoftDocs/azure-docs-sdk-python.ja-JP",
+  
   "git_repository_branch_open_to_public_contributors": "live",
   "dependent_repositories": [
     {
       "path_to_root": "_themes",
-      "url": "https://github.com/Microsoft/templates.docs.msft.ja-jp",
+      "url": "https://github.com/Microsoft/templates.docs.msft.ja-JP",
       "branch": "master",
       "branch_mapping": {}
     },
@@ -63,7 +68,7 @@
       "branch": "master",
       "branch_mapping": {}
     }
-   ],
+  ],
   "dependent_packages": [
     {
       "id": "opbuild.templates.uref",
