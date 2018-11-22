@@ -11,12 +11,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: python
 ms.service: multiple
-ms.openlocfilehash: 0a92b191f245585fd27261e99bea6158ff127a80
-ms.sourcegitcommit: 8a9e4295359a4f47b21908541e2460c333e94a0a
+ms.openlocfilehash: c70c3d44911b28b0a8c92b5f7efeca3bf1611f43
+ms.sourcegitcommit: f439ba940d5940359c982015db7ccfb82f9dffd9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39624958"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "52277254"
 ---
 # <a name="azure-dns-libraries-for-python"></a>Python 用 Azure DNS ライブラリ
 

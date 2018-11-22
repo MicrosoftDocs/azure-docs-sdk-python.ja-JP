@@ -11,19 +11,19 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: python
 ms.service: multiple
-ms.openlocfilehash: d924a8aea18d9b59ec8c78d85dce8fe0ce7c8d6c
-ms.sourcegitcommit: d521a7350216461eb2fa68152c4975f55152f831
+ms.openlocfilehash: f331a88ceac73449c9c1aff7bccbbaff4c4ba7be
+ms.sourcegitcommit: f439ba940d5940359c982015db7ccfb82f9dffd9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/06/2017
-ms.locfileid: "26327990"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "52277379"
 ---
 # <a name="azure-resources-libraries-for-python"></a>Python 用 Azure リソース ライブラリ
 
 ## <a name="overview"></a>概要 
 [Azure Resource Manager](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-overview) を使用して、グループ内のリソースをデプロイ、監視、管理します。
 
-## <a name="management-api"></a>Management API
+## <a name="management-api"></a>管理 API
 Management API を使用して、リソース グループを作成し、テンプレートからリソースをデプロイします。
 
 ```bash
