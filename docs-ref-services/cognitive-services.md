@@ -11,12 +11,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: python
 ms.service: multiple
-ms.openlocfilehash: 1f1dbaa77ee02a1da9386642e001f0a1a63a6599
-ms.sourcegitcommit: 61cc12fd4bb1a3ad5f9b79d1c616f005bc21c5d9
+ms.openlocfilehash: 736b2dd747842caa50418afc8219dafae655db39
+ms.sourcegitcommit: f439ba940d5940359c982015db7ccfb82f9dffd9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/06/2018
-ms.locfileid: "30849773"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "52277459"
 ---
 # <a name="azure-cognitive-services-modules-for-python"></a>Python 用 Azure Cognitive Services モジュール
 

@@ -11,12 +11,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: python
 ms.service: multiple
-ms.openlocfilehash: 0f3f0b747be7a66e763daa2ebf4bf73881536f56
-ms.sourcegitcommit: 41e90fe75de03d397079a276cdb388305290e27e
+ms.openlocfilehash: ede7119561c591be93c76935f51295bf00e921e8
+ms.sourcegitcommit: f439ba940d5940359c982015db7ccfb82f9dffd9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
-ms.locfileid: "29478795"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "52277419"
 ---
 # <a name="azure-event-hubs-libraries-for-python"></a>Python 用 Azure Event Hubs ライブラリ
 

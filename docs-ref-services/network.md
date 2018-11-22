@@ -11,12 +11,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: python
 ms.service: multiple
-ms.openlocfilehash: 47252ca3b2f5c6087277bac3735025f0dbabbdd8
-ms.sourcegitcommit: 41e90fe75de03d397079a276cdb388305290e27e
+ms.openlocfilehash: f468f844becc2f0fe07d892c725c00df4669f4e3
+ms.sourcegitcommit: f439ba940d5940359c982015db7ccfb82f9dffd9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
-ms.locfileid: "29479075"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "52273028"
 ---
 # <a name="azure-network-libraries-for-python"></a>Python 用 Azure ネットワーク ライブラリ
 

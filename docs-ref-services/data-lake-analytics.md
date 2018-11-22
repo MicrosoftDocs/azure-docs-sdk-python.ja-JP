@@ -11,12 +11,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: python
 ms.service: multiple
-ms.openlocfilehash: d779aca1f3a9e14f275385f93054a8e2f9c0c689
-ms.sourcegitcommit: 41e90fe75de03d397079a276cdb388305290e27e
+ms.openlocfilehash: f1bba0556baf7c373a3584c2dae922e04fa76fc8
+ms.sourcegitcommit: f439ba940d5940359c982015db7ccfb82f9dffd9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
-ms.locfileid: "29478765"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "52279265"
 ---
 # <a name="azure-data-lake-analytics-libraries-for-python"></a>Python 用 Azure Data Lake Analytics ライブラリ
 
