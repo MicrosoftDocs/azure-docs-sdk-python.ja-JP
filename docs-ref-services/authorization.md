@@ -11,28 +11,28 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: python
 ms.service: multiple
-ms.openlocfilehash: a3db490357ec35c0780d7dd16114b9041458373d
-ms.sourcegitcommit: 86f7f40295271ef94272642efb89b471aae99a2c
+ms.openlocfilehash: 8709bbd3cff448c7beb394621b163a4b3e3c3cd8
+ms.sourcegitcommit: f439ba940d5940359c982015db7ccfb82f9dffd9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35720043"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "52276766"
 ---
-# <a name="azure-authorization-libraries-for-python"></a><span data-ttu-id="69488-104">Python 用 Azure 承認ライブラリ</span><span class="sxs-lookup"><span data-stu-id="69488-104">Azure Authorization libraries for python</span></span>
+# <a name="azure-authorization-libraries-for-python"></a><span data-ttu-id="0c08e-104">Python 用 Azure 承認ライブラリ</span><span class="sxs-lookup"><span data-stu-id="0c08e-104">Azure Authorization libraries for python</span></span>
 
-## <a name="management-apipythonapioverviewazureauthorizationmanagement"></a>[<span data-ttu-id="69488-105">Management API</span><span class="sxs-lookup"><span data-stu-id="69488-105">Management API</span></span>](/python/api/overview/azure/authorization/management)
+## <a name="management-apipythonapioverviewazureauthorizationmanagement"></a>[<span data-ttu-id="0c08e-105">Management API</span><span class="sxs-lookup"><span data-stu-id="0c08e-105">Management API</span></span>](/python/api/overview/azure/authorization/management)
 
 ```bash
 pip install azure-mgmt-authorization
 ```
 
-## <a name="create-the-management-client"></a><span data-ttu-id="69488-106">管理クライアントを作成する</span><span class="sxs-lookup"><span data-stu-id="69488-106">Create the management client</span></span>
+## <a name="create-the-management-client"></a><span data-ttu-id="0c08e-106">管理クライアントを作成する</span><span class="sxs-lookup"><span data-stu-id="0c08e-106">Create the management client</span></span>
 
-<span data-ttu-id="69488-107">管理クライアントのインスタンスは、以下のコードで作成します。</span><span class="sxs-lookup"><span data-stu-id="69488-107">The following code creates an instance of the management client.</span></span>
+<span data-ttu-id="0c08e-107">管理クライアントのインスタンスは、以下のコードで作成します。</span><span class="sxs-lookup"><span data-stu-id="0c08e-107">The following code creates an instance of the management client.</span></span>
 
-<span data-ttu-id="69488-108">[サブスクリプション一覧](https://manage.windowsazure.com/#Workspaces/AdminTasks/SubscriptionMapping)から取得できる自分の ``subscription_id`` を指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="69488-108">You will need to provide your ``subscription_id`` which can be retrieved from [your subscription list](https://manage.windowsazure.com/#Workspaces/AdminTasks/SubscriptionMapping).</span></span>
+<span data-ttu-id="0c08e-108">[サブスクリプション一覧](https://manage.windowsazure.com/#Workspaces/AdminTasks/SubscriptionMapping)から取得できる自分の ``subscription_id`` を指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="0c08e-108">You will need to provide your ``subscription_id`` which can be retrieved from [your subscription list](https://manage.windowsazure.com/#Workspaces/AdminTasks/SubscriptionMapping).</span></span>
 
-<span data-ttu-id="69488-109">Python SDK を使用した Azure Active Directory の認証処理と ``Credentials`` インスタンスの作成について詳しくは、「[Resource Management Authentication (リソース管理の認証)](/python/azure/python-sdk-azure-authenticate)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="69488-109">See [Resource Management Authentication](/python/azure/python-sdk-azure-authenticate) for details on handling Azure Active Directory authentication with the Python SDK, and creating a ``Credentials`` instance.</span></span>
+<span data-ttu-id="0c08e-109">Python SDK を使用した Azure Active Directory の認証処理と ``Credentials`` インスタンスの作成について詳しくは、「[Resource Management Authentication (リソース管理の認証)](/python/azure/python-sdk-azure-authenticate)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="0c08e-109">See [Resource Management Authentication](/python/azure/python-sdk-azure-authenticate) for details on handling Azure Active Directory authentication with the Python SDK, and creating a ``Credentials`` instance.</span></span>
 
 ```python
 from azure.mgmt.authorization import AuthorizationManagementClient
@@ -53,10 +53,10 @@ authorization_client = AuthorizationManagementClient(
 )
 ``` 
 
-## <a name="check-permissions-for-a-resource-group"></a><span data-ttu-id="69488-110">リソース グループのアクセス許可チェック</span><span class="sxs-lookup"><span data-stu-id="69488-110">Check permissions for a resource group</span></span>
+## <a name="check-permissions-for-a-resource-group"></a><span data-ttu-id="0c08e-110">リソース グループのアクセス許可チェック</span><span class="sxs-lookup"><span data-stu-id="0c08e-110">Check permissions for a resource group</span></span>
 
-<span data-ttu-id="69488-111">以下のコードは、特定のリソース グループのアクセス許可をチェックするものです。</span><span class="sxs-lookup"><span data-stu-id="69488-111">The following code checks permissions in a given resource group.</span></span>
-<span data-ttu-id="69488-112">リソース グループの作成と管理については、[リソース管理](/python/api/overview/azure/azure.mgmt.resource)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="69488-112">To create or manage resource groups, see [Resource Management](/python/api/overview/azure/azure.mgmt.resource).</span></span>
+<span data-ttu-id="0c08e-111">以下のコードは、特定のリソース グループのアクセス許可をチェックするものです。</span><span class="sxs-lookup"><span data-stu-id="0c08e-111">The following code checks permissions in a given resource group.</span></span>
+<span data-ttu-id="0c08e-112">リソース グループの作成と管理については、[リソース管理](/python/api/overview/azure/azure.mgmt.resource)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="0c08e-112">To create or manage resource groups, see [Resource Management](/python/api/overview/azure/azure.mgmt.resource).</span></span>
 
 ```python
 from azure.mgmt.redis.models import Sku, RedisCreateOrUpdateParameters
@@ -69,5 +69,5 @@ permissions = self.authorization_client.permissions.list_for_resource_group(
 ```
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="69488-113">Management API を探す</span><span class="sxs-lookup"><span data-stu-id="69488-113">Explore the Management APIs</span></span>](/python/api/overview/azure/authorization/management)
+> [<span data-ttu-id="0c08e-113">Management API を探す</span><span class="sxs-lookup"><span data-stu-id="0c08e-113">Explore the Management APIs</span></span>](/python/api/overview/azure/authorization/management)
 
