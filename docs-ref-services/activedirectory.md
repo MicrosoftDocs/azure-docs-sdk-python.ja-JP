@@ -10,13 +10,12 @@ ms.topic: reference
 ms.prod: azure
 ms.technology: azure
 ms.devlang: python
-ms.service: active-directory
-ms.openlocfilehash: 78df70001dd0d55ac2c9c9da04fac6a51c5919e6
-ms.sourcegitcommit: 41e90fe75de03d397079a276cdb388305290e27e
+ms.openlocfilehash: 4cf4149dfbd8209020e3affc0d15ab870f8d9697
+ms.sourcegitcommit: f439ba940d5940359c982015db7ccfb82f9dffd9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
-ms.locfileid: "29478925"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "52276746"
 ---
 # <a name="azure-active-directory-libraries-for-python"></a>Python 用 Azure Active Directory ライブラリ
 
@@ -34,7 +33,7 @@ pip install azure-graphrbac
 
 ### <a name="example"></a>例
 > [!NOTE]
-> 資格情報インスタンスの作成中に、リソース パラメーターを https://graph.windows.net に変更する必要があります
+> 資格情報インスタンスの作成時に、リソース パラメーターを https://graph.windows.net に変更する必要があります。
 
 ```python
 from azure.graphrbac import GraphRbacManagementClient
