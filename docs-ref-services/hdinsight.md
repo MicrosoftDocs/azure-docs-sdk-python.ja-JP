@@ -7,18 +7,18 @@ ms.author: tyfox
 ms.date: 09/18/2018
 ms.topic: reference
 ms.devlang: python
-ms.openlocfilehash: 42e1e36b5854fda93188564be3ed3064b9ba4435
-ms.sourcegitcommit: f439ba940d5940359c982015db7ccfb82f9dffd9
+ms.openlocfilehash: 9447d50fd734bd9221accbf470a456210bb57a7f
+ms.sourcegitcommit: e2e4b1ecfac9804a72973477634128061c1ec990
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "52277472"
+ms.lasthandoff: 12/17/2018
+ms.locfileid: "53455109"
 ---
 # <a name="hdinsight-python-management-sdk-preview"></a>HDInsight Python Management SDK (プレビュー)
 
 ## <a name="overview"></a>概要
 
-HDInsight Python SDK には、HDInsight クラスターの管理に使用できるクラスとメソッドが用意されています。 これには、スクリプト アクションを作成、削除、更新、一覧表示、スケーリング、実行したり、HDInsight クラスターのプロパティを監視、取得したりする操作が含まれます。
+HDInsight Python SDK には、HDInsight クラスターの管理に使用できるクラスとメソッドが用意されています。 これには、スクリプト アクションを作成、削除、更新、一覧表示、サイズ変更、実行したり、HDInsight クラスターのプロパティを監視、取得したりする操作が含まれます。
 
 ## <a name="prerequisites"></a>前提条件
 
@@ -37,7 +37,7 @@ HDInsight Python SDK は、[Python Package Index](https://pypi.org/project/azure
 SDK は最初に Azure サブスクリプションで認証する必要があります。  以下の例に従って、サービス プリンシパルを作成し、これを使用して認証します。 その後、`HDInsightManagementClient` のインスタンスが生成されます。これには、管理操作の実行に使用できるメソッドが多数含まれています (以下のセクションで説明します)。
 
 > [!NOTE]
-> 認証方法は以下の例の他にもあり、そちらの方がご自身のニーズに適している可能性もあります。 すべての方法については、「[Python 用 Azure 管理ライブラリを使用した認証](https://docs.microsoft.com/en-us/python/azure/python-sdk-azure-authenticate?view=azure-python)」をご覧ください。
+> 認証方法は以下の例の他にもあり、そちらの方がご自身のニーズに適している可能性もあります。 すべてのメソッドの概要については、「[Python 用 Azure 管理ライブラリを使用した認証](https://docs.microsoft.com/en-us/python/azure/python-sdk-azure-authenticate?view=azure-python)」をご覧ください。
 
 ### <a name="authentication-example-using-a-service-principal"></a>サービス プリンシパルを使用した認証の例
 
@@ -310,9 +310,9 @@ client.clusters.update("<Resource Group Name>", "<Cluster Name>", tags={<Diction
 client.clusters.update("<Resource Group Name>", "<Cluster Name>", tags={"tag1Name" : "tag1Value", "tag2Name" : "tag2Value"})
 ```
 
-### <a name="scale-cluster"></a>クラスターのスケーリング
+### <a name="resize-cluster"></a>クラスターのサイズ変更
 
-特定のクラスターの worker ノード数を増減するには、次のように新しいサイズを指定します。
+特定のクラスターの worker ノード数をサイズ変更するには、次のように新しいサイズを指定します。
 
 ```python
 client.clusters.resize("<Resource Group Name>", "<Cluster Name>", target_instance_count=<Num of Worker Nodes>)
@@ -325,7 +325,7 @@ HDInsight 管理 SDK を使用して、Operations Management Suite (OMS) でご�
 ### <a name="enable-oms-monitoring"></a>OMS 監視の有効化
 
 > [!NOTE]
-> OMS の監視を有効にするには、既存の Log Analytics ワークスペースが必要です。 まだ作成していない場合、その方法については、「[Azure ポータルで Log Analytics ワークスペースを作成する](https://docs.microsoft.com/en-us/azure/log-analytics/log-analytics-quick-create-workspace)」を参照してください。
+> OMS の監視を有効にするには、既存の Log Analytics ワークスペースが必要です。 まだ作成していない場合、その方法については、「[Azure portal で Log Analytics ワークスペースを作成する](https://docs.microsoft.com/en-us/azure/log-analytics/log-analytics-quick-create-workspace)」を参照してください。
 
 ご自身のクラスターで OMS 監視を有効にするには:
 
@@ -353,7 +353,7 @@ client.extension.disable_monitoring("<Resource Group Name>", "<Cluster Name>")
 
 HDInsight には、クラスターをカスタマイズするためにカスタム スクリプトを呼び出すスクリプト アクションという構成方法があります。
 > [!NOTE]
-> スクリプト アクションを使用する方法の詳細については、「[スクリプト アクションを使用して Linux ベースの HDInsight クラスターをカスタマイズする](https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-customize-cluster-linux)」を参照してください
+> スクリプト アクションの使用方法の詳細については、「[スクリプト アクションを使用して Linux ベースの HDInsight クラスターをカスタマイズする](https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-customize-cluster-linux)」を参照してください
 
 ### <a name="execute-script-actions"></a>スクリプト アクションの実行
 特定のクラスターに対してスクリプト アクションを実行するには:
