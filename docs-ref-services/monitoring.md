@@ -11,31 +11,31 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: python
 ms.service: multiple
-ms.openlocfilehash: 2d4172fa206b89437cca88fb2c5d0a7965be4e9b
-ms.sourcegitcommit: f439ba940d5940359c982015db7ccfb82f9dffd9
+ms.openlocfilehash: 36746da246db2467b336a2eb14bfe2f6300b6ea4
+ms.sourcegitcommit: 993aacad1d19d87533023f154c015d840723d716
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "52277174"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57528060"
 ---
-# <a name="azure-monitoring-libraries-for-python"></a><span data-ttu-id="e7457-104">Python 用 Azure 監視ライブラリ</span><span class="sxs-lookup"><span data-stu-id="e7457-104">Azure Monitoring libraries for python</span></span>
+# <a name="azure-monitoring-libraries-for-python"></a><span data-ttu-id="f9bd3-104">Python 用 Azure 監視ライブラリ</span><span class="sxs-lookup"><span data-stu-id="f9bd3-104">Azure Monitoring libraries for python</span></span>
 
-## <a name="overview"></a><span data-ttu-id="e7457-105">概要</span><span class="sxs-lookup"><span data-stu-id="e7457-105">Overview</span></span> 
-<span data-ttu-id="e7457-106">監視では、アプリケーションを正常な状態で稼働させ続けるためのデータを取得できます。</span><span class="sxs-lookup"><span data-stu-id="e7457-106">Monitoring provides data to ensure that your application stays up and running in a healthy state.</span></span> <span data-ttu-id="e7457-107">また、潜在的な問題を防止したり、発生した問題をトラブルシューティングするのにも役立ちます。</span><span class="sxs-lookup"><span data-stu-id="e7457-107">It also helps you to stave off potential problems or troubleshoot past ones.</span></span> <span data-ttu-id="e7457-108">さらに、監視データを使用して、アプリケーションに関する深い洞察を得ることもできます。</span><span class="sxs-lookup"><span data-stu-id="e7457-108">In addition, you can use monitoring data to gain deep insights about your application.</span></span> <span data-ttu-id="e7457-109">そのような知識は、アプリケーションのパフォーマンスや保守容易性を向上させたり、手作業での介入が必要な操作を自動化したりするうえで役立ちます。</span><span class="sxs-lookup"><span data-stu-id="e7457-109">That knowledge can help you to improve application performance or maintainability, or automate actions that would otherwise require manual intervention.</span></span>
+## <a name="overview"></a><span data-ttu-id="f9bd3-105">概要</span><span class="sxs-lookup"><span data-stu-id="f9bd3-105">Overview</span></span> 
+<span data-ttu-id="f9bd3-106">監視では、アプリケーションを正常な状態で稼働させ続けるためのデータを取得できます。</span><span class="sxs-lookup"><span data-stu-id="f9bd3-106">Monitoring provides data to ensure that your application stays up and running in a healthy state.</span></span> <span data-ttu-id="f9bd3-107">また、潜在的な問題を防止したり、発生した問題をトラブルシューティングするのにも役立ちます。</span><span class="sxs-lookup"><span data-stu-id="f9bd3-107">It also helps you to stave off potential problems or troubleshoot past ones.</span></span> <span data-ttu-id="f9bd3-108">さらに、監視データを使用して、アプリケーションに関する深い洞察を得ることもできます。</span><span class="sxs-lookup"><span data-stu-id="f9bd3-108">In addition, you can use monitoring data to gain deep insights about your application.</span></span> <span data-ttu-id="f9bd3-109">そのような知識は、アプリケーションのパフォーマンスや保守容易性を向上させたり、手作業での介入が必要な操作を自動化したりするうえで役立ちます。</span><span class="sxs-lookup"><span data-stu-id="f9bd3-109">That knowledge can help you to improve application performance or maintainability, or automate actions that would otherwise require manual intervention.</span></span>
 
-<span data-ttu-id="e7457-110">Azure Monitor の詳細については、[こちら](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview-azure-monitor)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="e7457-110">Learn more about Azure Monitor [here](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview-azure-monitor).</span></span> 
+<span data-ttu-id="f9bd3-110">Azure Monitor の詳細については、[こちら](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview-azure-monitor)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="f9bd3-110">Learn more about Azure Monitor [here](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview-azure-monitor).</span></span> 
 
-## <a name="installation"></a><span data-ttu-id="e7457-111">インストール</span><span class="sxs-lookup"><span data-stu-id="e7457-111">Installation</span></span>
+## <a name="installation"></a><span data-ttu-id="f9bd3-111">インストール</span><span class="sxs-lookup"><span data-stu-id="f9bd3-111">Installation</span></span>
 ```bash
 pip install azure-mgmt-monitor
 ```
 
-## <a name="example---metrics"></a><span data-ttu-id="e7457-112">例 - メトリック</span><span class="sxs-lookup"><span data-stu-id="e7457-112">Example - Metrics</span></span>
-<span data-ttu-id="e7457-113">このサンプルは、Azure 上のリソース (VM など) のメトリックを取得します。</span><span class="sxs-lookup"><span data-stu-id="e7457-113">This sample obtains the metrics of a resource on Azure (VMs, etc.).</span></span> <span data-ttu-id="e7457-114">このサンプルには、少なくとも Python パッケージのバージョン 0.4.0 が必要です。</span><span class="sxs-lookup"><span data-stu-id="e7457-114">This sample requires version 0.4.0 of the Python package at least.</span></span>
+## <a name="example---metrics"></a><span data-ttu-id="f9bd3-112">例 - メトリック</span><span class="sxs-lookup"><span data-stu-id="f9bd3-112">Example - Metrics</span></span>
+<span data-ttu-id="f9bd3-113">このサンプルは、Azure 上のリソース (VM など) のメトリックを取得します。</span><span class="sxs-lookup"><span data-stu-id="f9bd3-113">This sample obtains the metrics of a resource on Azure (VMs, etc.).</span></span> <span data-ttu-id="f9bd3-114">このサンプルには、少なくとも Python パッケージのバージョン 0.4.0 が必要です。</span><span class="sxs-lookup"><span data-stu-id="f9bd3-114">This sample requires version 0.4.0 of the Python package at least.</span></span>
 
-<span data-ttu-id="e7457-115">フィルターに使用できるキーワードの完全な一覧については、[こちら](https://msdn.microsoft.com/library/azure/mt743622.aspx)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="e7457-115">A complete list of available keywords for filters is available [here](https://msdn.microsoft.com/library/azure/mt743622.aspx).</span></span>
+<span data-ttu-id="f9bd3-115">フィルターに使用できるキーワードの完全な一覧については、[こちら](https://msdn.microsoft.com/library/azure/mt743622.aspx)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="f9bd3-115">A complete list of available keywords for filters is available [here](https://msdn.microsoft.com/library/azure/mt743622.aspx).</span></span>
 
-<span data-ttu-id="e7457-116">各種のリソースでサポートされているメトリックについては、[こちら](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-supported-metrics)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="e7457-116">Supported metrics per resource type is available [here](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-supported-metrics).</span></span>
+<span data-ttu-id="f9bd3-116">各種のリソースでサポートされているメトリックについては、[こちら](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-supported-metrics)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="f9bd3-116">Supported metrics per resource type is available [here](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-supported-metrics).</span></span>
 
 ```python
 import datetime
@@ -83,7 +83,7 @@ metrics_data = client.metrics.list(
     resource_id,
     timespan="{}/{}".format(yesterday, today),
     interval='PT1H',
-    metric='Percentage CPU',
+    metricnames='Percentage CPU',
     aggregation='Total'
 )
 
@@ -107,10 +107,10 @@ for item in metrics_data.value:
 # 2016-11-16 07:00:00+00:00: 45.4
 ```
 
-## <a name="example---alerts"></a><span data-ttu-id="e7457-117">例 - アラート</span><span class="sxs-lookup"><span data-stu-id="e7457-117">Example - Alerts</span></span>
-<span data-ttu-id="e7457-118">この例は、リソースの作成時にそれらに関するアラートを自動的に設定して、すべてのリソースを正しく監視する方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="e7457-118">This example shows how to automatically set up alerts on your resources when they are created to ensure that all resources are monitored correctly.</span></span>
+## <a name="example---alerts"></a><span data-ttu-id="f9bd3-117">例 - アラート</span><span class="sxs-lookup"><span data-stu-id="f9bd3-117">Example - Alerts</span></span>
+<span data-ttu-id="f9bd3-118">この例は、リソースの作成時にそれらに関するアラートを自動的に設定して、すべてのリソースを正しく監視する方法を示しています。</span><span class="sxs-lookup"><span data-stu-id="f9bd3-118">This example shows how to automatically set up alerts on your resources when they are created to ensure that all resources are monitored correctly.</span></span>
 
-<span data-ttu-id="e7457-119">CPU 使用率についてのアラートを作成するために、VM 上にデータ ソースを作成します。</span><span class="sxs-lookup"><span data-stu-id="e7457-119">Create a data source on a VM to alert on CPU usage:</span></span>
+<span data-ttu-id="f9bd3-119">CPU 使用率についてのアラートを作成するために、VM 上にデータ ソースを作成します。</span><span class="sxs-lookup"><span data-stu-id="f9bd3-119">Create a data source on a VM to alert on CPU usage:</span></span>
 ```python
 from azure.mgmt.monitor import MonitorMgmtClient
 from azure.mgmt.monitor.models import RuleMetricDataSource
@@ -133,7 +133,7 @@ data_source = RuleMetricDataSource(
     metric_name = 'Percentage CPU'
 )
 ```
-<span data-ttu-id="e7457-120">過去 5 分間の VM の平均 CPU 使用率が 90% を上回る場合にトリガーされるしきい値条件を作成します (上記のデータ ソースを使用)。</span><span class="sxs-lookup"><span data-stu-id="e7457-120">Create a threshold condition that triggers when the average CPU usage of a VM for the last 5 minutes is above 90% (using the preceding data source):</span></span>
+<span data-ttu-id="f9bd3-120">過去 5 分間の VM の平均 CPU 使用率が 90% を上回る場合にトリガーされるしきい値条件を作成します (上記のデータ ソースを使用)。</span><span class="sxs-lookup"><span data-stu-id="f9bd3-120">Create a threshold condition that triggers when the average CPU usage of a VM for the last 5 minutes is above 90% (using the preceding data source):</span></span>
 ```python
 from azure.mgmt.monitor.models import ThresholdRuleCondition
 
@@ -147,7 +147,7 @@ rule_condition = ThresholdRuleCondition(
 )
 ```
 
-<span data-ttu-id="e7457-121">電子メール アクションを作成します。</span><span class="sxs-lookup"><span data-stu-id="e7457-121">Create an email action:</span></span>
+<span data-ttu-id="f9bd3-121">電子メール アクションを作成します。</span><span class="sxs-lookup"><span data-stu-id="f9bd3-121">Create an email action:</span></span>
 ```python
 from azure.mgmt.monitor.models import RuleEmailAction
 
@@ -160,7 +160,7 @@ rule_action = RuleEmailAction(
 )
 ```
 
-<span data-ttu-id="e7457-122">アラートを作成します。</span><span class="sxs-lookup"><span data-stu-id="e7457-122">Create the alert:</span></span>
+<span data-ttu-id="f9bd3-122">アラートを作成します。</span><span class="sxs-lookup"><span data-stu-id="f9bd3-122">Create the alert:</span></span>
 ```python
 rule_name = 'MyPyTestAlertRule'
 my_alert = client.alert_rules.create_or_update(
@@ -179,4 +179,4 @@ my_alert = client.alert_rules.create_or_update(
 )
 ```
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="e7457-123">Management API を探す</span><span class="sxs-lookup"><span data-stu-id="e7457-123">Explore the Management APIs</span></span>](/python/api/overview/azure/monitoring/management)
+> [<span data-ttu-id="f9bd3-123">Management API を探す</span><span class="sxs-lookup"><span data-stu-id="f9bd3-123">Explore the Management APIs</span></span>](/python/api/overview/azure/monitoring/management)
