@@ -1,24 +1,24 @@
 ---
-title: Azure HDInsight Python SDK (プレビュー)
-description: Azure HDInsight Python SDK のリファレンス。 HDInsight Python SDK には、HDInsight クラスターの管理に使用できるクラスとメソッドが用意されています。
+title: Python 用の Azure HDInsight SDK
+description: Python 用の Azure HDInsight SDK のリファレンス。 Python 用の HDInsight SDK には、HDInsight クラスターの管理に使用できるクラスとメソッドが用意されています。
 ms.service: hdinsight
 author: tylerfox
 ms.author: tyfox
-ms.date: 09/18/2018
+ms.date: 04/10/2019
 ms.topic: reference
 ms.devlang: python
-ms.openlocfilehash: 8d081739a3984e1cd3f7bbf31fcb44d63cfb6947
-ms.sourcegitcommit: fba77bdf8eb9f49621be94544d9fef88aff98c14
+ms.openlocfilehash: f16e5da474e1c506c800b860b451754a6bdc75bc
+ms.sourcegitcommit: 3c6087cbc1fee5a2c88c40fe96d351375c6c6377
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54747712"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59504549"
 ---
-# <a name="hdinsight-python-management-sdk-preview"></a>HDInsight Python Management SDK (プレビュー)
+# <a name="hdinsight-sdk-for-python"></a>Python 用の HDInsight SDK
 
 ## <a name="overview"></a>概要
 
-HDInsight Python SDK には、HDInsight クラスターの管理に使用できるクラスとメソッドが用意されています。 これには、スクリプト アクションを作成、削除、更新、一覧表示、サイズ変更、実行したり、HDInsight クラスターのプロパティを監視、取得したりする操作が含まれます。
+Python 用の HDInsight SDK には、HDInsight クラスターの管理に使用できるクラスとメソッドが用意されています。 これには、スクリプト アクションを作成、削除、更新、一覧表示、サイズ変更、実行したり、HDInsight クラスターのプロパティを監視、取得したりする操作が含まれます。
 
 ## <a name="prerequisites"></a>前提条件
 
@@ -28,7 +28,7 @@ HDInsight Python SDK には、HDInsight クラスターの管理に使用でき�
 
 ## <a name="sdk-installation"></a>SDK のインストール
 
-HDInsight Python SDK は、[Python Package Index](https://pypi.org/project/azure-mgmt-hdinsight/) にあり、次のコマンドを実行してインストールできます。 
+Python 用の HDInsight SDK は、[Python Package Index](https://pypi.org/project/azure-mgmt-hdinsight/) にあり、次のコマンドを実行してインストールできます。 
 
 `pip install azure-mgmt-hdinsight`
 
@@ -235,6 +235,10 @@ client.clusters.create(
         properties=params
     ))
 ```
+
+#### <a name="samples"></a>サンプル
+
+HDInsight クラスターの一般的な数種類のコード サンプルを [HDInsight Python のサンプル](https://github.com/Azure-Samples/hdinsight-python-sdk-samples)に関するページから入手することもできます。
 
 ### <a name="get-cluster-details"></a>クラスターの詳細の取得
 
