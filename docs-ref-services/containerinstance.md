@@ -2,21 +2,21 @@
 title: Python 用 Azure Container Instances ライブラリ
 description: Python 用 Azure Container Instances ライブラリのリファレンス
 keywords: Azure, python, SDK, API, ACI, container, instances
-author: mmacy
+author: dlepow
 manager: jeconnoc
-ms.date: 06/04/2018
-ms.author: marsma
+ms.date: 04/15/2019
+ms.author: danlep
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: python
 ms.service: container-instances
-ms.openlocfilehash: 95571e0da6ef82ef045d8c9ba0a5beb0abe9b63a
-ms.sourcegitcommit: f439ba940d5940359c982015db7ccfb82f9dffd9
+ms.openlocfilehash: 88df9443efb98bc5cec26c5eb4b01a4956141d40
+ms.sourcegitcommit: 1b45953f168cbf36869c24c1741d70153b88b9fc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "52273018"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59675937"
 ---
 # <a name="azure-container-instances-libraries-for-python"></a>Python 用 Azure Container Instances ライブラリ
 
@@ -56,7 +56,8 @@ SDK クライアント (次の例の Azure Container Instances クライアン�
 
 資格情報ファイルを作成し、`AZURE_AUTH_LOCATION` 環境変数を設定したら、[client_factory][client_factory] モジュールの `get_client_from_auth_file` メソッドを使用して、[ResourceManagementClient][ResourceManagementClient] オブジェクトと [ContainerInstanceManagementClient][ContainerInstanceManagementClient] オブジェクトを初期化します。
 
-<!-- SOURCE REPO: https://github.com/Azure-Samples/aci-docs-sample-python --> [!code-python[authenticate](~/aci-docs-sample-python/src/aci_docs_sample.py#L45-L58 "Authenticate ACI and Resource Manager clients")]
+<!-- SOURCE REPO: https://github.com/Azure-Samples/aci-docs-sample-python -->
+[!code-python[authenticate](~/aci-docs-sample-python/src/aci_docs_sample.py#L45-L58 "Authenticate ACI and Resource Manager clients")]
 
 Azure の Python 管理ライブラリで使用できる認証方法の詳細については、「[Python 用 Azure 管理ライブラリを使用した認証](/python/azure/python-sdk-azure-authenticate)」を参照してください。
 
@@ -64,13 +65,15 @@ Azure の Python 管理ライブラリで使用できる認証方法の詳細に
 
 この例では、1 つのコンテナーを含むコンテナー グループが作成されます
 
-<!-- SOURCE REPO: https://github.com/Azure-Samples/aci-docs-sample-python --> [!code-python[create_container_group](~/aci-docs-sample-python/src/aci_docs_sample.py#L94-L140 "Create single-container group")]
+<!-- SOURCE REPO: https://github.com/Azure-Samples/aci-docs-sample-python -->
+[!code-python[create_container_group](~/aci-docs-sample-python/src/aci_docs_sample.py#L94-L141 "Create single-container group")]
 
 ## <a name="create-container-group---multiple-containers"></a>コンテナー グループを作成する - 複数のコンテナー
 
 この例では、アプリケーション コンテナーとサイドカー コンテナーという 2 つのコンテナーを含むコンテナー グループが作成されます。
 
-<!-- SOURCE REPO: https://github.com/Azure-Samples/aci-docs-sample-python --> [!code-python[create_container_group_multi](~/aci-docs-sample-python/src/aci_docs_sample.py#L143-L196 "Create multi-container group")]
+<!-- SOURCE REPO: https://github.com/Azure-Samples/aci-docs-sample-python -->
+[!code-python[create_container_group_multi](~/aci-docs-sample-python/src/aci_docs_sample.py#L144-L197 "Create multi-container group")]
 
 ## <a name="create-task-based-container-group"></a>タスク ベースのコンテナー グループを作成する
 
@@ -89,7 +92,8 @@ Azure の Python 管理ライブラリで使用できる認証方法の詳細に
 * [再起動ポリシー](/azure/container-instances/container-instances-restart-policy) - コンテナーは再起動ポリシー "Never" を使用して構成されます。これは、バッチ ジョブの一環として実行されるタスク ベースのコンテナーに有用です。
 * [AzureOperationPoller][AzureOperationPoller] による操作のポーリング - create メソッドの呼び出し後、その操作はポーリングされます。これにより、操作が完了したことを判断し、コンテナー グループのログを取得できます。
 
-<!-- SOURCE REPO: https://github.com/Azure-Samples/aci-docs-sample-python --> [!code-python[create_container_group_task](~/aci-docs-sample-python/src/aci_docs_sample.py#L199-L275 "Run a task-based container")]
+<!-- SOURCE REPO: https://github.com/Azure-Samples/aci-docs-sample-python -->
+[!code-python[create_container_group_task](~/aci-docs-sample-python/src/aci_docs_sample.py#L200-L276 "Run a task-based container")]
 
 ## <a name="list-container-groups"></a>コンテナー グループの一覧を表示する
 
@@ -97,7 +101,8 @@ Azure の Python 管理ライブラリで使用できる認証方法の詳細に
 
 コンテナー グループの一覧を表示すると、返された各グループの [instance_view][instance_view] は `None` になっています。 コンテナー グループ内のコンテナーの詳細を取得するには、コンテナー グループに対して [get][containergroupoperations_get] を使用します。これにより、`instance_view` プロパティが設定されたグループが返されます。 コンテナー グループのコンテナーをその `instance_view` で反復処理する例については、次の「[既存のコンテナー グループを取得する](#get-an-existing-container-group)」を参照してください。
 
-<!-- SOURCE REPO: https://github.com/Azure-Samples/aci-docs-sample-python --> [!code-python[list_container_groups](~/aci-docs-sample-python/src/aci_docs_sample.py#L278-L292 "List container groups")]
+<!-- SOURCE REPO: https://github.com/Azure-Samples/aci-docs-sample-python -->
+[!code-python[list_container_groups](~/aci-docs-sample-python/src/aci_docs_sample.py#L279-L293 "List container groups")]
 
 ## <a name="get-an-existing-container-group"></a>既存のコンテナー グループを取得する
 
@@ -105,13 +110,15 @@ Azure の Python 管理ライブラリで使用できる認証方法の詳細に
 
 [取得操作][containergroupoperations_get]によって、[instance_view][instance_view] が設定されたコンテナー グループが返されます。これにより、グループ内の各コンテナーを反復処理できます。 コンテナー グループの `instance_vew` プロパティは `get` 操作によってのみ設定されます。サブスクリプションまたはリソース グループ内のコンテナー グループを一覧表示しても、この操作は性質上負荷がかかる可能性があるため、インスタンス ビューは設定されません (たとえば、数百のコンテナー グループを一覧表示すると、それぞれのグループに複数のコンテナーが含まれる可能性があります)。 前に「[コンテナー グループの一覧を表示する](#list-container-groups)」で説明したように、`list` の実行後、特定のコンテナー グループのコンテナー インスタンスの詳細を取得するには、そのグループに対して `get` を実行する必要があります。
 
-<!-- SOURCE REPO: https://github.com/Azure-Samples/aci-docs-sample-python --> [!code-python[get_container_group](~/aci-docs-sample-python/src/aci_docs_sample.py#L295-L324 "Get container group")]
+<!-- SOURCE REPO: https://github.com/Azure-Samples/aci-docs-sample-python -->
+[!code-python[get_container_group](~/aci-docs-sample-python/src/aci_docs_sample.py#L296-L325 "Get container group")]
 
 ## <a name="delete-a-container-group"></a>コンテナー グループを削除する
 
 この例では、リソース グループの複数のコンテナー グループと、リソース グループが削除されます。
 
-<!-- SOURCE REPO: https://github.com/Azure-Samples/aci-docs-sample-python --> [!code-python[delete_container_group](~/aci-docs-sample-python/src/aci_docs_sample.py#L83-L91 "Delete container groups and resource group")]
+<!-- SOURCE REPO: https://github.com/Azure-Samples/aci-docs-sample-python -->
+[!code-python[delete_container_group](~/aci-docs-sample-python/src/aci_docs_sample.py#L83-L91 "Delete container groups and resource group")]
 
 ## <a name="next-steps"></a>次の手順
 

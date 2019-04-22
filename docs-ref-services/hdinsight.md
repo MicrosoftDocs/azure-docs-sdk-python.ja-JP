@@ -7,12 +7,12 @@ ms.author: tyfox
 ms.date: 04/10/2019
 ms.topic: reference
 ms.devlang: python
-ms.openlocfilehash: f16e5da474e1c506c800b860b451754a6bdc75bc
-ms.sourcegitcommit: 3c6087cbc1fee5a2c88c40fe96d351375c6c6377
+ms.openlocfilehash: ea9599be9fead5f964fbd4ce4e4bdc78a445918c
+ms.sourcegitcommit: 375a1f9180eb1323fe2af0a7e28fd4676973c68e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59504549"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59586820"
 ---
 # <a name="hdinsight-sdk-for-python"></a>Python 用の HDInsight SDK
 
@@ -131,7 +131,11 @@ client = HDInsightManagementClient(credentials, SUBSCRIPTION_ID)
 
 ### <a name="create-a-cluster"></a>クラスターの作成
 
-新しいクラスターを作成するには、`client.clusters.create()` を呼び出します。 
+新しいクラスターを作成するには、`client.clusters.create()` を呼び出します。
+
+#### <a name="samples"></a>サンプル
+
+HDInsight クラスターの一般的な数種類のコード サンプルを [HDInsight Python のサンプル](https://github.com/Azure-Samples/hdinsight-python-sdk-samples)に関するページから入手することもできます。
 
 #### <a name="example"></a>例
 
@@ -235,10 +239,6 @@ client.clusters.create(
         properties=params
     ))
 ```
-
-#### <a name="samples"></a>サンプル
-
-HDInsight クラスターの一般的な数種類のコード サンプルを [HDInsight Python のサンプル](https://github.com/Azure-Samples/hdinsight-python-sdk-samples)に関するページから入手することもできます。
 
 ### <a name="get-cluster-details"></a>クラスターの詳細の取得
 
