@@ -1,6 +1,6 @@
 ---
 title: Python 用 Azure SQL Database ライブラリ
-description: ODBC ドライバーと pyodbc を使用して Azure SQL Database に接続したり、Management API を使用して Azure SQL インスタンスを管理したりします。
+description: ODBC ドライバーと pyodbc を使用して Azure SQL データベースに接続したり、Management API を使用して Azure SQL インスタンスを管理したりします。
 author: lisawong19
 ms.author: liwong
 manager: routlaw
@@ -19,7 +19,7 @@ ms.locfileid: "33901355"
 
 ## <a name="overview"></a>概要
 
-pyodbc [ODBC データベース ドライバー](https://github.com/mkleehammer/pyodbc/wiki/Drivers-and-Driver-Managers)を使用して、[Azure SQL Database](/azure/sql-database/sql-database-technical-overview) に格納されたデータを Python で処理します。 Azure SQL Database への接続、Transact-SQL ステートメントを使用したデータの照会、pyodbc での[サンプル](https://github.com/mkleehammer/pyodbc/wiki/Getting-started)の使用に関する[クイック スタート](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-python)をご覧ください。
+pyodbc [ODBC データベース ドライバー](https://github.com/mkleehammer/pyodbc/wiki/Drivers-and-Driver-Managers)を使用して、[Azure SQL Database](/azure/sql-database/sql-database-technical-overview) に格納されたデータを Python で処理します。 Azure SQL データベースへの接続、Transact-SQL ステートメントを使用したデータの照会、pyodbc での[サンプル](https://github.com/mkleehammer/pyodbc/wiki/Getting-started)の使用に関する[クイック スタート](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-python)をご覧ください。
 
 ## <a name="install-odbc-driver-and-pyodbc"></a>ODBC ドライバーと pyodbc のインストール
 
