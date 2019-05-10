@@ -12,10 +12,10 @@ ms.technology: azure
 ms.devlang: python
 ms.service: compute
 ms.openlocfilehash: adea3dfd1e38fb8c880009d5a02ab2b8be2a67e1
-ms.sourcegitcommit: 41e90fe75de03d397079a276cdb388305290e27e
+ms.sourcegitcommit: a1248376a21fc9a9441ab1fb982a477bce48f565
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/08/2019
 ms.locfileid: "29478825"
 ---
 # <a name="azure-virtual-machine-libraries"></a>Azure 仮想マシン ライブラリ
@@ -80,7 +80,7 @@ def create_vm()
 * [管理対象のサービス ID で認証を行う][2]
 * [管理対象のサービス ID 拡張機能で仮想マシンを作成する][3]
 * [ロード バランサーを管理する][4]
-* [管理ディスクを作成して構成する][5]
+* [マネージド ディスクを作成して構成する][5]
 * [イメージを一覧表示する][6] 
 * [仮想マシンを監視する][7]
 
