@@ -11,34 +11,34 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: python
 ms.service: multiple
-ms.openlocfilehash: 06e6c8786ebbd88b7d3996b640af96a23cd5689b
-ms.sourcegitcommit: f439ba940d5940359c982015db7ccfb82f9dffd9
+ms.openlocfilehash: 2dd7703e94a814d85716a7b96994666e32f95565
+ms.sourcegitcommit: 3db75daa592da90ea9aa8fd17fb99627a30eb4fd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "52275536"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66179872"
 ---
-# <a name="azure-cdn-libraries-for-python"></a><span data-ttu-id="1d3f5-104">Python 用 Azure CDN ライブラリ</span><span class="sxs-lookup"><span data-stu-id="1d3f5-104">Azure CDN libraries for python</span></span>
+# <a name="azure-cdn-libraries-for-python"></a><span data-ttu-id="37214-104">Python 用 Azure CDN ライブラリ</span><span class="sxs-lookup"><span data-stu-id="37214-104">Azure CDN libraries for python</span></span>
 
-## <a name="overview"></a><span data-ttu-id="1d3f5-105">概要</span><span class="sxs-lookup"><span data-stu-id="1d3f5-105">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="37214-105">概要</span><span class="sxs-lookup"><span data-stu-id="37214-105">Overview</span></span>
 
-<span data-ttu-id="1d3f5-106">[Azure Content Delivery Network (CDN)](https://docs.microsoft.com/en-us/azure/cdn/cdn-overview) を使用すると、世界中で高帯域幅の可用性を実現するための Web コンテンツ キャッシュを提供することができます。</span><span class="sxs-lookup"><span data-stu-id="1d3f5-106">[Azure Content Delivery Network (CDN)](https://docs.microsoft.com/en-us/azure/cdn/cdn-overview) allows you to provide web content caches to ensure high-bandwidth availability across the globe.</span></span>
+<span data-ttu-id="37214-106">[Azure Content Delivery Network (CDN)](https://docs.microsoft.com/en-us/azure/cdn/cdn-overview) を使用すると、世界中で高帯域幅の可用性を実現するための Web コンテンツ キャッシュを提供することができます。</span><span class="sxs-lookup"><span data-stu-id="37214-106">[Azure Content Delivery Network (CDN)](https://docs.microsoft.com/en-us/azure/cdn/cdn-overview) allows you to provide web content caches to ensure high-bandwidth availability across the globe.</span></span>
 
-<span data-ttu-id="1d3f5-107">Azure CDN を導入するには、「[Azure CDN の概要](https://docs.microsoft.com/en-us/azure/cdn/cdn-create-new-endpoint)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="1d3f5-107">To get started with Azure CDN, see [Getting started with Azure CDN](https://docs.microsoft.com/en-us/azure/cdn/cdn-create-new-endpoint).</span></span>
+<span data-ttu-id="37214-107">Azure CDN を導入するには、「[Azure CDN の概要](https://docs.microsoft.com/en-us/azure/cdn/cdn-create-new-endpoint)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="37214-107">To get started with Azure CDN, see [Getting started with Azure CDN](https://docs.microsoft.com/en-us/azure/cdn/cdn-create-new-endpoint).</span></span>
 
-## <a name="management-apis"></a><span data-ttu-id="1d3f5-108">管理 API</span><span class="sxs-lookup"><span data-stu-id="1d3f5-108">Management APIs</span></span>
+## <a name="management-apis"></a><span data-ttu-id="37214-108">管理 API</span><span class="sxs-lookup"><span data-stu-id="37214-108">Management APIs</span></span>
 
-<span data-ttu-id="1d3f5-109">Management API で Azure CDN を作成、照会、管理します。</span><span class="sxs-lookup"><span data-stu-id="1d3f5-109">Create, query, and manage Azure CDNs with the management API.</span></span>
+<span data-ttu-id="37214-109">Management API で Azure CDN を作成、照会、管理します。</span><span class="sxs-lookup"><span data-stu-id="37214-109">Create, query, and manage Azure CDNs with the management API.</span></span>
 
-<span data-ttu-id="1d3f5-110">pip で管理パッケージをインストールします。</span><span class="sxs-lookup"><span data-stu-id="1d3f5-110">Install the management package via pip.</span></span>
+<span data-ttu-id="37214-110">pip で管理パッケージをインストールします。</span><span class="sxs-lookup"><span data-stu-id="37214-110">Install the management package via pip.</span></span>
 
 ```bash
 pip install azure-mgmt-cdn
 ```
 
-### <a name="example"></a><span data-ttu-id="1d3f5-111">例</span><span class="sxs-lookup"><span data-stu-id="1d3f5-111">Example</span></span>
+### <a name="example"></a><span data-ttu-id="37214-111">例</span><span class="sxs-lookup"><span data-stu-id="37214-111">Example</span></span>
 
-<span data-ttu-id="1d3f5-112">単一の定義済みエンドポイントを備えた CDN プロファイルを作成しています。</span><span class="sxs-lookup"><span data-stu-id="1d3f5-112">Creating a CDN profile with a single defined endpoint:</span></span>
+<span data-ttu-id="37214-112">単一の定義済みエンドポイントを備えた CDN プロファイルを作成しています。</span><span class="sxs-lookup"><span data-stu-id="37214-112">Creating a CDN profile with a single defined endpoint:</span></span>
 
 ```python
 from azure.mgmt.cdn import CdnManagementClient
@@ -54,7 +54,7 @@ profile_poller = cdn_client.profiles.create('my-resource-group',
                                             })
 profile = profile_poller.result()
 
-endpoint_poller = client.endpoints.create('my-resource-group',
+endpoint_poller = cdn_client.endpoints.create('my-resource-group',
                                           'cdn-name',
                                           'unique-endpoint-name', 
                                           { 
@@ -69,4 +69,4 @@ endpoint = endpoint_poller.result()
 ```
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="1d3f5-113">Management API を探す</span><span class="sxs-lookup"><span data-stu-id="1d3f5-113">Explore the Management APIs</span></span>](/python/api/overview/azure/cdn/management)
+> [<span data-ttu-id="37214-113">Management API を探す</span><span class="sxs-lookup"><span data-stu-id="37214-113">Explore the Management APIs</span></span>](/python/api/overview/azure/cdn/management)
