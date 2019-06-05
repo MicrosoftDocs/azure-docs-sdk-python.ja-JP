@@ -11,16 +11,17 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: python
 ms.service: multiple
-ms.openlocfilehash: 792feac12f8328e2467017530065350e347c59b7
-ms.sourcegitcommit: 757bf84535fd9d8299c4b51ec92a5ab1926cb671
+ms.openlocfilehash: 6014937fb41d6074e94578ccc47c30eb7b3f63d2
+ms.sourcegitcommit: 434186988284e0a8268a9de11645912a81226d6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/27/2018
-ms.locfileid: "29565821"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66376872"
 ---
 # <a name="installation"></a>インストール
 
 ## <a name="which-python-and-which-version-to-use"></a>使用する Python とそのバージョン
+
 いくつかの Python インタープリターが提供されています。以下に例を示します。
 
 * CPython - 最も一般的に使用されている標準的な Python インタープリター
@@ -31,6 +32,7 @@ ms.locfileid: "29565821"
 **CPython** v2.7 または v3.4 以降および PyPy 5.4.0 が、Python Azure SDK に対してテストされ、サポートされています。
 
 ## <a name="where-to-get-python"></a>Python を入手するには
+
 CPython はいくつかの方法で入手できます。
 
 * [Python](https://www.python.org/) から直接入手
@@ -70,6 +72,8 @@ pip install --pre azure
 
 `azure` をソースからインストールする場合は、次のようにします。
 
-    git clone git://github.com/Azure/azure-sdk-for-python.git
-    cd azure-sdk-for-python
-    python setup.py install
+```bash
+git clone git://github.com/Azure/azure-sdk-for-python.git
+cd azure-sdk-for-python
+python setup.py install
+```
