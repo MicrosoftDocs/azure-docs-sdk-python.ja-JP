@@ -11,12 +11,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: python
 ms.service: multiple
-ms.openlocfilehash: 736b2dd747842caa50418afc8219dafae655db39
-ms.sourcegitcommit: f439ba940d5940359c982015db7ccfb82f9dffd9
+ms.openlocfilehash: 5890c2091f8456dd9b8bcb68f8a34eed3cae6e04
+ms.sourcegitcommit: d7ad0e8b4ba4add5e6f63e6b9eac54ecccdc7090
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "52277459"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67148171"
 ---
 # <a name="azure-cognitive-services-modules-for-python"></a>Python 用 Azure Cognitive Services モジュール
 
@@ -49,7 +49,7 @@ Computer Vision API の[詳細](/azure/cognitive-services/computer-vision/home)�
 [pip](https://pip.pypa.io/en/stable/quickstart/) で Python モジュールを入手する:
 
 ```
-pip install azure-cognitiveservices-vision-computervision
+pip install azure-cognitiveservices-vision-contentmoderator
 ```
 
 Content Moderator サービスの[詳細](/azure/cognitive-services/content-moderator/overview)を確認する。
