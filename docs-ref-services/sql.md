@@ -2,18 +2,18 @@
 title: Python 用 Azure SQL Database ライブラリ
 description: ODBC ドライバーと pyodbc を使用して Azure SQL データベースに接続したり、Management API を使用して Azure SQL インスタンスを管理したりします。
 author: lisawong19
-ms.author: liwong
+ms.author: routlaw
 manager: routlaw
 ms.date: 01/09/2018
 ms.topic: reference
 ms.devlang: python
 ms.service: sql-database
-ms.openlocfilehash: 5b73977fb58ed3cb17d675784da921b0e199d165
-ms.sourcegitcommit: 560362db0f65307c8b02b7b7ad8642b5c4aa6294
+ms.openlocfilehash: 9b8a5b120425fc600f34c1e4c4456b0888814fe8
+ms.sourcegitcommit: 46bebbf5dd558750043ce5afadff2ec3714a54e6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33901355"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67534206"
 ---
 # <a name="azure-sql-database-libraries-for-python"></a>Python 用 Azure SQL Database ライブラリ
 
@@ -26,7 +26,7 @@ pyodbc [ODBC データベース ドライバー](https://github.com/mkleehammer/
 ```bash
 pip install pyodbc
 ```
-Python とデータベースの通信ライブラリのインストールの詳細については、[こちら](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-python#install-the-python-and-database-communication-libraries)をご覧ください。
+Python とデータベースの通信ライブラリのインストールの詳細については、[こちら](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-python#prerequisites)をご覧ください。
 
 ## <a name="connect-and-execute-a-sql-query"></a>接続と SQL クエリの実行
 
@@ -60,7 +60,7 @@ while row:
 
 ## <a name="connecting-to-orms"></a>ORM への接続
 
-pyodbc は、[SQLAlchemy](http://docs.sqlalchemy.org/en/latest/dialects/mssql.html?highlight=pyodbc#module-sqlalchemy.dialects.mssql.pyodbc) や [Django](https://github.com/lionheart/django-pyodbc/) などの他の ORM で動作します。 
+pyodbc は、[SQLAlchemy](https://docs.sqlalchemy.org/en/latest/dialects/mssql.html?highlight=pyodbc#module-sqlalchemy.dialects.mssql.pyodbc) や [Django](https://github.com/lionheart/django-pyodbc/) などの他の ORM で動作します。 
 
 ## <a name="management-apipythonapioverviewazuresqlmanagement"></a>[Management API](/python/api/overview/azure/sql/management)
 

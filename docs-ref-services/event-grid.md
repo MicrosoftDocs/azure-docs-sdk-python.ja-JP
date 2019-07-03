@@ -3,18 +3,18 @@ title: Python 用 Azure Event Grid ライブラリ
 description: ''
 keywords: Azure, Python, SDK, API, Event Grid
 author: lisawong19
-ms.author: liwong
+ms.author: routlaw
 manager: routlaw
 ms.date: 08/21/2017
 ms.topic: article
 ms.devlang: python
 ms.service: event-grid
-ms.openlocfilehash: bfaa1908295eb77531e399f1337acdeee512005f
-ms.sourcegitcommit: f439ba940d5940359c982015db7ccfb82f9dffd9
+ms.openlocfilehash: e5df1078116f13f959923eac3e0c7b5789545278
+ms.sourcegitcommit: 46bebbf5dd558750043ce5afadff2ec3714a54e6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "52276836"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67534298"
 ---
 # <a name="event-grid-libraries-for-python"></a>Python 用 Event Grid ライブラリ
 
@@ -88,7 +88,7 @@ pip install azure-mgmt-eventgrid
 ### <a name="example"></a>例
 
 次のコードでは、カスタム トピックを作成し、エンドポイントをそのトピックにサブスクライブします。 その後、HTTPS 経由でイベントをトピックに送信します。
-RequestBin は、エンドポイントを作成してそこに送信された要求を確認することができるオープン ソースのサードパーティ ツールです。 [RequestBin](https://requestb.in/) にアクセスし、**[Create a RequestBin]\(RequestBin の作成\)** をクリックします。 Bin URL をコピーしてください。トピックをサブスクライブするときにこの URL が必要になります。
+RequestBin は、エンドポイントを作成してそこに送信された要求を確認することができるオープン ソースのサードパーティ ツールです。 [RequestBin](https://requestbin.com) にアクセスし、 **[Create a RequestBin]\(RequestBin の作成\)** をクリックします。 Bin URL をコピーしてください。トピックをサブスクライブするときにこの URL が必要になります。
 
 ```python
 from azure.mgmt.resource import ResourceManagementClient

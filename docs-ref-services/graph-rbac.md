@@ -11,12 +11,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: python
 ms.service: multiple
-ms.openlocfilehash: 27238e00463ae30ec0e47e8c18497ffb9edac62c
-ms.sourcegitcommit: 253c8d4b3dbc2bb76d1a273a757ab96ba37617a1
+ms.openlocfilehash: e9b0aba7998565284ae18e0036da96d033b2b05f
+ms.sourcegitcommit: 46bebbf5dd558750043ce5afadff2ec3714a54e6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65731538"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67534274"
 ---
 # <a name="azure-active-directory-graph-libraries-for-python"></a>Python 用 Azure Active Directory Graph ライブラリ
 
@@ -30,7 +30,7 @@ ms.locfileid: "65731538"
 
 ## <a name="overview"></a>概要 
 
-[Active Directory Graph](/azure/active-directory/develop/active-directory-graph-apis) でユーザーのサインオンを行い、アプリケーションと API へのアクセスを制御します。   
+[Active Directory Graph](/azure/active-directory/develop/active-directory-graph-api) でユーザーのサインオンを行い、アプリケーションと API へのアクセスを制御します。    
 
 ## <a name="client-library"></a>クライアント ライブラリ   
 

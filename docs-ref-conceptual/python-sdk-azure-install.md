@@ -11,12 +11,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: python
 ms.service: multiple
-ms.openlocfilehash: 6014937fb41d6074e94578ccc47c30eb7b3f63d2
-ms.sourcegitcommit: 434186988284e0a8268a9de11645912a81226d6b
+ms.openlocfilehash: 9fd11cbc7b987b970ceee85c7b11b22e3d6299ea
+ms.sourcegitcommit: 31d7df367b15ec09a5a610eb333295bba0f6b351
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66376872"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67395449"
 ---
 # <a name="installation"></a>インストール
 
@@ -77,3 +77,24 @@ git clone git://github.com/Azure/azure-sdk-for-python.git
 cd azure-sdk-for-python
 python setup.py install
 ```
+
+## <a name="install-an-older-version-with-pip"></a>pip を使用した古いバージョンのインストール
+'azure==3.0.0' とバージョン詳細を指定することにより、古いバージョンの `azure` をインストールできます。
+```bash
+pip install azure==3.0.0 
+```
+## <a name="check-sdk-installation-details-with-pip"></a>pip を使用した SDK のインストール詳細の確認
+`azure` SDK のインストール場所、バージョンの詳細などを確認できます。
+```bash
+pip show azure # Show installed version, location details etc.
+pip freeze     # Output installed packages in requirements format.
+pip list       # List installed packages, including editables.
+```
+## <a name="to-uninstall-with-pip"></a>pip でのアンインストール
+`azure` メタ パッケージを使用して、すべての Azure ライブラリを 1 行でアンインストールできます。
+```bash
+pip uninstall azure 
+```
+> [!NOTE]
+> `pip uninstall azure` により `azure` メタ パッケージが削除されますが、個別の `azure-*` パッケージ (および他の `adal` や `msrest` など) はそのまま残ります。 Python と pip の特徴として、依存関係のあるすべてのパッケージに関して、最初のパッケージをアンインストールしても依存関係はアンインストールされません。 `azure-` およびそのサポート パッケージを削除するには、コマンド `pip freeze | grep 'azure-' | xargs pip uninstall -y` を実行します (その後、adal、msrest、msrestazure の個別のアンインストールを実行します)。
+

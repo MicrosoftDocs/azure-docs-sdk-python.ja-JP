@@ -7,12 +7,12 @@ ms.author: tyfox
 ms.date: 04/10/2019
 ms.topic: reference
 ms.devlang: python
-ms.openlocfilehash: ea9599be9fead5f964fbd4ce4e4bdc78a445918c
-ms.sourcegitcommit: 375a1f9180eb1323fe2af0a7e28fd4676973c68e
+ms.openlocfilehash: 3b0799dd77f7ff447ef997b2d142a6744c4a6858
+ms.sourcegitcommit: 46bebbf5dd558750043ce5afadff2ec3714a54e6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59586820"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67534264"
 ---
 # <a name="hdinsight-sdk-for-python"></a>Python 用の HDInsight SDK
 
@@ -259,7 +259,7 @@ print(my_cluster)
 
 出力は次のようになります。
 
-```
+```output
 {'additional_properties': {}, 'id': '/subscriptions/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX/resourceGroups/<Resource Group Name>/providers/Microsoft.HDInsight/clusters/<Cluster Name>', 'name': '<Cluster Name>', 'type': 'Microsoft.HDInsight/clusters', 'location': '<Location>', 'tags': {}, 'etag': 'XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX', 'properties': <azure.mgmt.hdinsight.models.cluster_get_properties_py3.ClusterGetProperties object at 0x0000013766D68048>}
 ```
 

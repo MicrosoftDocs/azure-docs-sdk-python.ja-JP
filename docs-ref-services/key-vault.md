@@ -1,30 +1,34 @@
 ---
 title: Python 用 Azure Key Vault ライブラリ
 description: Python 用 Azure Key Vault クライアント ライブラリのリファレンス ドキュメント
-author: lisawong19
-keywords: Azure, Python, SDK, API, キー, Key Vault, 認証, シークレット, キー, セキュリティ
-manager: douge
-ms.author: liwong
-ms.date: 07/18/2017
-ms.topic: article
+author: sptramer
+manager: carmonm
+ms.author: sttramer
+ms.date: 06/10/2019
+ms.topic: conceptual
 ms.devlang: python
 ms.service: keyvault
-ms.openlocfilehash: e9ad2630a9004edfb3521f818307c134aa885315
-ms.sourcegitcommit: fc9f0188879abc4afab8cc7d8aae8b2899133529
+ms.openlocfilehash: f4661ee389c13ce8546e7b5cc8866ab7b216d3b0
+ms.sourcegitcommit: 92fa5dbcfd9a20f4a49da5f4bdc03045783d3495
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55065071"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67149334"
 ---
 # <a name="azure-key-vault-libraries-for-python"></a>Python 用 Azure Key Vault ライブラリ
 
-## <a name="overview"></a>概要
+[Azure Key Vault](/azure/key-vault/) は、暗号化キー、シークレット、および証明書の管理用の Azure のストレージと管理のシステムです。 Key Vault 用の Python SDK API は、クライアント ライブラリと管理ライブラリに分割されます。
 
-Azure Key Vault に格納されるキーとシークレットの作成、更新、削除は、クライアント ライブラリを使って行います。
+以下の場合にクライアント ライブラリを使用します。
+- Azure Key Vault に格納されている項目のアクセス、更新、または削除
+- 格納されている証明書のメタデータの取得
+- Key Vault 内の対称キーに対する署名の確認
 
-キー コンテナーの作成、アプリケーションの承認、アクセス許可の管理は、Azure Key Vault 管理ライブラリを使って行います。 
-
-[Azure Key Vault](/azure/key-vault/key-vault-whatis) の詳細はこちらです。
+以下の場合に管理ライブラリを使用します。
+- 新しい Key Vault ストアの作成、更新、または削除
+- コンテナーのアクセス ポリシーの制御
+- サブスクリプションまたはリソース グループによるコンテナーの一覧表示
+- コンテナー名の利用可能性の確認
 
 ## <a name="install-the-libraries"></a>ライブラリをインストールする
 
@@ -36,77 +40,91 @@ pip install azure-keyvault
 
 ## <a name="examples"></a>例
 
-キー コンテナーから [JSON Web キー](https://tools.ietf.org/html/draft-ietf-jose-json-web-key-18)を取得します。
+次の例では、Azure に接続するアプリケーションの推奨されるサインイン方式である、サービス プリンシパル認証を使用しています。 サービス プリンシパル認証の詳細については、「[Python 用 Azure 管理ライブラリを使用した認証](https://docs.microsoft.com/en-us/python/azure/python-sdk-azure-authenticate)」を参照してください。
+
+コンテナーからの非対称キーの公開部分を取得します。
 
 ```python
-from azure.keyvault import KeyVaultClient, KeyVaultAuthentication
+from azure.keyvault import KeyVaultClient
 from azure.common.credentials import ServicePrincipalCredentials
 
-def auth_callback(server, resource, scope):
-    credentials = ServicePrincipalCredentials(
-        client_id = '',
-        secret = '',
-        tenant = '',
-        resource = "https://vault.azure.net"
-    )
-    token = credentials.token
-    return token['token_type'], token['access_token']
+credentials = ServicePrincipalCredentials(
+    client_id = '...',
+    secret = '...',
+    tenant = '...'
+)
 
-client = KeyVaultClient(KeyVaultAuthentication(auth_callback))
+client = KeyVaultClient(credentials)
 
+# VAULT_URL must be in the format 'https://<vaultname>.vault.azure.net'
+# KEY_VERSION is required, and can be obtained with the KeyVaultClient.get_key_versions(self, vault_url, key_name) API
 key_bundle = client.get_key(VAULT_URL, KEY_NAME, KEY_VERSION)
-json_key = key_bundle.key
+key = key_bundle.key
 ```
 
-同様に、次のスニペットを使用して、コンテナーからシークレットを取得できます。
+コンテナーからシークレットを取得します。
 
 ```python
-from azure.keyvault import KeyVaultClient, KeyVaultAuthentication
+from azure.keyvault import KeyVaultClient
 from azure.common.credentials import ServicePrincipalCredentials
 
-def auth_callback(server, resource, scope):
-    credentials = ServicePrincipalCredentials(
-        client_id = '',
-        secret = '',
-        tenant = '',
-        resource = "https://vault.azure.net"
-    )
-    token = credentials.token
-    return token['token_type'], token['access_token']
+credentials = ServicePrincipalCredentials(
+    client_id = '...',
+    secret = '...',
+    tenant = '...'
+)
 
-client = KeyVaultClient(KeyVaultAuthentication(auth_callback))
+client = KeyVaultClient(credentials)
 
+# VAULT_URL must be in the format 'https://<vaultname>.vault.azure.net'
+# SECRET_VERSION is required, and can be obtained with the KeyVaultClient.get_secret_versions(self, vault_url, secret_id) API
 secret_bundle = client.get_secret(VAULT_URL, SECRET_ID, SECRET_VERSION)
-
-print(secret_bundle.value)
+secret = secret_bundle.value
 ```
 
 > [!div class="nextstepaction"]
 > [クライアント API を探す](/python/api/overview/azure/keyvault/client)
 
-### <a name="management-api"></a>管理 API
+### <a name="management-library"></a>管理ライブラリ
 
 ```bash
 pip install azure-mgmt-keyvault
 ```
 
 ### <a name="example"></a>例
+
 次の例は、Azure Key Vault を作成する方法を示します。 
 
 ```python
 from azure.mgmt.keyvault import KeyVaultManagementClient
+from azure.common.credentials import ServicePrincipalCredentials
 
-GROUP_NAME = 'your_resource_group_name'
-KV_NAME = 'your_key_vault_name'
-#The object ID of the User or Application for access policies. Find this number in the portal
-OBJECT_ID = '00000000-0000-0000-0000-000000000000'
-TENANT_ID = os.environ['AZURE_TENANT_ID']
 
-kv_client = KeyVaultManagementClient(credentials, subscription_id)
+credentials = ServicePrincipalCredentials(
+    client_id = '...',
+    secret = '...',
+    tenant = '...'
+)
 
-operation = kv_client.vaults.create_or_update(
-    GROUP_NAME,
-    KV_NAME,
+# Even when using service principal credentials, a subscription ID is required. For service principals,
+# this should be the subscription used to create the service principal. Storing a token like a valid
+# subscription ID in code is not recommended and only shown here for example purposes.
+SUBSCRIPTION_ID = '...'
+client = KeyVaultManagementClient(credentials, SUBSCRIPTION_ID)
+
+# The object ID and organization ID (tenant) of the user, application, or service principal for access policies.
+# These values can be found through the Azure CLI or the Portal.
+ALLOW_OBJECT_ID = '...'
+ALLOW_TENANT_ID = '...'
+
+RESOURCE_GROUP = '...'
+VAULT_NAME = '...'
+
+# Vault properties may also be created by using the azure.mgmt.keyvault.models.VaultCreateOrUpdateParameters
+# class, rather than a map. 
+operation = client.vaults.create_or_update(
+    RESOURCE_GROUP,
+    VAULT_NAME,
     {
         'location': 'eastus',
         'properties': {
@@ -115,8 +133,8 @@ operation = kv_client.vaults.create_or_update(
             },
             'tenant_id': TENANT_ID,
             'access_policies': [{
-                'tenant_id': TENANT_ID,
                 'object_id': OBJECT_ID,
+                'tenant_id': ALLOW_TENANT_ID,
                 'permissions': {
                     'keys': ['all'],
                     'secrets': ['all']
@@ -127,18 +145,15 @@ operation = kv_client.vaults.create_or_update(
 )
 
 vault = operation.result()
-
-VAULT_URI = vault.properties.vault_uri
+print(f'New vault URI: {vault.properties.vault_uri}')
 ```
-> [!div class="nextstepaction"]
-> [クライアント API を探す](/python/api/overview/azure/keyvault/client)
 
 > [!div class="nextstepaction"]
 > [Management API を探す](/python/api/overview/azure/keyvault/management)
 
 ## <a name="samples"></a>サンプル
-* [キー コンテナーの管理][1] 
-* [キー コンテナーの回復][2]
+* [Azure Key Vault の管理][1] 
+* [Azure Key Vault の回復][2]
 
 [1]: https://azure.microsoft.com/resources/samples/key-vault-python-manage/
 [2]: https://azure.microsoft.com/resources/samples/key-vault-recovery-python/

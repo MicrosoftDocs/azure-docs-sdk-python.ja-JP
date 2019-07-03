@@ -11,12 +11,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: python
 ms.service: multiple
-ms.openlocfilehash: 5890c2091f8456dd9b8bcb68f8a34eed3cae6e04
-ms.sourcegitcommit: d7ad0e8b4ba4add5e6f63e6b9eac54ecccdc7090
+ms.openlocfilehash: 5a23a52414e70facd6feae3af3956a5131f6b5c4
+ms.sourcegitcommit: 46bebbf5dd558750043ce5afadff2ec3714a54e6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67148171"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67534341"
 ---
 # <a name="azure-cognitive-services-modules-for-python"></a>Python 用 Azure Cognitive Services モジュール
 
@@ -36,7 +36,7 @@ Python 用 Azure Cognitive Services モジュールを使用して、画像お�
 
 [pip](https://pip.pypa.io/en/stable/quickstart/) で Python モジュールを入手する:
 
-```
+```python
 pip install azure-cognitiveservices-vision-computervision
 ```
 
@@ -48,7 +48,7 @@ Computer Vision API の[詳細](/azure/cognitive-services/computer-vision/home)�
 
 [pip](https://pip.pypa.io/en/stable/quickstart/) で Python モジュールを入手する:
 
-```
+```python
 pip install azure-cognitiveservices-vision-contentmoderator
 ```
 
@@ -60,7 +60,7 @@ Content Moderator サービスの[詳細](/azure/cognitive-services/content-mode
 
 [pip](https://pip.pypa.io/en/stable/quickstart/) で Python モジュールを入手する:
 
-```
+```python
 pip install azure-cognitiveservices-vision-customvision
 ```
 
@@ -74,7 +74,7 @@ Custom Vision Service の[詳細](/azure/cognitive-services/Custom-Vision-Servic
 
 [pip](https://pip.pypa.io/en/stable/quickstart/) で Python モジュールを入手する:
 
-```
+```python
 pip install cognitive-face
 ```
 
@@ -90,7 +90,7 @@ Bing Web Search API でインデックス設定された Web ドキュメント�
 
 [pip](https://pip.pypa.io/en/stable/quickstart/) で Python モジュールを入手する:
 
-```
+```python
 pip install azure-cognitiveservices-search-websearch
 ```
 
@@ -104,7 +104,7 @@ Bing Web Search API の[詳細](/azure/cognitive-services/bing-web-search/overvi
 
 [pip](https://pip.pypa.io/en/stable/quickstart/) で Python モジュールを入手する:
 
-```
+```python
 pip install azure-cognitiveservices-search-imagesearch
 ```
 
@@ -119,7 +119,7 @@ Bing Image Search API の[詳細](/azure/cognitive-services/bing-image-search/ov
 
 [pip](https://pip.pypa.io/en/stable/quickstart/) で Python モジュールを入手する:
 
-```
+```python
 pip install azure-cognitiveservices-search-entitysearch
 ```
 
@@ -131,7 +131,7 @@ Bing Entity Search API の[詳細](/azure/cognitive-services/bing-entities-searc
 
 [pip](https://pip.pypa.io/en/stable/quickstart/) で Python モジュールを入手する:
 
-```
+```python
 pip install azure-cognitiveservices-search-customsearch
 ```
 
@@ -145,7 +145,7 @@ Web 上のビデオを検索し、作成者、エンコード、長さ、およ�
 
 [pip](https://pip.pypa.io/en/stable/quickstart/) で Python モジュールを入手する:
 
-```
+```python
 pip install azure-cognitiveservices-search-videosearch
 ```
 
@@ -160,11 +160,11 @@ Web 上のニュース記事を検索し、記事、関連するニュース、�
 
 [pip](https://pip.pypa.io/en/stable/quickstart/) で Python モジュールを入手する:
 
-```
+```python
 pip install azure-cognitiveservices-search-newssearch
 ```
 
-Bing News Search サービスの[詳細](/azure/cognitive-services/bing-news-search/search-the-web)を確認し、[News Search API Python クイックスタート](//azure/cognitive-services/bing-news-search/python)を開始する。
+Bing News Search サービスの[詳細](/azure/cognitive-services/bing-news-search/search-the-web)を確認し、[News Search API Python クイックスタート](/azure/cognitive-services/bing-news-search/python)を開始する。
 
 
 ## <a name="language-modules"></a>言語モジュール
@@ -181,7 +181,7 @@ Text Analytics API は、未加工のテキストに対する自然言語処理�
 
 [pip](https://pip.pypa.io/en/stable/quickstart/) で Python モジュールを入手する:
 
-```
+```python
 pip install azure-cognitiveservices-language-textanalytics
 ```
 
@@ -196,7 +196,7 @@ Bing Spell Check API を使用して、コンテキストに応じた文法お�
 
 [pip](https://pip.pypa.io/en/stable/quickstart/) で Python モジュールを入手する:
 
-```
+```python
 pip install azure-cognitiveservices-language-spellcheck
 ```
 
