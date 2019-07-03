@@ -3,7 +3,7 @@ title: Python 用 Azure Scheduler ライブラリ
 description: Python 用 Azure Scheduler ライブラリのリファレンス
 keywords: Azure, Python, SDK, API, Scheduler
 author: lisawong19
-ms.author: liwong
+ms.author: routlaw
 manager: mbaldwin
 ms.date: 02/21/2018
 ms.topic: article
@@ -11,31 +11,31 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: python
 ms.service: multiple
-ms.openlocfilehash: 98e32799a4240f9946caf1ab7b05e35605d89dc9
-ms.sourcegitcommit: f439ba940d5940359c982015db7ccfb82f9dffd9
+ms.openlocfilehash: 73c33ff808212fade192ca7c7c05a8e64d3fafda
+ms.sourcegitcommit: 46bebbf5dd558750043ce5afadff2ec3714a54e6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "52277062"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67534212"
 ---
-# <a name="azure-scheduler-libraries-for-python"></a><span data-ttu-id="23ea9-104">Python 用 Azure Scheduler ライブラリ</span><span class="sxs-lookup"><span data-stu-id="23ea9-104">Azure Scheduler libraries for python</span></span>
+# <a name="azure-scheduler-libraries-for-python"></a><span data-ttu-id="4378d-104">Python 用 Azure Scheduler ライブラリ</span><span class="sxs-lookup"><span data-stu-id="4378d-104">Azure Scheduler libraries for python</span></span>
 
-## <a name="install-the-libraries"></a><span data-ttu-id="23ea9-105">ライブラリをインストールする</span><span class="sxs-lookup"><span data-stu-id="23ea9-105">Install the libraries</span></span>
+## <a name="install-the-libraries"></a><span data-ttu-id="4378d-105">ライブラリをインストールする</span><span class="sxs-lookup"><span data-stu-id="4378d-105">Install the libraries</span></span>
 
-## <a name="management"></a><span data-ttu-id="23ea9-106">管理</span><span class="sxs-lookup"><span data-stu-id="23ea9-106">Management</span></span>
+## <a name="management"></a><span data-ttu-id="4378d-106">管理</span><span class="sxs-lookup"><span data-stu-id="4378d-106">Management</span></span>
 
 ```bash
 pip install azure-mgmt-scheduler
 ```
-## <a name="example"></a><span data-ttu-id="23ea9-107">例</span><span class="sxs-lookup"><span data-stu-id="23ea9-107">Example</span></span>
+## <a name="example"></a><span data-ttu-id="4378d-107">例</span><span class="sxs-lookup"><span data-stu-id="4378d-107">Example</span></span>
 
-### <a name="create-the-management-client"></a><span data-ttu-id="23ea9-108">管理クライアントを作成する</span><span class="sxs-lookup"><span data-stu-id="23ea9-108">Create the management client</span></span>
+### <a name="create-the-management-client"></a><span data-ttu-id="4378d-108">管理クライアントを作成する</span><span class="sxs-lookup"><span data-stu-id="4378d-108">Create the management client</span></span>
 
-<span data-ttu-id="23ea9-109">管理クライアントのインスタンスは、以下のコードで作成します。</span><span class="sxs-lookup"><span data-stu-id="23ea9-109">The following code creates an instance of the management client.</span></span>
+<span data-ttu-id="4378d-109">管理クライアントのインスタンスは、以下のコードで作成します。</span><span class="sxs-lookup"><span data-stu-id="4378d-109">The following code creates an instance of the management client.</span></span>
 
-<span data-ttu-id="23ea9-110">[サブスクリプション一覧](https://manage.windowsazure.com/#Workspaces/AdminTasks/SubscriptionMapping)から取得できる自分の ``subscription_id`` を指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="23ea9-110">You will need to provide your ``subscription_id`` which can be retrieved from [your subscription list](https://manage.windowsazure.com/#Workspaces/AdminTasks/SubscriptionMapping).</span></span>
+<span data-ttu-id="4378d-110">[サブスクリプション一覧](https://manage.windowsazure.com/#Workspaces/AdminTasks/SubscriptionMapping)から取得できる自分の ``subscription_id`` を指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="4378d-110">You will need to provide your ``subscription_id`` which can be retrieved from [your subscription list](https://manage.windowsazure.com/#Workspaces/AdminTasks/SubscriptionMapping).</span></span>
 
-<span data-ttu-id="23ea9-111">Python SDK を使用した Azure Active Directory の認証処理と ``Credentials`` インスタンスの作成について詳しくは、「[Resource Management Authentication (リソース管理の認証)](/python/azure/python-sdk-azure-authenticate)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="23ea9-111">See [Resource Management Authentication](/python/azure/python-sdk-azure-authenticate) for details on handling Azure Active Directory authentication with the Python SDK, and creating a ``Credentials`` instance.</span></span>
+<span data-ttu-id="4378d-111">Python SDK を使用した Azure Active Directory の認証処理と ``Credentials`` インスタンスの作成について詳しくは、「[Resource Management Authentication (リソース管理の認証)](/python/azure/python-sdk-azure-authenticate)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="4378d-111">See [Resource Management Authentication](/python/azure/python-sdk-azure-authenticate) for details on handling Azure Active Directory authentication with the Python SDK, and creating a ``Credentials`` instance.</span></span>
 
 ```python
 from azure.mgmt.scheduler import SchedulerManagementClient
@@ -56,10 +56,10 @@ scheduler_client = SchedulerManagementClient(
 )
 ```
 
-### <a name="create-a-job-collection"></a><span data-ttu-id="23ea9-112">ジョブ コレクションの作成</span><span class="sxs-lookup"><span data-stu-id="23ea9-112">Create a job collection</span></span>
+### <a name="create-a-job-collection"></a><span data-ttu-id="4378d-112">ジョブ コレクションの作成</span><span class="sxs-lookup"><span data-stu-id="4378d-112">Create a job collection</span></span>
 
-<span data-ttu-id="23ea9-113">以下のコードは、既存のリソース グループにジョブ コレクションを作成するものです。</span><span class="sxs-lookup"><span data-stu-id="23ea9-113">The following code creates a job collection under an existing resource group.</span></span>
-<span data-ttu-id="23ea9-114">リソース グループの作成と管理については、[リソース管理](/python/api/overview/azure/azure.mgmt.resource)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="23ea9-114">To create or manage resource groups, see [Resource Management](/python/api/overview/azure/azure.mgmt.resource).</span></span>
+<span data-ttu-id="4378d-113">以下のコードは、既存のリソース グループにジョブ コレクションを作成するものです。</span><span class="sxs-lookup"><span data-stu-id="4378d-113">The following code creates a job collection under an existing resource group.</span></span>
+<span data-ttu-id="4378d-114">リソース グループの作成と管理については、[リソース管理](/python/api/overview/azure/azure.mgmt.resource)に関するページを参照してください。</span><span class="sxs-lookup"><span data-stu-id="4378d-114">To create or manage resource groups, see [Resource Management](/python/api/overview/azure/azure.mgmt.resource).</span></span>
 
 ```python
 from azure.mgmt.scheduler.models import JobCollectionDefinition, JobCollectionProperties, Sku
@@ -82,4 +82,4 @@ scheduler_client.job_collections.create_or_update(
 ```
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="23ea9-115">Management API を探す</span><span class="sxs-lookup"><span data-stu-id="23ea9-115">Explore the Management APIs</span></span>](/python/api/overview/azure/scheduler/management)
+> [<span data-ttu-id="4378d-115">Management API を探す</span><span class="sxs-lookup"><span data-stu-id="4378d-115">Explore the Management APIs</span></span>](/python/api/overview/azure/scheduler/management)

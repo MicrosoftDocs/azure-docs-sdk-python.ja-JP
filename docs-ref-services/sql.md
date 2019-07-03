@@ -2,35 +2,35 @@
 title: Python 用 Azure SQL Database ライブラリ
 description: ODBC ドライバーと pyodbc を使用して Azure SQL データベースに接続したり、Management API を使用して Azure SQL インスタンスを管理したりします。
 author: lisawong19
-ms.author: liwong
+ms.author: routlaw
 manager: routlaw
 ms.date: 01/09/2018
 ms.topic: reference
 ms.devlang: python
 ms.service: sql-database
-ms.openlocfilehash: 5b73977fb58ed3cb17d675784da921b0e199d165
-ms.sourcegitcommit: 560362db0f65307c8b02b7b7ad8642b5c4aa6294
+ms.openlocfilehash: 9b8a5b120425fc600f34c1e4c4456b0888814fe8
+ms.sourcegitcommit: 46bebbf5dd558750043ce5afadff2ec3714a54e6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33901355"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67534206"
 ---
-# <a name="azure-sql-database-libraries-for-python"></a><span data-ttu-id="f9cd9-103">Python 用 Azure SQL Database ライブラリ</span><span class="sxs-lookup"><span data-stu-id="f9cd9-103">Azure SQL Database libraries for Python</span></span>
+# <a name="azure-sql-database-libraries-for-python"></a><span data-ttu-id="407f1-103">Python 用 Azure SQL Database ライブラリ</span><span class="sxs-lookup"><span data-stu-id="407f1-103">Azure SQL Database libraries for Python</span></span>
 
-## <a name="overview"></a><span data-ttu-id="f9cd9-104">概要</span><span class="sxs-lookup"><span data-stu-id="f9cd9-104">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="407f1-104">概要</span><span class="sxs-lookup"><span data-stu-id="407f1-104">Overview</span></span>
 
-<span data-ttu-id="f9cd9-105">pyodbc [ODBC データベース ドライバー](https://github.com/mkleehammer/pyodbc/wiki/Drivers-and-Driver-Managers)を使用して、[Azure SQL Database](/azure/sql-database/sql-database-technical-overview) に格納されたデータを Python で処理します。</span><span class="sxs-lookup"><span data-stu-id="f9cd9-105">Work with data stored in [Azure SQL Database](/azure/sql-database/sql-database-technical-overview) from Python with the pyodbc [ODBC database driver](https://github.com/mkleehammer/pyodbc/wiki/Drivers-and-Driver-Managers).</span></span> <span data-ttu-id="f9cd9-106">Azure SQL データベースへの接続、Transact-SQL ステートメントを使用したデータの照会、pyodbc での[サンプル](https://github.com/mkleehammer/pyodbc/wiki/Getting-started)の使用に関する[クイック スタート](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-python)をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="f9cd9-106">View our [quickstart](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-python) on connecting to an Azure SQL database and using Transact-SQL statements to query data and getting started [sample](https://github.com/mkleehammer/pyodbc/wiki/Getting-started) with pyodbc.</span></span>
+<span data-ttu-id="407f1-105">pyodbc [ODBC データベース ドライバー](https://github.com/mkleehammer/pyodbc/wiki/Drivers-and-Driver-Managers)を使用して、[Azure SQL Database](/azure/sql-database/sql-database-technical-overview) に格納されたデータを Python で処理します。</span><span class="sxs-lookup"><span data-stu-id="407f1-105">Work with data stored in [Azure SQL Database](/azure/sql-database/sql-database-technical-overview) from Python with the pyodbc [ODBC database driver](https://github.com/mkleehammer/pyodbc/wiki/Drivers-and-Driver-Managers).</span></span> <span data-ttu-id="407f1-106">Azure SQL データベースへの接続、Transact-SQL ステートメントを使用したデータの照会、pyodbc での[サンプル](https://github.com/mkleehammer/pyodbc/wiki/Getting-started)の使用に関する[クイック スタート](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-python)をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="407f1-106">View our [quickstart](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-python) on connecting to an Azure SQL database and using Transact-SQL statements to query data and getting started [sample](https://github.com/mkleehammer/pyodbc/wiki/Getting-started) with pyodbc.</span></span>
 
-## <a name="install-odbc-driver-and-pyodbc"></a><span data-ttu-id="f9cd9-107">ODBC ドライバーと pyodbc のインストール</span><span class="sxs-lookup"><span data-stu-id="f9cd9-107">Install ODBC driver and pyodbc</span></span>
+## <a name="install-odbc-driver-and-pyodbc"></a><span data-ttu-id="407f1-107">ODBC ドライバーと pyodbc のインストール</span><span class="sxs-lookup"><span data-stu-id="407f1-107">Install ODBC driver and pyodbc</span></span>
 
 ```bash
 pip install pyodbc
 ```
-<span data-ttu-id="f9cd9-108">Python とデータベースの通信ライブラリのインストールの詳細については、[こちら](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-python#install-the-python-and-database-communication-libraries)をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="f9cd9-108">More [details](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-python#install-the-python-and-database-communication-libraries) about installing the python and database communication libraries.</span></span>
+<span data-ttu-id="407f1-108">Python とデータベースの通信ライブラリのインストールの詳細については、[こちら](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-python#prerequisites)をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="407f1-108">More [details](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-python#prerequisites) about installing the python and database communication libraries.</span></span>
 
-## <a name="connect-and-execute-a-sql-query"></a><span data-ttu-id="f9cd9-109">接続と SQL クエリの実行</span><span class="sxs-lookup"><span data-stu-id="f9cd9-109">Connect and execute a SQL query</span></span>
+## <a name="connect-and-execute-a-sql-query"></a><span data-ttu-id="407f1-109">接続と SQL クエリの実行</span><span class="sxs-lookup"><span data-stu-id="407f1-109">Connect and execute a SQL query</span></span>
 
-### <a name="connect-to-a-sql-database"></a><span data-ttu-id="f9cd9-110">SQL Database への接続</span><span class="sxs-lookup"><span data-stu-id="f9cd9-110">Connect to a SQL database</span></span>
+### <a name="connect-to-a-sql-database"></a><span data-ttu-id="407f1-110">SQL Database への接続</span><span class="sxs-lookup"><span data-stu-id="407f1-110">Connect to a SQL database</span></span>
 
 ```python
 import pyodbc
@@ -45,7 +45,7 @@ cnxn = pyodbc.connect('DRIVER='+driver+';PORT=1433;SERVER='+server+';PORT=1443;D
 cursor = cnxn.cursor()
 ```
 
-### <a name="execute-a-sql-query"></a><span data-ttu-id="f9cd9-111">SQL クエリの実行</span><span class="sxs-lookup"><span data-stu-id="f9cd9-111">Execute a SQL query</span></span>
+### <a name="execute-a-sql-query"></a><span data-ttu-id="407f1-111">SQL クエリの実行</span><span class="sxs-lookup"><span data-stu-id="407f1-111">Execute a SQL query</span></span>
 
 ```python
 cursor.execute("SELECT TOP 20 pc.Name as CategoryName, p.name as ProductName FROM [SalesLT].[ProductCategory] pc JOIN [SalesLT].[Product] p ON pc.productcategoryid = p.productcategoryid")
@@ -56,15 +56,15 @@ while row:
 ```
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="f9cd9-112">pyodbc のサンプル</span><span class="sxs-lookup"><span data-stu-id="f9cd9-112">pyodbc sample</span></span>](https://github.com/mkleehammer/pyodbc/wiki/Getting-started)
+> [<span data-ttu-id="407f1-112">pyodbc のサンプル</span><span class="sxs-lookup"><span data-stu-id="407f1-112">pyodbc sample</span></span>](https://github.com/mkleehammer/pyodbc/wiki/Getting-started)
 
-## <a name="connecting-to-orms"></a><span data-ttu-id="f9cd9-113">ORM への接続</span><span class="sxs-lookup"><span data-stu-id="f9cd9-113">Connecting to ORMs</span></span>
+## <a name="connecting-to-orms"></a><span data-ttu-id="407f1-113">ORM への接続</span><span class="sxs-lookup"><span data-stu-id="407f1-113">Connecting to ORMs</span></span>
 
-<span data-ttu-id="f9cd9-114">pyodbc は、[SQLAlchemy](http://docs.sqlalchemy.org/en/latest/dialects/mssql.html?highlight=pyodbc#module-sqlalchemy.dialects.mssql.pyodbc) や [Django](https://github.com/lionheart/django-pyodbc/) などの他の ORM で動作します。</span><span class="sxs-lookup"><span data-stu-id="f9cd9-114">pyodbc works with other ORMs such as [SQLAlchemy](http://docs.sqlalchemy.org/en/latest/dialects/mssql.html?highlight=pyodbc#module-sqlalchemy.dialects.mssql.pyodbc) and [Django](https://github.com/lionheart/django-pyodbc/).</span></span> 
+<span data-ttu-id="407f1-114">pyodbc は、[SQLAlchemy](https://docs.sqlalchemy.org/en/latest/dialects/mssql.html?highlight=pyodbc#module-sqlalchemy.dialects.mssql.pyodbc) や [Django](https://github.com/lionheart/django-pyodbc/) などの他の ORM で動作します。</span><span class="sxs-lookup"><span data-stu-id="407f1-114">pyodbc works with other ORMs such as [SQLAlchemy](https://docs.sqlalchemy.org/en/latest/dialects/mssql.html?highlight=pyodbc#module-sqlalchemy.dialects.mssql.pyodbc) and [Django](https://github.com/lionheart/django-pyodbc/).</span></span> 
 
-## <a name="management-apipythonapioverviewazuresqlmanagement"></a>[<span data-ttu-id="f9cd9-115">Management API</span><span class="sxs-lookup"><span data-stu-id="f9cd9-115">Management API</span></span>](/python/api/overview/azure/sql/management)
+## <a name="management-apipythonapioverviewazuresqlmanagement"></a>[<span data-ttu-id="407f1-115">Management API</span><span class="sxs-lookup"><span data-stu-id="407f1-115">Management API</span></span>](/python/api/overview/azure/sql/management)
 
-<span data-ttu-id="f9cd9-116">Management API を使用すると、ご利用のサブスクリプションの Azure SQL Database リソースを作成したり管理したりすることができます。</span><span class="sxs-lookup"><span data-stu-id="f9cd9-116">Create and manage Azure SQL Database resources in your subscription with the management API.</span></span> 
+<span data-ttu-id="407f1-116">Management API を使用すると、ご利用のサブスクリプションの Azure SQL Database リソースを作成したり管理したりすることができます。</span><span class="sxs-lookup"><span data-stu-id="407f1-116">Create and manage Azure SQL Database resources in your subscription with the management API.</span></span> 
 
 ```bash
 pip install azure-common
@@ -72,9 +72,9 @@ pip install azure-mgmt-sql
 pip install azure-mgmt-resource
 ```
 
-## <a name="example"></a><span data-ttu-id="f9cd9-117">例</span><span class="sxs-lookup"><span data-stu-id="f9cd9-117">Example</span></span>
+## <a name="example"></a><span data-ttu-id="407f1-117">例</span><span class="sxs-lookup"><span data-stu-id="407f1-117">Example</span></span>
 
-<span data-ttu-id="f9cd9-118">SQL Database リソースを作成し、ファイアウォール規則を使って、特定の範囲の IP アドレスにアクセスを制限します。</span><span class="sxs-lookup"><span data-stu-id="f9cd9-118">Create a SQL Database resource and restrict access to a range of IP addresses using a firewall rule.</span></span>
+<span data-ttu-id="407f1-118">SQL Database リソースを作成し、ファイアウォール規則を使って、特定の範囲の IP アドレスにアクセスを制限します。</span><span class="sxs-lookup"><span data-stu-id="407f1-118">Create a SQL Database resource and restrict access to a range of IP addresses using a firewall rule.</span></span>
 
 ```python
 from azure.common.client_factory import get_client_from_cli_profile
@@ -130,5 +130,5 @@ firewall_rule = sql_client.firewall_rules.create_or_update(
 )
 ```
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="f9cd9-119">Management API を探す</span><span class="sxs-lookup"><span data-stu-id="f9cd9-119">Explore the Management APIs</span></span>](/python/api/overview/azure/sql/management)
+> [<span data-ttu-id="407f1-119">Management API を探す</span><span class="sxs-lookup"><span data-stu-id="407f1-119">Explore the Management APIs</span></span>](/python/api/overview/azure/sql/management)
 
