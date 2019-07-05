@@ -3,19 +3,19 @@ title: Python 用 Azure MySQL/PostgreSQL ライブラリ
 description: ''
 keywords: Azure, Python, SDK, API, SQL, データベース, MySQL, PostgreSQL
 author: lisawong19
-ms.author: liwong
+ms.author: routlaw
 manager: douge
 ms.date: 07/19/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: python
-ms.openlocfilehash: 402e87ae81e6df64b040293992244902313e5b1b
-ms.sourcegitcommit: fba77bdf8eb9f49621be94544d9fef88aff98c14
+ms.openlocfilehash: 81a29ea16dc9857257859181f0c2e5be8b4b7901
+ms.sourcegitcommit: 46bebbf5dd558750043ce5afadff2ec3714a54e6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54747722"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67534233"
 ---
 # <a name="azure-mysqlpostgresql-libraries-for-python"></a>Python 用 Azure MySQL/PostgreSQL ライブラリ
 
@@ -25,7 +25,7 @@ MySQL Manager と pyodbc を使用して、Python から [Azure MySQL Database](
 
 ### <a name="client-odbc-driver-and-pyodbc"></a>クライアント ODBC ドライバーと pyodbc
 
-Azure Database for MySQL にアクセスするための推奨クライアント ライブラリは、Microsoft [ODBC ドライバー](/azure/sql-database/sql-database-connect-query-python#install-the-python-and-database-communication-libraries)です。 ODBC ドライバーを使用してデータベースに接続し、SQL ステートメントを直接実行します。
+Azure Database for MySQL にアクセスするための推奨クライアント ライブラリは、Microsoft [ODBC ドライバー](/azure/sql-database/sql-database-connect-query-python#prerequisites)です。 ODBC ドライバーを使用してデータベースに接続し、SQL ステートメントを直接実行します。
 
 #### <a name="example"></a>例
 
@@ -113,7 +113,7 @@ ODBC ドライバーと pyodbc を使用してデータベースに接続し、S
 Azure Database for PostgreSQL の詳細については、[こちら](https://docs.microsoft.com/azure/postgresql/)を参照してください。
 
 ### <a name="client-odbc-driver-and-pyodbc"></a>クライアント ODBC ドライバーと pyodbc
-Azure Database for PostgreSQL にアクセスするための推奨クライアント ライブラリは、Microsoft [ODBC ドライバーと pyodbc](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-python#install-the-python-and-database-communication-libraries) です。
+Azure Database for PostgreSQL にアクセスするための推奨クライアント ライブラリは、Microsoft [ODBC ドライバーと pyodbc](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-python#prerequisites) です。
 
 #### <a name="example"></a>例 
 

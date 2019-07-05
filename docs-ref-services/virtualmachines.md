@@ -3,7 +3,7 @@ title: Python 用 Azure 仮想マシン ライブラリ
 description: ''
 keywords: Azure, Python, SDK, API, コンピューティング, 仮想マシン
 author: lisawong19
-ms.author: liwong
+ms.author: routlaw
 manager: douge
 ms.date: 06/09/2017
 ms.topic: article
@@ -11,12 +11,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: python
 ms.service: compute
-ms.openlocfilehash: 78750d5f98ab81401c48493aff98d4268c01850d
-ms.sourcegitcommit: 434186988284e0a8268a9de11645912a81226d6b
+ms.openlocfilehash: e09ffed98f3f6050e34ca2cb39e645e30f8bdb15
+ms.sourcegitcommit: 46bebbf5dd558750043ce5afadff2ec3714a54e6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66376707"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67534185"
 ---
 # <a name="azure-virtual-machine-libraries"></a>Azure 仮想マシン ライブラリ
 
@@ -76,13 +76,13 @@ def create_vm()
 
 ## <a name="samples"></a>サンプル
 
-* [仮想マシンを管理する][1]
-* [管理対象のサービス ID で認証を行う][2]
-* [管理対象のサービス ID 拡張機能で仮想マシンを作成する][3]
+* [仮想マシンの管理][1]
+* [マネージド サービス ID で認証を行う][2]
+* [マネージド サービス ID 拡張機能で仮想マシンを作成する][3]
 * [ロード バランサーを管理する][4]
 * [マネージド ディスクを作成して構成する][5]
 * [イメージを一覧表示する][6] 
-* [仮想マシンを監視する][7]
+* [仮想マシンの監視][7]
 
 仮想マシン サンプルの[完全な一覧](https://azure.microsoft.com/resources/samples/?platform=python&term=virtual-machines)をご覧ください。
 

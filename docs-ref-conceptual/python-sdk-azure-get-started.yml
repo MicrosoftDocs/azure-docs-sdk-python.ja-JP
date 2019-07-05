@@ -9,12 +9,13 @@ metadata:
   nextTutorialTitle: Python SDK リファレンス
   displayType: two-column
   interactive: azurecli
-  ms.openlocfilehash: 23e29f3a4fde678e6b8973f3f7baca0f2afb1cde
-  ms.sourcegitcommit: 5ab15a7214082d16f339a13e4ae7735b3a57a9aa
+  ms.date: 11/30/2017
+  ms.openlocfilehash: 1f995a9448206a42e038da178758bffd6c3ca371
+  ms.sourcegitcommit: 46bebbf5dd558750043ce5afadff2ec3714a54e6
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 01/18/2018
-  ms.locfileid: "27907932"
+  ms.lasthandoff: 07/03/2019
+  ms.locfileid: "67534478"
 items:
 - durationInMinutes: 1
   content: "このガイドでは、いくつかの Python 用 Azure ライブラリの使用方法について説明します。  \n"
@@ -56,7 +57,40 @@ items:
     ```
 - title: 仮想環境の作成
   durationInMinutes: 5
-  content: "> [!IMPORTANT]\n> 仮想環境の作成は省略可能ですが、作成することを強くお勧めします。\n\nBash (Linux または [Bash for Windows](https://msdn.microsoft.com/commandline/wsl/about)) で仮想環境を作成します。\n```bash\npip install virtualenv\nvirtualenv mytestenv\ncd mytestenv\nsource ./bin/activate\n```\n\nPowerShell での仮想環境の作成: \n```powershell\npip install virtualenv\nvirtualenv mytestenv\ncd mytestenv\n.\\Scripts\\activate\n```\n"
+  content: >
+    > [!IMPORTANT]
+
+    > 仮想環境の作成は省略可能ですが、作成することを強くお勧めします。
+
+
+    Bash (Linux または [Bash for Windows](https://msdn.microsoft.com/commandline/wsl/about)) で仮想環境を作成します。
+
+    ```bash
+
+    pip install virtualenv
+
+    virtualenv mytestenv
+
+    cd mytestenv
+
+    source ./bin/activate
+
+    ```
+
+
+    PowerShell での仮想環境の作成:
+
+    ```powershell
+
+    pip install virtualenv
+
+    virtualenv mytestenv
+
+    cd mytestenv
+
+    .\Scripts\activate
+
+    ```
 - title: Linux 仮想マシンの作成
   durationInMinutes: 5
   content: >
@@ -235,7 +269,7 @@ items:
     ```
 - title: GitHub リポジトリからの Web アプリのデプロイ
   durationInMinutes: 5
-  content: "このコードは、無料の価格レベルで稼働する新しい [Azure App Service Web アプリ](https://docs.microsoft.com/azure/app-service-web/app-service-web-overview)に、GitHub リポジトリの `master` ブランチから Flask Web アプリケーションをデプロイするものです。 \n\n開始する前に、https://github.com/Azure-Samples/python-docs-hello-world をフォークします。\n\n認証を行います。\n```azcli\naz login\n```\nリソース グループを作成します。\n```azurecli-interactive\naz group create -l eastus -n sampleWebResourceGroup\n```\n\n無料の App Service プランを作成します。\n```azurecli-interactive\naz appservice plan create -g sampleWebResourceGroup -n sampleFreePlan  --sku Free\n```\n\n```python\nfrom azure.mgmt.web import WebSiteManagementClient\nfrom azure.mgmt.web.models import Site, SiteSourceControl, SiteConfig\nfrom azure.common.client_factory import get_client_from_cli_profile\n\nRESOURCE_GROUP_NAME = 'sampleWebResourceGroup'\nSERVICE_PLAN_NAME = 'sampleFreePlanName'\nWEB_APP_NAME = 'sampleflaskapp123'\nREPO_URL = 'GitHub_Repository_URL'\n\n#log in\nweb_client = get_client_from_cli_profile(WebSiteManagementClient)\n\n# get service plan id\nservice_plan = web_client.app_service_plans.get(RESOURCE_GROUP_NAME, SERVICE_PLAN_NAME)\n\n# create a web app\nsiteConfiguration = SiteConfig(\n    python_version='3.4',\n)\nsite_async_operation = web_client.web_apps.create_or_update(\n    RESOURCE_GROUP_NAME,\n    WEB_APP_NAME,\n    Site(\n        location='eastus',\n        server_farm_id=service_plan.id,\n        site_config=siteConfiguration\n    ),\n)\n\nsite = site_async_operation.result()\nprint('created webapp: ' + site.default_host_name)\n\n# continuous deployment with GitHub\nsource_control_async_operation = web_client.web_apps.create_or_update_source_control(\n    RESOURCE_GROUP_NAME,\n    WEB_APP_NAME,\n    SiteSourceControl(\n        location='GitHub',\n        repo_url= REPO_URL,\n        branch='master'\n    )\n)\n\nsource_control = source_control_async_operation.result()\nprint(\"added source control to: \" + source_control.name + \"azurewebsites.net\")\n```\n\nブラウザーを開いてアプリケーションにアクセスします。CLI から次のコマンドを入力してください。\n```azurecli-interactive\naz appservice web browse --resource-group sampleWebResourceGroup --name YOUR_APP_NAME\n```\n\nデプロイを検証したら、Web アプリとプランをサブスクリプションから削除します。 \n```azurecli-interactive\naz group delete --name sampleWebResourceGroup\n```\n"
+  content: "このコードは、無料の価格レベルで稼働する新しい [Azure App Service Web アプリ](https://docs.microsoft.com/azure/app-service-web/app-service-web-overview)に、GitHub リポジトリの `master` ブランチから Flask Web アプリケーションをデプロイするものです。 \n\n作業を開始する前に、次のことを行います。https://github.com/Azure-Samples/python-docs-hello-worldをフォーク\n\n認証を行います。\n```azcli\naz login\n```\nリソース グループを作成します。\n```azurecli-interactive\naz group create -l eastus -n sampleWebResourceGroup\n```\n\n無料の App Service プランを作成します。\n```azurecli-interactive\naz appservice plan create -g sampleWebResourceGroup -n sampleFreePlan  --sku Free\n```\n\n```python\nfrom azure.mgmt.web import WebSiteManagementClient\nfrom azure.mgmt.web.models import Site, SiteSourceControl, SiteConfig\nfrom azure.common.client_factory import get_client_from_cli_profile\n\nRESOURCE_GROUP_NAME = 'sampleWebResourceGroup'\nSERVICE_PLAN_NAME = 'sampleFreePlanName'\nWEB_APP_NAME = 'sampleflaskapp123'\nREPO_URL = 'GitHub_Repository_URL'\n\n#log in\nweb_client = get_client_from_cli_profile(WebSiteManagementClient)\n\n# get service plan id\nservice_plan = web_client.app_service_plans.get(RESOURCE_GROUP_NAME, SERVICE_PLAN_NAME)\n\n# create a web app\nsiteConfiguration = SiteConfig(\n    python_version='3.4',\n)\nsite_async_operation = web_client.web_apps.create_or_update(\n    RESOURCE_GROUP_NAME,\n    WEB_APP_NAME,\n    Site(\n        location='eastus',\n        server_farm_id=service_plan.id,\n        site_config=siteConfiguration\n    ),\n)\n\nsite = site_async_operation.result()\nprint('created webapp: ' + site.default_host_name)\n\n# continuous deployment with GitHub\nsource_control_async_operation = web_client.web_apps.create_or_update_source_control(\n    RESOURCE_GROUP_NAME,\n    WEB_APP_NAME,\n    SiteSourceControl(\n        location='GitHub',\n        repo_url= REPO_URL,\n        branch='master'\n    )\n)\n\nsource_control = source_control_async_operation.result()\nprint(\"added source control to: \" + source_control.name + \"azurewebsites.net\")\n```\n\nブラウザーを開いてアプリケーションにアクセスします。CLI から次のコマンドを入力してください。\n```azurecli-interactive\naz appservice web browse --resource-group sampleWebResourceGroup --name YOUR_APP_NAME\n```\n\nデプロイを検証したら、Web アプリとプランをサブスクリプションから削除します。 \n```azurecli-interactive\naz group delete --name sampleWebResourceGroup\n```\n"
 - title: SQL Database への接続
   durationInMinutes: 5
   content: "このコードは、リモート アクセスを許可するファイアウォール規則を使用して新しい SQL データベースを作成し、Microsoft ODBC ドライバーを使用してそのデータベースに接続するものです。 pyodbc は、Linux 上で Microsoft ODBC Driver を使用して SQL データベースに接続します。 \n\n認証を行います。\n```azcli\naz login\n```\nリソース グループを作成します。\n```azurecli-interactive\naz group create -l eastus -n azure-sample-group\n```\n\nSQL サーバーを作成します。\n```azurecli-interactive\naz sql server create --admin-password HusH_Sec4et --admin-user mysecretname -l eastus -n samplesqlserver123 -g azure-sample-group\n```\n\nファイアウォール規則を追加します。\n```azurecli-interactive\naz sql server firewall-rule create --end-ip-address 167.220.0.235 --name firewall_rule_name_123.123.123.123 --resource-group azure-sample-group --server samplesqlserver123 --start-ip-address 123.123.123.123\n```\n\nSQL データベースを作成します。\n```azurecli-interactive\naz sql db create --name sample-db --resource-group azure-sample-group --server samplesqlserver123\n```\n\n```python\nfrom azure.mgmt.sql import SqlManagementClient\nfrom azure.common.client_factory import get_client_from_cli_profile\nimport pyodbc\n\nLOCATION = 'eastus'\nGROUP_NAME = 'azure-sample-group'\nSERVER_NAME = 'samplesqlserver123'\nDATABASE_NAME = 'sample-db'\nUSER_NAME ='mysecretname'\nPASSWORD='HusH_Sec4et'\n\n# authenticate\nsql_client = get_client_from_cli_profile(SqlManagementClient)\n\n\ndef run_example():\n# Get SQL database\nprint('Get SQL database')\ndatabase = sql_client.databases.get(\n    GROUP_NAME,\n    SERVER_NAME,\n    DATABASE_NAME\n)\nprint(database)\nprint(\"\\n\\n\")\n\n\ndef create_and_insert():\nserver = SERVER_NAME+'.database.windows.net'\ndatabase = DATABASE_NAME\nusername = USER_NAME\npassword = PASSWORD\ndriver = '{ODBC Driver 13 for SQL Server}'\ncnxn = pyodbc.connect(\n    'DRIVER=' + driver + ';PORT=1433;SERVER=' + server + ';PORT=1443;DATABASE=' + database + ';UID=' + username + ';PWD=' + password)\ncursor = cnxn.cursor()\ntsql = \"CREATE TABLE CLOUD (name varchar(255), code int);\"\ntsqlInsert = \"INSERT INTO CLOUD (name, code) VALUES ('Azure', 1); \"\nselectValues = \"SELECT * FROM CLOUD\"\nwith cursor.execute(tsql):\n    print('Successfully created table!')\nwith cursor.execute(tsqlInsert):\n    print('Successfully inserted data into table')\ncursor.execute(selectValues)\nrow = cursor.fetchone()\nwhile row:\n    print(str(row[0]) + \" \" + str(row[1]))\n    row = cursor.fetchone()\ncnxn.commit()\n\nif __name__ == \"__main__\":\nrun_example()\ncreate_and_insert()\n```\n\nコードが正しく動作することを確認したら、CLI を使用して SQL データベースとそのリソースを削除します。\n\n```azurecli-interactive\naz group delete --name azure-sample-group\n```\n"
