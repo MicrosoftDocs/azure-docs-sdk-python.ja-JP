@@ -11,12 +11,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: python
 ms.service: container-instances
-ms.openlocfilehash: 88df9443efb98bc5cec26c5eb4b01a4956141d40
-ms.sourcegitcommit: 1b45953f168cbf36869c24c1741d70153b88b9fc
+ms.openlocfilehash: 19e0e629253462f77d58740857b853d1c94d53cf
+ms.sourcegitcommit: 46bebbf5dd558750043ce5afadff2ec3714a54e6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59675937"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67534320"
 ---
 # <a name="azure-container-instances-libraries-for-python"></a>Python 用 Azure Container Instances ライブラリ
 
@@ -54,7 +54,7 @@ SDK クライアント (次の例の Azure Container Instances クライアン�
    export AZURE_AUTH_LOCATION=/home/yourusername/my.azureauth
    ```
 
-資格情報ファイルを作成し、`AZURE_AUTH_LOCATION` 環境変数を設定したら、[client_factory][client_factory] モジュールの `get_client_from_auth_file` メソッドを使用して、[ResourceManagementClient][ResourceManagementClient] オブジェクトと [ContainerInstanceManagementClient][ContainerInstanceManagementClient] オブジェクトを初期化します。
+資格情報ファイルを作成し、`AZURE_AUTH_LOCATION` 環境変数を設定したら、[client_factory][client_factory] モジュールの `get_client_from_auth_file` メソッドを使用して、ResourceManagementClient オブジェクトと [ContainerInstanceManagementClient][ContainerInstanceManagementClient] オブジェクトを初期化します。
 
 <!-- SOURCE REPO: https://github.com/Azure-Samples/aci-docs-sample-python -->
 [!code-python[authenticate](~/aci-docs-sample-python/src/aci_docs_sample.py#L45-L58 "Authenticate ACI and Resource Manager clients")]
@@ -79,9 +79,9 @@ Azure の Python 管理ライブラリで使用できる認証方法の詳細に
 
 この例では、1 つのタスク ベースのコンテナーを含むコンテナー グループが作成されます。 この例では、複数の機能を示します。
 
-* [コマンド ライン オーバーライド](/azure/container-instances/container-instances-restart-policy#command-line-override) - コンテナーの Dockerfile の `CMD` 行で指定されているものとは異なるカスタム コマンド ラインが指定されます。 コマンド ライン オーバーライドを使用すると、コンテナーの起動時に実行するカスタム コマンド ラインを指定して、コンテナーに組み込まれている既定のコマンド ラインをオーバーライドできます。 コンテナーの起動時に複数のコマンドが実行される場合は、次が適用されます。
+* [コマンド ライン オーバーライド](/azure/container-instances/container-instances-start-command) - コンテナーの Dockerfile の `CMD` 行で指定されているものとは異なるカスタム コマンド ラインが指定されます。 コマンド ライン オーバーライドを使用すると、コンテナーの起動時に実行するカスタム コマンド ラインを指定して、コンテナーに組み込まれている既定のコマンド ラインをオーバーライドできます。 コンテナーの起動時に複数のコマンドが実行される場合は、次が適用されます。
 
-   `echo FOO BAR` など、**1 つのコマンド**を、複数のコマンド ライン引数を指定して実行する場合、その引数は、1 つの文字列リストとして [Container][Container] の `command` プロパティに指定する必要があります。 例: 
+   `echo FOO BAR` など、**1 つのコマンド**を、複数のコマンド ライン引数を指定して実行する場合、その引数は、1 つの文字列リストとして [Container][Container] の `command` プロパティに指定する必要があります。 例:
 
    `command = ['echo', 'FOO', 'BAR']`
 
@@ -108,7 +108,7 @@ Azure の Python 管理ライブラリで使用できる認証方法の詳細に
 
 この例では、リソース グループから特定のコンテナー グループが取得され、そのプロパティ (そのコンテナーを含む) とその値がいくつか出力されます。
 
-[取得操作][containergroupoperations_get]によって、[instance_view][instance_view] が設定されたコンテナー グループが返されます。これにより、グループ内の各コンテナーを反復処理できます。 コンテナー グループの `instance_vew` プロパティは `get` 操作によってのみ設定されます。サブスクリプションまたはリソース グループ内のコンテナー グループを一覧表示しても、この操作は性質上負荷がかかる可能性があるため、インスタンス ビューは設定されません (たとえば、数百のコンテナー グループを一覧表示すると、それぞれのグループに複数のコンテナーが含まれる可能性があります)。 前に「[コンテナー グループの一覧を表示する](#list-container-groups)」で説明したように、`list` の実行後、特定のコンテナー グループのコンテナー インスタンスの詳細を取得するには、そのグループに対して `get` を実行する必要があります。
+[取得操作][containergroupoperations_get]によって、returns a container group with its [instance_view][instance_view] が設定されたコンテナー グループが返されます。これにより、グループ内の各コンテナーを反復処理できます。 コンテナー グループの `instance_vew` プロパティは `get` 操作によってのみ設定されます。サブスクリプションまたはリソース グループ内のコンテナー グループを一覧表示しても、この操作は性質上負荷がかかる可能性があるため、インスタンス ビューは設定されません (たとえば、数百のコンテナー グループを一覧表示すると、それぞれのグループに複数のコンテナーが含まれる可能性があります)。 前に「[コンテナー グループの一覧を表示する](#list-container-groups)」で説明したように、`list` の実行後、特定のコンテナー グループのコンテナー インスタンスの詳細を取得するには、そのグループに対して `get` を実行する必要があります。
 
 <!-- SOURCE REPO: https://github.com/Azure-Samples/aci-docs-sample-python -->
 [!code-python[get_container_group](~/aci-docs-sample-python/src/aci_docs_sample.py#L296-L325 "Get container group")]
@@ -130,7 +130,7 @@ Azure の Python 管理ライブラリで使用できる認証方法の詳細に
 
   [Azure のコード サンプル][samples-aci]
 
-* アプリで使用できるその他の[サンプル Python コード][samples-python]を確認してください。
+* アプリで使用できるその他の[サンプル Python コード][samples-python]も参照してください。
 
 > [!div class="nextstepaction"]
 > [Management API を探す](/python/api/overview/azure/containerinstance/management)
@@ -145,7 +145,7 @@ Azure の Python 管理ライブラリで使用できる認証方法の詳細に
 [client_factory]: /python/api/azure.common.client_factory
 [Container]: /python/api/azure.mgmt.containerinstance.models.container
 [ContainerGroupInstanceView]: /python/api/azure.mgmt.containerinstance.models.containergrouppropertiesinstanceview
-[containergroupoperations_get]: /python/api/azure.mgmt.containerinstance.operations.containergroupsoperations#get
+[containergroupoperations_get]: /python/api/azure.mgmt.containerinstance.operations.containergroupsoperations#get-resource-group-name--container-group-name--custom-headers-none--raw-false----operation-config-
 [ContainerInstanceManagementClient]: /python/api/azure.mgmt.containerinstance.containerinstancemanagementclient
 [instance_view]: /python/api/azure.mgmt.containerinstance.models.containergroup#variables
 [ResourceManagementClient]: /python/api/azure.mgmt.resource.resources.resourcemanagementclient
