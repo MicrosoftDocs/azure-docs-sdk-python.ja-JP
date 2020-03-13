@@ -324,7 +324,7 @@ client.clusters.resize("<Resource Group Name>", "<Cluster Name>", target_instanc
 
 ## <a name="cluster-monitoring"></a>クラスターの監視
 
-HDInsight 管理 SDK を使用して、Operations Management Suite (OMS) でご自身のクラスターの監視を管理することもできます。
+HDInsight Management SDK を使用して、Operations Management Suite (OMS) でご自身のクラスターの監視を管理することもできます。
 
 ### <a name="enable-oms-monitoring"></a>OMS 監視の有効化
 
