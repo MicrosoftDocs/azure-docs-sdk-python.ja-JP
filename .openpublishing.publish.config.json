@@ -1,5 +1,43 @@
 {
-  "docsets_to_publish": [],
+  "docsets_to_publish": [
+    {
+      "docset_name": "python-sdk",
+      "build_source_folder": ".",
+      "build_output_subfolder": "azure-python-sdk",
+      "locale": "ja-JP",
+      "moniker_ranges": [
+        "azure-python",
+        "azure-python-preview",
+        "azure-python-previous"
+      ],
+      "open_to_public_contributors": false,
+      "type_mapping": {
+        "Conceptual": "Content",
+        "ManagedReference": "Content",
+        "RestApi": "Content",
+        "UniversalReference": "Content",
+        "LandingData": "Content",
+        "APIConnector": "Content",
+        "Tutorial": "Content"
+      },
+      "build_entry_point": "docs",
+      "template_folder": "_themes",
+      "customized_template_paths": [
+        "_dependentPackages/uref/content"
+      ],
+      "customized_tasks": {
+        "docset_prebuild": [
+          "_dependentPackages/CommonPlugins/tools/SplitTOC.ps1",
+          "_dependentPackages/CommonPlugins/tools/JoinTOC.ps1",
+          "_dependentPackages/CommonPlugins/tools/DiffFolder.ps1"
+        ]
+      },
+      "DiffFolder": [
+        "api"
+      ],
+      "version": 0
+    }
+  ],
   "notification_subscribers": [],
   "branches_to_filter": [
     "live"
@@ -13,7 +51,13 @@
   "dependent_repositories": [
     {
       "path_to_root": "_themes",
-      "url": "https://github.com/Microsoft/templates.docs.msft.ja-jp",
+      "url": "https://github.com/Microsoft/templates.docs.msft.ja-JP",
+      "branch": "master",
+      "branch_mapping": {}
+    },
+    {
+      "path_to_root": "aci-docs-sample-python",
+      "url": "https://github.com/Azure-Samples/aci-docs-sample-python",
       "branch": "master",
       "branch_mapping": {}
     },
@@ -25,12 +69,6 @@
         "live": "live",
         "master": "master"
       }
-    },
-    {
-      "path_to_root": "aci-docs-sample-python",
-      "url": "https://github.com/Azure-Samples/aci-docs-sample-python",
-      "branch": "master",
-      "branch_mapping": {}
     }
   ],
   "need_generate_pdf_url_template": false,
