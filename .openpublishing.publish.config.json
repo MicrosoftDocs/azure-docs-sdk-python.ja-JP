@@ -21,9 +21,9 @@
       "build_entry_point": "docs",
       "template_folder": "_themes",
       "customized_template_paths": [
-         "_dependentPackages/uref/content"
+        "_dependentPackages/uref/content"
       ],
-       "customized_tasks": {
+      "customized_tasks": {
         "docset_prebuild": [
           "_dependentPackages/CommonPlugins/tools/SplitTOC.ps1",
           "_dependentPackages/CommonPlugins/tools/JoinTOC.ps1",
@@ -45,7 +45,9 @@
   "need_preview_pull_request": true,
   "enable_incremental_build": false,
   "git_repository_url_open_to_public_contributors": "https://github.com/MicrosoftDocs/azure-docs-sdk-python.ja-jp",
-  "error_log_codes": ["DuplicateOutputFiles"],
+  "error_log_codes": [
+    "DuplicateOutputFiles"
+  ],
   "SplitTOC": [
     "docs-ref-autogen/toc.yml"
   ],
@@ -57,7 +59,7 @@
       "branch": "master",
       "branch_mapping": {}
     },
-{
+    {
       "path_to_root": "_repo.en-us",
       "url": "https://github.com/MicrosoftDocs/azure-docs-sdk-python",
       "branch": "live",
@@ -98,7 +100,9 @@
       "ConceptualTOCUrl": "/python/azure/toc.json",
       "OutputFolder": "docs-ref-autogen/overview/azure",
       "ContainerPageMetadata": {
-        "langs": ["python"]
+        "langs": [
+          "python"
+        ]
       },
       "ContainerPageYamlMime": "YamlMime:UniversalReference"
     }
@@ -106,5 +110,8 @@
   "DiffFolder": [
     "docs-ref-autogen/overview/azure"
   ],
-  "need_generate_pdf_url_template": false
+  "need_generate_pdf_url_template": false,
+  "docs_build_engine": {
+    "name": "docfx_v3"
+  }
 }
