@@ -7,13 +7,22 @@
       "build_source_folder": ".",
       "build_output_subfolder": "azure-python-sdk",
       "locale": "ja-jp",
-      "monikers": [],
+      "moniker_ranges": [
+        "azure-python",
+        "azure-python-preview",
+        "azure-python-previous"
+      ],
       "open_to_public_contributors": true,
       "type_mapping": {
         "Conceptual": "Content",
         "ManagedReference": "Content",
         "RestApi": "Content",
         "UniversalReference": "Content",
+        "PythonEnum": "Content",
+        "PythonModule": "Content",
+        "PythonClass": "Content",
+        "PythonPackage": "Content",
+        "ReferenceContainer": "Content",
         "LandingData": "Content",
         "APIConnector": "Content",
         "Tutorial": "Content"
